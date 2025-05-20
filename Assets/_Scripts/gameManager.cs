@@ -24,6 +24,13 @@ public class gameManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject looseMenu;
     public GameObject playerInventory;
+    public GameObject CharacterStatsMenu;
+    public GameObject CraftingMenu;
+    public GameObject skillsMenu;
+    public GameObject CollectiblesMenu;
+    public GameObject infoMenu;
+    public GameObject settingsMenu;
+
 
     [Header("----- Inventory Management -----")]
     public GameObject previuslySelectedSlot = null;

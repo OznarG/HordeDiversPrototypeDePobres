@@ -15,7 +15,42 @@ public class ButtonsFunctions : MonoBehaviour
         gameManager.instance.activeMenu = gameManager.instance.pauseMenu;
         gameManager.instance.activeMenu.gameObject.SetActive(true);
     }
-
+    public void OpenCharacterStats()
+    {
+        gameManager.instance.activeMenu.gameObject.SetActive(false);
+        gameManager.instance.activeMenu = gameManager.instance.CharacterStatsMenu;
+        gameManager.instance.activeMenu.gameObject.SetActive(true);
+    }
+    public void OpenCrafting()
+    {
+        gameManager.instance.activeMenu.gameObject.SetActive(false);
+        gameManager.instance.activeMenu = gameManager.instance.CraftingMenu;
+        gameManager.instance.activeMenu.gameObject.SetActive(true);
+    }
+    public void OpenSkills()
+    {
+        gameManager.instance.activeMenu.gameObject.SetActive(false);
+        gameManager.instance.activeMenu = gameManager.instance.skillsMenu;
+        gameManager.instance.activeMenu.gameObject.SetActive(true);
+    }
+    public void OpenCollectibles()
+    {
+        gameManager.instance.activeMenu.gameObject.SetActive(false);
+        gameManager.instance.activeMenu = gameManager.instance.CollectiblesMenu;
+        gameManager.instance.activeMenu.gameObject.SetActive(true);
+    }
+    public void OpenInfo()
+    {
+        gameManager.instance.activeMenu.gameObject.SetActive(false);
+        gameManager.instance.activeMenu = gameManager.instance.infoMenu;
+        gameManager.instance.activeMenu.gameObject.SetActive(true);
+    }
+    public void OpenSettings()
+    {
+        gameManager.instance.activeMenu.gameObject.SetActive(false);
+        gameManager.instance.activeMenu = gameManager.instance.settingsMenu;
+        gameManager.instance.activeMenu.gameObject.SetActive(true);
+    }
     public void OpenInventory()
     {
         gameManager.instance.activeMenu.gameObject.SetActive(false);
