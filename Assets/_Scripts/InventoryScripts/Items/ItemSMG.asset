@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4201ab544c2dbe6418483ae1d40c49d8, type: 3}
+  m_Name: ItemSMG
+  m_EditorClassIdentifier: 
+  ID: 2
+  type: 2
+  itemName: SMG
+  description: Machine Gun
+  stackMax: 1
+  usable: 1
+  amountToAdd: 1
+  icon: {fileID: 21300024, guid: 6674e8c43c63e4f4184cbd009379498d, type: 3}
+  itemPrefab: {fileID: 5786097810451525583, guid: 260ff1508afea5241b6511d8fbe92201, type: 3}
