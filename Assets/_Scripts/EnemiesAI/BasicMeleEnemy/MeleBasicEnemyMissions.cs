@@ -22,7 +22,7 @@ namespace BasicEnemyMeleMissions
             if(_enemy.playerInRange && _enemy.agent.enabled)
             {
                 state = NodeState.SUCCESS;
-                _enemy.agent.stoppingDistance = 3;
+                _enemy.agent.stoppingDistance = 2.5f;
                 return state;
             }
             else

@@ -41,17 +41,18 @@ public class CharacterStats : MonoBehaviour, IDamage
    {
         if(!isDead)
         {
+            Debug.Log("Enemy took damage " + damage);
+            int healthAfterDamage = health - ((int)damage);
+            SetHealthTo(healthAfterDamage);
             if (model != null)
             {
                 StartCoroutine(flashDamage(Color.blue));
             }
-            if (animator != null)
+            if (animator != null && !isDead)
             {
                 animator.SetTrigger("damage");
             }
-            Debug.Log("Enemy took damage " + damage);
-            int healthAfterDamage = health - ((int)damage);
-            SetHealthTo(healthAfterDamage);
+            
         }
         
    }
