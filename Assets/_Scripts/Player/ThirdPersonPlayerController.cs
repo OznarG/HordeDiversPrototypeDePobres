@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class ThirdPersonPlayerController : MonoBehaviour, IDamage
@@ -12,6 +13,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     [SerializeField] Rigidbody rb;
     [SerializeField] CharacterController characterController;
     public Animator playerAnim;
+
     [Header("--- Combat Stats ---")]
     public float meleDamage;
     public float meleAttackSpeed;
@@ -45,6 +47,19 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     [SerializeField] int level;
     [SerializeField] float health;
     [SerializeField] float maxHealth = 100;
+    [SerializeField] float energy;
+    [SerializeField] float maxEnergy;
+    [SerializeField] float mana;
+    [SerializeField] float maxMana;
+    [SerializeField] float exp;
+    [SerializeField] float maxExp;
+
+    [Header("--- Player Bars ---")]
+    [SerializeField] Image HealthBar;
+    [SerializeField] Image ManaBar;
+    [SerializeField] Image EnergyBar;
+    [SerializeField] Image ExpBar;
+
     private void Start()
     {
         health = maxHealth;
@@ -215,5 +230,30 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public void TakeDamage(float damage)
     {
         health -= damage;
+        if (health <= 0)
+        {
+            playerDead = true;
+            health = 0;
+        }
+        UpdateHealthBar();
     }
+
+    #region --State Bars Functions--
+    public void UpdateHealthBar()
+    {
+        HealthBar.fillAmount = health / maxHealth;
+    }
+    public void UpdateManaBar()
+    {
+        ManaBar.fillAmount = mana / maxMana;
+    }
+    public void UpdateEnergyBar()
+    {
+        EnergyBar.fillAmount = energy / maxEnergy;
+    }
+    public void UpdateExpyBar()
+    {
+        ExpBar.fillAmount = exp / maxExp;
+    }
+    #endregion
 }
