@@ -27433,12 +27433,12 @@ MonoBehaviour:
   pauseMenu: {fileID: 4543341869626484914}
   looseMenu: {fileID: 0}
   playerInventory: {fileID: 2354741856099457334}
-  CharacterStatsMenu: {fileID: 0}
-  CraftingMenu: {fileID: 0}
-  skillsMenu: {fileID: 0}
-  CollectiblesMenu: {fileID: 0}
-  infoMenu: {fileID: 0}
-  settingsMenu: {fileID: 0}
+  CharacterStatsMenu: {fileID: 1382555127}
+  CraftingMenu: {fileID: 416737006}
+  skillsMenu: {fileID: 1321156929}
+  CollectiblesMenu: {fileID: 2054879145}
+  infoMenu: {fileID: 1561556289}
+  settingsMenu: {fileID: 1388039609}
   previuslySelectedSlot: {fileID: 0}
   selectedSlot: {fileID: 0}
   backgroundColor: {r: 0, g: 0, b: 0, a: 0}
