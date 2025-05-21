@@ -727,18 +727,7 @@ ModelImporter:
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'B_Spine' has translation animation that
       will be discarded.\n"
-    animationRetargetingWarnings: "\nRetargeting quality report for clip 'Take 001':\n\tLeftLowerLeg
-      average position error 0.8 mm and maximum position error 10.9 mm at time 0:
-      1 (4.2%) Frame 1\n\tLeftUpperArm average position error 7.0 mm and maximum
-      position error 18.0 mm at time 0:21 (87.5%) Frame 21\n\tLeftLowerArm average
-      position error 7.0 mm and maximum position error 18.0 mm at time 0:21 (87.5%)
-      Frame 21\n\tLeftHand average position error 7.0 mm and maximum position error
-      18.0 mm at time 0:21 (87.5%) Frame 21\n\tRightUpperArm average position error
-      7.0 mm and maximum position error 18.0 mm at time 0:21 (87.5%) Frame 21\n\tRightLowerArm
-      average position error 7.0 mm and maximum position error 18.1 mm at time 0:
-      9 (37.5%) Frame 9\n\tRightHand average position error 7.0 mm and maximum position
-      error 18.0 mm at time 0:21 (87.5%) Frame 21\n\tHead average position error
-      7.0 mm and maximum position error 18.0 mm at time 0:21 (87.5%) Frame 21\n"
+    animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 1
     importAnimatedCustomProperties: 0
     importConstraints: 0
@@ -763,7 +752,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
