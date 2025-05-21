@@ -18,8 +18,7 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
 
     private void Awake()
     {
-        characterStats.agent = GetComponent<NavMeshAgent>();
-        characterStats.animator = GetComponentInChildren<Animator>();
+
         damageSourceScrpt.SetDamage(10);
     }
     protected override BehaviorTreeMila.Node SetupTree()
@@ -82,6 +81,7 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
     }
 
     //Anim and condition Functions for trees
+    #region -- Animation Methods ---
     public void IsTakingDamage()
     {
         characterStats.isTakingDamage = true;
@@ -102,11 +102,14 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
         characterStats.attackCounter = 0;
         characterStats.onAttackCoolDown = true;
     }
-
     public void EnemyDead()
     {
         Destroy(gameObject, 10);
     }
+    #endregion
+
+
+
 
     public void SetCountToTrue()
     {
@@ -122,7 +125,7 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
         else
         {
             characterStats.onAttackCoolDown = true;
-            characterStats.animator.SetTrigger("attack");
+            characterStats.animator.SetTrigger("AttackRight");
         }
 
     }

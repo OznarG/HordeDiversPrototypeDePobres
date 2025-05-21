@@ -29,7 +29,11 @@ public class CharacterStats : MonoBehaviour, IDamage
     public bool playerInRange;
     public bool isTakingDamage;
 
-
+    private void Awake()
+    {
+        agent = GetComponent<NavMeshAgent>();
+        animator = GetComponentInChildren<Animator>();
+    }
     public virtual void Start()
     {
         maxHealth = 100;

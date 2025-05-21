@@ -596,7 +596,7 @@ namespace BasicEnemyGolemMissions
         {
             if (!_deadTriggered)
             {
-                enemy.characterStats.animator.SetTrigger("isDead");
+                enemy.characterStats.animator.SetTrigger("Dead");
                 _deadTriggered = true;
             }
 
