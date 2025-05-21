@@ -13,6 +13,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     [SerializeField] Rigidbody rb;
     [SerializeField] CharacterController characterController;
     public Animator playerAnim;
+    [SerializeField] ParticleSystem particleLvlUp;
 
     [Header("--- Combat Stats ---")]
     public float meleDamage;
@@ -260,8 +261,10 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public void AddExp(float amount)
     {
         exp += amount;
-        if(exp > maxExpNeeded)
+        if(exp >= maxExpNeeded)
         {
+            
+            particleLvlUp.Play();
             float temp;
             temp = exp - maxExpNeeded;
             exp = 0;
