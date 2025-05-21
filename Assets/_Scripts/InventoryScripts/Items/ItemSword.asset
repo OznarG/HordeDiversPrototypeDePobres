@@ -19,5 +19,5 @@ MonoBehaviour:
   stackMax: 1
   usable: 1
   amountToAdd: 1
-  icon: {fileID: 21300000, guid: 146ff2c18b2e6dd45813c07f2513b0c7, type: 3}
+  icon: {fileID: 21300000, guid: 0d7f4ec131922bc4fa14e5fb70e63f61, type: 3}
   itemPrefab: {fileID: 0}
