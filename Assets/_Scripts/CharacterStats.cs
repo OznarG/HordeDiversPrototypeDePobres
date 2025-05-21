@@ -29,6 +29,8 @@ public class CharacterStats : MonoBehaviour, IDamage
     public bool playerInRange;
     public bool isTakingDamage;
 
+    [Header("--- Drop / Loot ---")]
+    public float xpPointDrop;
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -55,6 +57,7 @@ public class CharacterStats : MonoBehaviour, IDamage
    private void Die()
    {
        isDead = true;
+        gameManager.instance.thirdPersonPlayerController.AddExp(xpPointDrop);
    }
    private void SetHealthTo(int healthToSetTo)
    {

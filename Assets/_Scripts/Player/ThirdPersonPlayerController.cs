@@ -43,8 +43,6 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public GameObject[] playerWeapons;
 
     [Header("--- Player Use Stats")]
-    [SerializeField] int expPoint;
-    [SerializeField] int level;
     [SerializeField] float health;
     [SerializeField] float maxHealth = 100;
     [SerializeField] float energy;
@@ -52,8 +50,9 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     [SerializeField] float mana;
     [SerializeField] float maxMana;
     [SerializeField] float exp;
-    [SerializeField] float maxExp;
-
+    [SerializeField] float maxExpNeeded;
+    [SerializeField] int level;
+    [SerializeField] int upgradePoints;
     [Header("--- Player Bars ---")]
     [SerializeField] Image HealthBar;
     [SerializeField] Image ManaBar;
@@ -253,7 +252,26 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     }
     public void UpdateExpyBar()
     {
-        ExpBar.fillAmount = exp / maxExp;
+        ExpBar.fillAmount = exp / maxExpNeeded;
+    }
+    #endregion
+
+    #region Adder and Value Changers
+    public void AddExp(float amount)
+    {
+        exp += amount;
+        if(exp > maxExpNeeded)
+        {
+            float temp;
+            temp = exp - maxExpNeeded;
+            exp = 0;
+            level++;
+            upgradePoints++;
+            maxExpNeeded = maxExpNeeded * 1.5f;   
+            AddExp(temp);
+
+        } 
+        UpdateExpyBar();
     }
     #endregion
 }
