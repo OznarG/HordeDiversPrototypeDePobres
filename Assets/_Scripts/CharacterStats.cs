@@ -1,15 +1,35 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CharacterStats : MonoBehaviour, IDamage
 {
-    [SerializeField] SkinnedMeshRenderer model;
+    [Header("--- References ---")]
+    public SkinnedMeshRenderer model;
+    public Animator animator;
+    public NavMeshAgent agent;
 
-    [SerializeField] protected int health;
-   [SerializeField] protected int maxHealth;
+    [Header("--- Helpfull Variables ---")]
+    public float attackCounter;
 
-   [SerializeField] protected bool isDead;
-    [SerializeField] Animator animator;
+    [Header("--- Character Stats ---")]
+    public int health;
+    public int maxHealth;
+    public float speed;
+    public float attackRate;
+
+    [Header("--- Movement Stats ---")]
+    public float playerFaceSpeed;
+
+    [Header("--- Character States ---")]
+    public bool isDead;
+    public bool inDanger;
+    public bool onAttackCoolDown;
+    public bool isAttacking;
+    public bool playerInRange;
+    public bool isTakingDamage;
+
+
     public virtual void Start()
     {
         maxHealth = 100;

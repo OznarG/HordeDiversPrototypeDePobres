@@ -7,37 +7,19 @@ using BehaviorTreeMila;
 public class SkeletonEnemyDefault : BehaviorTreeMila.Tree
 {
     [Header("--- References ---")]
-    public NavMeshAgent agent;
-    public Animator anim;
     public CharacterStats characterStats;
     [SerializeField] Transform[] waypoints;
     [SerializeField] GameObject damageSource;
     [SerializeField] DamagePlayerOntrigger damageSourceScrpt;
 
-    [Header("--- Booleans and States ---")]
-    [SerializeField] float speed;
-    [SerializeField] bool inDanger;
-
-    public bool onAttackCoolDown;
-    public bool isAttacking;
-    [SerializeField] float attackCounter;
-
-    public bool isDead;
-    public bool playerInRange;
-    public bool isTakingDamage;
-
-    public float attackRate;
-
-
     [SerializeField] bool stopAgent;
     private Vector3 playerDir;
     [SerializeField] Transform headPos;
-    [SerializeField] float playerFaceSpeed;
 
     private void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();
-        anim = GetComponentInChildren<Animator>();
+        characterStats.agent = GetComponent<NavMeshAgent>();
+        characterStats.animator = GetComponentInChildren<Animator>();
         damageSourceScrpt.SetDamage(10);
     }
     protected override BehaviorTreeMila.Node SetupTree()
@@ -48,7 +30,7 @@ public class SkeletonEnemyDefault : BehaviorTreeMila.Tree
             new Sequence(new List<Node>{new EnemyDead(this), new DestroyEnemy(this)}),
             new Sequence(new List<Node>{new IsInAttackRange(this), new AttackPlayer(this)}),
             new Sequence(new List<Node> { new CheckEnemyInChaseRange(this),new ChasePlayer(this),}),
-            new TaskPatrol(transform, waypoints, agent),
+            new TaskPatrol(transform, waypoints, characterStats.agent),
 
         });
 
@@ -59,19 +41,19 @@ public class SkeletonEnemyDefault : BehaviorTreeMila.Tree
         base.Update();
         if (stopAgent)
         {
-            agent.enabled = false;
+            characterStats.agent.enabled = false;
         }
         else
         {
-            agent.enabled = true;
+            characterStats.agent.enabled = true;
         }
-        anim.SetFloat("Speed", agent.velocity.magnitude);
-        if (onAttackCoolDown)
+        characterStats.animator.SetFloat("Speed", characterStats.agent.velocity.magnitude);
+        if (characterStats.onAttackCoolDown)
         {
-            attackCounter += Time.deltaTime;
-            if (attackCounter >= attackRate)
+            characterStats.attackCounter += Time.deltaTime;
+            if (characterStats.attackCounter >= characterStats.attackRate)
             {
-                onAttackCoolDown = false;
+                characterStats.onAttackCoolDown = false;
                 //_animator.SetBool("Walking", true);
             }
         }
@@ -82,44 +64,43 @@ public class SkeletonEnemyDefault : BehaviorTreeMila.Tree
         playerDir = gameManager.instance.thirdPersonPlayerController.transform.position - headPos.position;
         playerDir.y = 0;
         Quaternion rot = Quaternion.LookRotation(playerDir);
-        transform.rotation = Quaternion.Lerp(transform.rotation, rot, Time.deltaTime * playerFaceSpeed);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rot, Time.deltaTime * characterStats.playerFaceSpeed);
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            playerInRange = true;
+            characterStats.playerInRange = true;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            playerInRange = false;
+            characterStats.playerInRange = false;
         }
     }
 
     //Anim and condition Functions for trees
     public void IsTakingDamage()
     {
-        isTakingDamage = true;
+        characterStats.isTakingDamage = true;
     }
     public void DoneTakingDamage()
     {
-        isTakingDamage = false;
+        characterStats.isTakingDamage = false;
     }
     public void IsAttaking()
     {
-        isAttacking = true;
+        characterStats.isAttacking = true;
         damageSource.SetActive(true);
-
     }
     public void IsNotAttacking()
     {
-        isAttacking = true;
+        characterStats.isAttacking = true;
         damageSource.SetActive(false);
-        attackCounter = 0;
-        onAttackCoolDown = true;
+        characterStats.attackCounter = 0;
+        characterStats.onAttackCoolDown = true;
     }
 
     public void EnemyDead()
@@ -129,22 +110,19 @@ public class SkeletonEnemyDefault : BehaviorTreeMila.Tree
 
     public void SetCountToTrue()
     {
-        onAttackCoolDown = true;
+        characterStats.onAttackCoolDown = true;
     }
 
     public void AttackMelle()
     {
-        if (onAttackCoolDown)
+        if (characterStats.onAttackCoolDown)
         {
 
         }
         else
         {
-            onAttackCoolDown = true;
-            anim.SetTrigger("attack");
-
-
-
+            characterStats.onAttackCoolDown = true;
+            characterStats.animator.SetTrigger("attack");
         }
 
     }
