@@ -809,14 +809,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.08497601
+      - time: 0
         functionName: Rolling
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.86958337
+      - time: 0.7580449
         functionName: DoneRolling
         data: 
         objectReferenceParameter: {instanceID: 0}

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,7 +25,8 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     [SerializeField] float rotationSpeed;
     [SerializeField] float moveSpeed;
     [SerializeField] private float walkSpeed;
-    [SerializeField] float runSpeed;      
+    [SerializeField] float runSpeed;
+    [SerializeField] float gravity;
     private Vector3 lastPosition;
     [Header("--- Player States ---")]
     public bool playerDead;
@@ -74,17 +76,22 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
 
         if (canMove)
         {
+            //Need to check if is expensive
+            Vector3 velocity = rb.linearVelocity;
             HandleRunning();
-            HandleMovement();
+            HandleMovement(velocity);
+            HandleGravity(velocity);
 
             if (Input.GetButton("Fire1") && rolling == false)
             {
                 //Need to change the Slot to an actual slot because GetComponent is expensive
                 gameManager.instance.selectedSlot.GetComponent<Slot>().UseItem();
             }
-            if(Input.GetButton("Jump"))
+            if(Input.GetButton("Jump") && !rolling)
             {
+                rolling = true;
                 playerAnim.SetTrigger("Roll");
+                Debug.Log("Rollings");
             }
             //Debug.Log(characterController.velocity.magnitude);
         }
@@ -94,6 +101,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public void TakeDamage(float damage)
     {
         health -= damage;
+        playerAnim.SetTrigger("GotHit");
         if (health <= 0)
         {
             playerDead = true;
@@ -103,10 +111,8 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     }
 
     #region ---Movement and gravty---
-    private void HandleMovement()
-    {
-        //Need to check if is expensive
-        Vector3 velocity = rb.linearVelocity;
+    private void HandleMovement(Vector3 velocity)
+    {     
         // Get input
         float horizontalInput = Input.GetAxis("Horizontal"); // A/D or Left/Right
         float verticalInput = Input.GetAxis("Vertical");     // W/S or Up/Down
@@ -152,7 +158,16 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
             moveSpeed = runSpeed;
         }
     }
+    private void HandleGravity(Vector3 velocity)
+    {
+        if (characterController.isGrounded && velocity.y < 0)
+        {
+            velocity.y = 0;
 
+        }
+        velocity.y -= gravity * Time.deltaTime;
+        characterController.Move(velocity * Time.deltaTime);
+    }
     #endregion
 
     #region ---Animation Functions---

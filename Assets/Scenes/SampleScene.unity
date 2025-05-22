@@ -37905,14 +37905,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LowPolySkeleton_Unity
       objectReference: {fileID: 0}
-    - target: {fileID: 1487010679681860085, guid: af8299faa71f6294b9ecce924a13bbd9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3751395928563278946, guid: af8299faa71f6294b9ecce924a13bbd9, type: 3}
-      propertyPath: m_Acceleration
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 8960374338550806869, guid: af8299faa71f6294b9ecce924a13bbd9, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
       value: 
@@ -56305,6 +56297,10 @@ PrefabInstance:
       propertyPath: ManaBar
       value: 
       objectReference: {fileID: 908943295}
+    - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
+      propertyPath: gravity
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
       propertyPath: maxMana
       value: 100
