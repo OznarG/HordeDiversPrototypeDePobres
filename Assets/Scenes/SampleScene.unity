@@ -56323,7 +56323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
       propertyPath: meleDamage
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
       propertyPath: maxExpNeeded
