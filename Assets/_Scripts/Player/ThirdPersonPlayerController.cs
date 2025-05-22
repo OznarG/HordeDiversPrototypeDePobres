@@ -19,6 +19,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public float meleAttackSpeed;
     public bool attacking;
     public bool restrictedByAnimation;
+    public bool rolling;
     [Header("--- Movement Stats ---")]
     [SerializeField] float rotationSpeed;
     [SerializeField] float moveSpeed;
@@ -76,10 +77,14 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
             HandleRunning();
             HandleMovement();
 
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButton("Fire1") && rolling == false)
             {
                 //Need to change the Slot to an actual slot because GetComponent is expensive
                 gameManager.instance.selectedSlot.GetComponent<Slot>().UseItem();
+            }
+            if(Input.GetButton("Jump"))
+            {
+                playerAnim.SetTrigger("Roll");
             }
             //Debug.Log(characterController.velocity.magnitude);
         }
@@ -105,7 +110,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         // Get input
         float horizontalInput = Input.GetAxis("Horizontal"); // A/D or Left/Right
         float verticalInput = Input.GetAxis("Vertical");     // W/S or Up/Down
-        if (horizontalInput != 0 || verticalInput != 0 && !restrictedByAnimation)
+        if ((horizontalInput != 0 || verticalInput != 0) && restrictedByAnimation == false)
         {
             // Get camera's forward and right vectors
             Vector3 cameraForward = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z).normalized;
@@ -162,10 +167,20 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public void EndRestrictByAnimation()
     {
         restrictedByAnimation = false;
+        Debug.Log("fALSE RESTRICTED");
     }
     public void RestrictByAnimation()
     {
+        Debug.Log("True RESTRICTED");
         restrictedByAnimation = true;
+    }
+    public void Rolling()
+    {
+        rolling = true;
+    }    
+    public void DoneRolling()
+    {
+        rolling = false;
     }
     public void UsingTool()
     {
