@@ -90,6 +90,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
             if(Input.GetButton("Jump") && !rolling)
             {
                 rolling = true;
+                
                 playerAnim.SetTrigger("Roll");
                 Debug.Log("Rollings");
             }
