@@ -102,7 +102,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public void TakeDamage(float damage)
     {
         health -= damage;
-        playerAnim.SetTrigger("GotHit");
+        //splayerAnim.SetTrigger("GotHit");
         if (health <= 0)
         {
             playerDead = true;
