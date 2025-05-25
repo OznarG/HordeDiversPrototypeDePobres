@@ -65,6 +65,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         //Cursor.visible = false;
         lastPosition = transform.position;
         moveSpeed = walkSpeed;
+        playerAnim.SetFloat("attackSpeed", meleAttackSpeed);
         SetPlayerBelt();
     }
     private void Update()
@@ -308,5 +309,14 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         }
         return false;
     }
+    #endregion
+
+    #region Getters or Setters
+    public bool IsAttacking()
+    {
+        return attacking;
+    }
+
+
     #endregion
 }

@@ -47,14 +47,20 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
         }
         else if(type == ItemType.MeleWeapon)
         {
-            if (Time.time >= nextTimeTofire)
-            {
+            //if (Time.time >= nextTimeTofire)
+            //{
                 
-                nextTimeTofire = Time.time + 2;
+            //    nextTimeTofire = Time.time + 2;
+            //    gameManager.instance.thirdPersonPlayerController.playerAnim.SetTrigger("Attack");
+            //    Debug.Log("Sword Attacked");
+            //}
+            //Debug.Log("ATTACKE CON CUCHILLO HEHEHE BOY :V");
+            if(!gameManager.instance.thirdPersonPlayerController.IsAttacking())
+            {
+                gameManager.instance.thirdPersonPlayerController.Attacking();
                 gameManager.instance.thirdPersonPlayerController.playerAnim.SetTrigger("Attack");
-                Debug.Log("Sword Attacked");
             }
-            Debug.Log("ATTACKE CON CUCHILLO HEHEHE BOY :V");
+
         }
         else if(type == ItemType.Seeds)
         {
