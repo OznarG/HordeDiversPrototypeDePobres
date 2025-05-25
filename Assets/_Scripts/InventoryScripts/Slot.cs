@@ -57,6 +57,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
             //Debug.Log("ATTACKE CON CUCHILLO HEHEHE BOY :V");
             if(!gameManager.instance.thirdPersonPlayerController.IsAttacking())
             {
+                gameManager.instance.thirdPersonPlayerController.playerAnim.SetFloat("attackSpeed", gameManager.instance.thirdPersonPlayerController.meleAttackSpeed);
                 gameManager.instance.thirdPersonPlayerController.Attacking();
                 gameManager.instance.thirdPersonPlayerController.playerAnim.SetTrigger("Attack");
             }
