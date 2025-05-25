@@ -23656,7 +23656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1699026232
 Transform:
   m_ObjectHideFlags: 0
@@ -59319,6 +59319,10 @@ PrefabInstance:
     - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
       propertyPath: meleAttackSpeed
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
+      propertyPath: rollingSpeedMul
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8156059292151132905, guid: edb934698097a914eab5eddea3c29475, type: 3}

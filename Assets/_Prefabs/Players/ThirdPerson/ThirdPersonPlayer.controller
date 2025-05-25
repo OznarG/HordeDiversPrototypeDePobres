@@ -364,6 +364,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: rollSpeed
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -466,13 +472,13 @@ AnimatorStateMachine:
     m_Position: {x: 330, y: -240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -99858475677379129}
-    m_Position: {x: 610, y: 60, z: 0}
+    m_Position: {x: 560, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2474829707864642769}
-    m_Position: {x: 230, y: 230, z: 0}
+    m_Position: {x: 90, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1437785043759577534}
-    m_Position: {x: 540.0589, y: 184.74945, z: 0}
+    m_Position: {x: 330, y: 240, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

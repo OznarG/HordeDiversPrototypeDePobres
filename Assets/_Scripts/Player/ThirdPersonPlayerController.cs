@@ -27,7 +27,10 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     [SerializeField] private float walkSpeed;
     [SerializeField] float runSpeed;
     [SerializeField] float gravity;
+    [SerializeField] float rollingSpeed;
+    [SerializeField] float rollingSpeedMul;
     private Vector3 lastPosition;
+    Vector3 inputDir;
     [Header("--- Player States ---")]
     public bool playerDead;
     public bool isgrouded;
@@ -66,6 +69,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         lastPosition = transform.position;
         moveSpeed = walkSpeed;
         playerAnim.SetFloat("attackSpeed", meleAttackSpeed);
+        rollingSpeed = walkSpeed + 3;
         SetPlayerBelt();
     }
     private void Update()
@@ -88,12 +92,18 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
                 //Need to change the Slot to an actual slot because GetComponent is expensive
                 gameManager.instance.selectedSlot.GetComponent<Slot>().UseItem();
             }
-            if(Input.GetButton("Jump") && !rolling)
+            if(Input.GetButton("Jump") && !rolling && !restrictedByAnimation)
             {
                 rolling = true;
-                
-                playerAnim.SetTrigger("Roll");
+                restrictedByAnimation = true;
+                playerAnim.SetTrigger("Roll");              
                 Debug.Log("Rollings");
+                
+            }
+            if(rolling)
+            {
+                characterController.Move(inputDir.normalized * rollingSpeed * rollingSpeedMul * Time.deltaTime);
+                playerObj.rotation = Quaternion.Slerp(playerObj.rotation, Quaternion.LookRotation(inputDir), Time.deltaTime * 15);
             }
             //Debug.Log(characterController.velocity.magnitude);
         }
@@ -124,7 +134,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
             Vector3 cameraForward = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z).normalized;
             Vector3 cameraRight = new Vector3(cameraTransform.right.x, 0, cameraTransform.right.z).normalized;
             // Calculate movement direction relative to the camera
-            Vector3 inputDir = cameraForward * verticalInput + cameraRight * horizontalInput;
+            inputDir = cameraForward * verticalInput + cameraRight * horizontalInput;
             // Calculate velocity based on position change
             velocity = (transform.position - lastPosition) / Time.deltaTime;
             // Update last position for the next frame
@@ -154,10 +164,12 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             moveSpeed = walkSpeed;
+            rollingSpeed = walkSpeed + 3;
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             moveSpeed = runSpeed;
+            rollingSpeed = runSpeed;
         }
     }
     private void HandleGravity(Vector3 velocity)
@@ -198,6 +210,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public void DoneRolling()
     {
         rolling = false;
+        restrictedByAnimation = false;
     }
     public void UsingTool()
     {
