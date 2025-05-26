@@ -23,6 +23,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     [SerializeField] Sprite defaultImage;
     [SerializeField] int addAmount;
     [SerializeField] bool usable;
+    [SerializeField] ItemWeaponStats weaponStats;
 
     [Header("Slot Information")]
     [SerializeField] bool selected;
@@ -102,31 +103,6 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
             UnityEngine.Debug.Log("No method yet");
         }
     }
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        //Set parent to cursor
-        parentAfterDrag = transform.parent;
-        transform.SetParent(transform.root);
-        //Is not colliding with what is under
-        transform.GetComponent<Image>().raycastTarget = false;
-    }
-    public void OnDrag(PointerEventData eventData)
-    {
-        // Get location of the mouse using canvas size and eventData
-        isDragging = true;
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-    }
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        //Remove cursor as parent and make the parent what it was before being grabed, is able to know what is bellow again
-        isDragging = false;
-        transform.SetParent(parentAfterDrag);
-        transform.GetComponent<Image>().raycastTarget = true;
-    }
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        // THIS IS CALLED ON THE ACTUAL BUTTON of the slot
-    }
     public void UpdateSlot()
     {
         //If the Stack is less or equal to 0
@@ -135,10 +111,17 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
             //Set everything to default(empty) ID = 0 is a empty Slot
             this.GetComponent<Image>().sprite = defaultImage;
             //defaultImage.GetComponent<Image>().color = Color.black;
-
             this.GetComponentInChildren<TMP_Text>().text = " ";
             ID = 0;
-
+            type = ItemType.Empty;
+            itemName = " ";
+            description = "Empty Slot";
+            stackMax = 0;
+            stackAmount = 0;
+            itemPrefab = null;
+            addAmount = 0;
+            usable = false;
+            weaponStats = null;
         }
         else
         {
@@ -160,7 +143,6 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
                 //unselect it because it wwas clicked again
                 transform.GetComponentInParent<SlotBackground>().selected = false;
                 gameManager.instance.selectedSlot.GetComponentInParent<SlotBackground>().UpdateSelection();
-
             }
             else
             {
@@ -176,8 +158,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
         }
     }
 
-    // ----- getters -----
-
+    #region Setters and Getters
     public int GetID()
     {
         return ID;
@@ -263,8 +244,9 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     {
         itemPrefab = _prefab;
     }
+    #endregion
 
-
+    #region Helper Functions
     // ----- helper funcs -----
 
     public void IncrementStackBy(int amount)
@@ -282,7 +264,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
         return stackMax - stackAmount;
     }
 
-    public void AddItemToSlot(int _ID, ItemType _type, string _itemName, string _description, int _stackMax, Sprite _icon, GameObject _itemPrefab, int _addAmount, bool _usable)
+    public void AddItemToSlot(int _ID, ItemType _type, string _itemName, string _description, int _stackMax, Sprite _icon, GameObject _itemPrefab, int _addAmount, bool _usable, ItemWeaponStats _weaponStats)
     {
         ID = _ID;
         type = _type;
@@ -293,7 +275,38 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
         itemPrefab = _itemPrefab;
         addAmount = _addAmount;
         usable = _usable;
+        weaponStats = _weaponStats;
     }
+    #endregion
+
+    #region Drag Methods
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        //Set parent to cursor
+             parentAfterDrag = transform.parent;
+             transform.SetParent(transform.root);
+             //Is not colliding with what is under
+             transform.GetComponent<Image>().raycastTarget = false;     
+    }
+    public void OnDrag(PointerEventData eventData)
+    { 
+            // Get location of the mouse using canvas size and eventData
+            isDragging = true;
+            rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+    }
+    public void OnEndDrag(PointerEventData eventData)
+    {
+            //Remove cursor as parent and make the parent what it was before being grabed, is able to know what is bellow again
+            isDragging = false;
+            transform.SetParent(parentAfterDrag);
+            transform.GetComponent<Image>().raycastTarget = true;
+    }
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        // THIS IS CALLED ON THE ACTUAL BUTTON of the slot
+    }
+    #endregion
+
 
     
 }
