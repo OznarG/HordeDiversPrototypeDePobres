@@ -15,9 +15,27 @@ public class ButtonsFunctions : MonoBehaviour
         gameManager.instance.activeMenu = gameManager.instance.pauseMenu;
         gameManager.instance.activeMenu.gameObject.SetActive(true);
     }
+    public void BactToPauseMenuFromIventory()
+    {
+
+        gameManager.instance.selectedSlot.GetComponentInParent<SlotBackground>().selected = false;
+        gameManager.instance.selectedSlot.GetComponentInParent<SlotBackground>().UpdateSelection();
+        gameManager.instance.selectedSlot = gameManager.instance.previuslySelectedSlot;
+        gameManager.instance.selectedSlot.GetComponentInParent<SlotBackground>().selected = true;
+        gameManager.instance.selectedSlot.GetComponentInParent<SlotBackground>().UpdateSelection();
+
+        gameManager.instance.playerInventoryScript.isOpen = false;
+        gameManager.instance.playerInventory.SetActive(false);
+
+        gameManager.instance.activeMenu.gameObject.SetActive(false);
+        gameManager.instance.activeMenu = gameManager.instance.pauseMenu;
+        gameManager.instance.activeMenu.gameObject.SetActive(true);
+    }
     public void OpenCharacterStats()
     {
         gameManager.instance.activeMenu.gameObject.SetActive(false);
+        gameManager.instance.playerInventoryScript.isOpen = true;
+        gameManager.instance.previuslySelectedSlot = gameManager.instance.selectedSlot;
         gameManager.instance.activeMenu = gameManager.instance.CharacterStatsMenu;
         gameManager.instance.activeMenu.gameObject.SetActive(true);
     }

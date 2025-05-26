@@ -113,7 +113,7 @@ public class gameManager : MonoBehaviour
             selectedSlot.GetComponentInParent<SlotBackground>().UpdateSelection();
 
             playerInventoryScript.isOpen = false;
-            instance.playerInventory.SetActive(false);
+            instance.CharacterStatsMenu.SetActive(false);
             //***IMPLEMENT WHEN I ADD WEAPON ****
             //if (selectedSlot.GetComponentInParent<SlotBackground>().GetComponentInChildren<Slot>().GetItemType() == 10)
             //{
@@ -139,8 +139,8 @@ public class gameManager : MonoBehaviour
         if (!instance.isPaused)
         {
             //open Inventory and set as main
-            instance.playerInventory.SetActive(true);
-            instance.activeMenu = instance.playerInventory;
+            instance.CharacterStatsMenu.SetActive(true);
+            instance.activeMenu = instance.CharacterStatsMenu;
             instance.isPaused = true;
             instance.playerInventoryScript.isOpen = true;
             //NEED TO IMPLEMENT THIS IF WE ADD A BACK BUTTON ON THE MENU  ---------<===>
@@ -152,7 +152,7 @@ public class gameManager : MonoBehaviour
             //}           
             instance.PauseGame();
         }
-        else if (instance.activeMenu == instance.playerInventory)
+        else if (instance.activeMenu == instance.CharacterStatsMenu)
         {
             instance.UnPauseGame();
         }
