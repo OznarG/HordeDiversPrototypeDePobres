@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4201ab544c2dbe6418483ae1d40c49d8, type: 3}
-  m_Name: ItemSword
+  m_Name: ItemRawMeat
   m_EditorClassIdentifier: 
-  ID: 3
-  type: 5
-  itemName: Sword
-  description: SwordOneToAttack
-  stackMax: 1
+  ID: 50
+  type: 1
+  itemName: Raw Meat
+  description: Raw Meat
+  stackMax: 10
   usable: 1
   amountToAdd: 1
-  icon: {fileID: 21300000, guid: 0d7f4ec131922bc4fa14e5fb70e63f61, type: 3}
-  itemPrefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: cfdaebeaf678dcd479920a5a8e1be333, type: 3}
+  itemPrefab: {fileID: 8528224774734155097, guid: 1dfa2f7e95dd57a42a067d7eb9c0ded3, type: 3}
   weaponStats: {fileID: 0}
   slotType: 0

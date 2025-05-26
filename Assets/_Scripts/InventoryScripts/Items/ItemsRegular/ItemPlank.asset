@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4201ab544c2dbe6418483ae1d40c49d8, type: 3}
-  m_Name: ItemSword
+  m_Name: ItemPlank
   m_EditorClassIdentifier: 
-  ID: 3
-  type: 5
-  itemName: Sword
-  description: SwordOneToAttack
-  stackMax: 1
-  usable: 1
+  ID: 52
+  type: 2
+  itemName: Plank
+  description: Plank to build
+  stackMax: 15
+  usable: 0
   amountToAdd: 1
-  icon: {fileID: 21300000, guid: 0d7f4ec131922bc4fa14e5fb70e63f61, type: 3}
-  itemPrefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: 85da10547c8c5c04fa767ba4f30154c4, type: 3}
+  itemPrefab: {fileID: 2258137720046105952, guid: 6297677ca8a7f2543a5ad2f7d08613e4, type: 3}
   weaponStats: {fileID: 0}
   slotType: 0

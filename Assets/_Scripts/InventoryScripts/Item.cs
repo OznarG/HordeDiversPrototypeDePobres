@@ -6,11 +6,6 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     //this will take from scriptable object to be added into the inventory
-    //IDs
-    //-1 : SMG | -2 : Rifle | 5 : FirstAid | 50 : SMGAmmo | 51 : RifleAmmo | 100 : Upgrate Pieces |  -60 : sword
-    //200 is apple seed
-    //250 is tomatoe seed
-    //300 is punkim seed
     public int ID;
     //Types 2: Heals the character | Type 10: Weapons | Type 5: Ammo | 
     public ItemType type;
@@ -23,5 +18,7 @@ public class Item : ScriptableObject
     public GameObject itemPrefab;
     public ItemWeaponStats weaponStats;
     public SlotType slotType;
-
+    //ID 
+    //--Weapons--
+    
 }

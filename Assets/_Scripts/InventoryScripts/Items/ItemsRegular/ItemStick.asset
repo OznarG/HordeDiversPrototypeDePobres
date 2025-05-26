@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4201ab544c2dbe6418483ae1d40c49d8, type: 3}
-  m_Name: ItemSword
+  m_Name: ItemStick
   m_EditorClassIdentifier: 
-  ID: 3
-  type: 5
-  itemName: Sword
-  description: SwordOneToAttack
-  stackMax: 1
-  usable: 1
+  ID: 55
+  type: 2
+  itemName: Wood Stick
+  description: Wood Stick for Crafting
+  stackMax: 10
+  usable: 0
   amountToAdd: 1
-  icon: {fileID: 21300000, guid: 0d7f4ec131922bc4fa14e5fb70e63f61, type: 3}
-  itemPrefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: a5da0fea74d08784685bafbd653c53ba, type: 3}
+  itemPrefab: {fileID: 9095038499373956063, guid: 0312c6feebcd81c4bbf30d72a8a5bba0, type: 3}
   weaponStats: {fileID: 0}
   slotType: 0
