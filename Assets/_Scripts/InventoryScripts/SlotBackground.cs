@@ -11,7 +11,7 @@ public class SlotBackground : MonoBehaviour, IDropHandler
     [SerializeField] SlotType slotTypeTaker;
     public int SlotID;
     public bool selected;
-    private bool specialSlot;
+    [SerializeField] bool specialSlot;
 
     private void Awake()
     {
@@ -96,21 +96,23 @@ public class SlotBackground : MonoBehaviour, IDropHandler
     }
     private void SwitchItemsLocation(Slot sourceSlot) /* NEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE BACK HERE    */
     {
-        /*
-        //// Create a temporary Slot to add the child information
-        //// (cannot call new on objects inheriting from MonoBehavior, so no copy constructor)
-        //int tempID = child.GetID();
-        //ItemType tempType = child.GetItemType();
-        //string tempItemName = child.GetItemName();
-        //string tempDescription = child.GetItemDescription();
-        //int tempStackMax = child.GetItemStackMax();
-        //int tempStackAmount = child.GetItemStackAmount();
-        //Sprite tempIcon = child.GetItemIcon();
-        //GameObject tempItemPrefab = child.GetItemPrefab(); */
+
+        // Create a temporary Slot to add the child information
+        // (cannot call new on objects inheriting from MonoBehavior, so no copy constructor)
+        int tempID = child.GetID();
+        ItemType tempType = child.GetItemType();
+        string tempItemName = child.GetItemName();
+        string tempDescription = child.GetItemDescription();
+        int tempStackMax = child.GetItemStackMax();
+        int tempStackAmount = child.GetItemStackAmount();
+        Sprite tempIcon = child.GetItemIcon();
+        GameObject tempItemPrefab = child.GetItemPrefab();
+        ItemWeaponStats weaponStats = child.GetWeaponStats();
+        SlotType slotType = child.GetSlotType();
 
         Slot temp = child;
 
-        /*
+        
         //Set this child information to the source slot
         child.SetItemID(sourceSlot.GetID());
         child.SetItemType(sourceSlot.GetItemType());
@@ -119,11 +121,12 @@ public class SlotBackground : MonoBehaviour, IDropHandler
         child.SetItemStackMax(sourceSlot.GetItemStackMax());
         child.SetItemStackAmount(sourceSlot.GetItemStackAmount());
         child.SetItemIcon(sourceSlot.GetItemIcon());
-        child.SetItemPrefab(sourceSlot.GetItemPrefab()); */
+        child.SetItemPrefab(sourceSlot.GetItemPrefab()); 
+        child.SetWeaponStats(sourceSlot.GetWeaponStats());
+        child.SetSlotType(sourceSlot.GetSlotType());
+        //child = sourceSlot;
 
-        child = sourceSlot;
-
-        /*
+        
         //Set the source slot to the temporary slot from the child
         sourceSlot.SetItemID(tempID);
         sourceSlot.SetItemType(tempType);
@@ -132,9 +135,10 @@ public class SlotBackground : MonoBehaviour, IDropHandler
         sourceSlot.SetItemStackMax(tempStackMax);
         sourceSlot.SetItemStackAmount(tempStackAmount);
         sourceSlot.SetItemIcon(tempIcon);
-        sourceSlot.SetItemPrefab(tempItemPrefab); */
-
-        sourceSlot = temp;
+        sourceSlot.SetItemPrefab(tempItemPrefab);
+        sourceSlot.SetWeaponStats(weaponStats);
+        sourceSlot.SetSlotType(slotType);
+        //sourceSlot = temp;
 
         //Update both Slot
         child.UpdateSlot();
@@ -161,9 +165,13 @@ public class SlotBackground : MonoBehaviour, IDropHandler
             }
         }
         else
+        {
+            transform.GetComponent<Image>().color = Color.white;
             //if is not selected do nothing, Set it white
             gameManager.instance.thirdPersonPlayerController.currentWeapon.SetActive(false);
-            transform.GetComponent<Image>().color = gameManager.instance.backgroundColor;
+            
+        }
+
            
     }
 

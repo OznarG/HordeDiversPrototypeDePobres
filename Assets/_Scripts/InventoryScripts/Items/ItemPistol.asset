@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ItemPistol
   m_EditorClassIdentifier: 
   ID: 1
-  type: 2
+  type: 3
   itemName: Pistol
   description: Basic Gun
   stackMax: 1
@@ -21,3 +21,5 @@ MonoBehaviour:
   amountToAdd: 1
   icon: {fileID: 21300028, guid: 6674e8c43c63e4f4184cbd009379498d, type: 3}
   itemPrefab: {fileID: 4965438261709640327, guid: a35b8c32acba1334b9b31dfe8cdbc9be, type: 3}
+  weaponStats: {fileID: 0}
+  slotType: 0

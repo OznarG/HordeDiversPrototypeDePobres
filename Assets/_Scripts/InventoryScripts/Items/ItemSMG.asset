@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ItemSMG
   m_EditorClassIdentifier: 
   ID: 2
-  type: 2
+  type: 3
   itemName: SMG
   description: Machine Gun
   stackMax: 1
@@ -21,3 +21,5 @@ MonoBehaviour:
   amountToAdd: 1
   icon: {fileID: 21300024, guid: 6674e8c43c63e4f4184cbd009379498d, type: 3}
   itemPrefab: {fileID: 5786097810451525583, guid: 260ff1508afea5241b6511d8fbe92201, type: 3}
+  weaponStats: {fileID: 0}
+  slotType: 0

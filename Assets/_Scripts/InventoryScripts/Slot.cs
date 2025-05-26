@@ -209,6 +209,10 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     {
         return slotType;
     }
+    public ItemWeaponStats GetWeaponStats()
+    {
+        return weaponStats;
+    }
 
     // ----- setters -----
     public void SetItemID(int _ID)
@@ -250,6 +254,15 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     {
         itemPrefab = _prefab;
     }
+    public void SetSlotType(SlotType _slotType)
+    {
+         slotType = _slotType;
+    }
+    public void SetWeaponStats(ItemWeaponStats _weaponStats)
+    {
+         weaponStats = _weaponStats;
+    }
+
     #endregion
 
     #region Helper Functions

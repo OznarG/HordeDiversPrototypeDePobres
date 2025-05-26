@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ItemAppleSeed
   m_EditorClassIdentifier: 
   ID: 200
-  type: 3
+  type: 4
   itemName: Apple Seed
   description: Apple seed yes
   stackMax: 5
@@ -21,3 +21,5 @@ MonoBehaviour:
   amountToAdd: 1
   icon: {fileID: 21300000, guid: adaac68d8e5d693499597113889d11d3, type: 3}
   itemPrefab: {fileID: 0}
+  weaponStats: {fileID: 0}
+  slotType: 0

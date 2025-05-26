@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ItemKnife
   m_EditorClassIdentifier: 
   ID: 0
-  type: 4
+  type: 5
   itemName: Knife
   description: Basic Knife
   stackMax: 1
@@ -21,3 +21,5 @@ MonoBehaviour:
   amountToAdd: 1
   icon: {fileID: 21300038, guid: 6674e8c43c63e4f4184cbd009379498d, type: 3}
   itemPrefab: {fileID: 6440599648175510709, guid: c1ab9abedc9d80f4a9109fe99b4ea8d4, type: 3}
+  weaponStats: {fileID: 0}
+  slotType: 0
