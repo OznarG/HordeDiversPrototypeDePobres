@@ -12,9 +12,12 @@ public class SlotBackground : MonoBehaviour, IDropHandler
     public int SlotID;
     public bool selected;
     [SerializeField] bool specialSlot;
+    [SerializeField] Color slotColor;
 
     private void Awake()
     {
+       
+        
         selected = false;
         child = transform.GetComponentInChildren<Slot>();
     }
@@ -96,6 +99,7 @@ public class SlotBackground : MonoBehaviour, IDropHandler
     }
     private void SwitchItemsLocation(Slot sourceSlot) /* NEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE BACK HERE    */
     {
+        //NEED TO FIND OUT WHY THIS DIDN'T WORKED AS I EXPECTED
 
         // Create a temporary Slot to add the child information
         // (cannot call new on objects inheriting from MonoBehavior, so no copy constructor)
@@ -166,7 +170,7 @@ public class SlotBackground : MonoBehaviour, IDropHandler
         }
         else
         {
-            transform.GetComponent<Image>().color = Color.white;
+            transform.GetComponent<Image>().color = slotColor;
             //if is not selected do nothing, Set it white
             gameManager.instance.thirdPersonPlayerController.currentWeapon.SetActive(false);
             
