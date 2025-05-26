@@ -267,6 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -276,6 +277,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &6512976
@@ -748,6 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1001 &19658290
@@ -1062,6 +1065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &34193416
@@ -1549,6 +1553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -1558,6 +1563,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &59485807
@@ -2189,6 +2195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &81952406
@@ -2306,6 +2313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &81961082
@@ -2660,6 +2668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -2669,6 +2678,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &99202292
@@ -2786,6 +2796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &100065299
@@ -3169,6 +3180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &106663396
@@ -4432,6 +4444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -4441,6 +4454,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &159640487 stripped
@@ -4732,6 +4746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -4741,6 +4756,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &176383873
@@ -5114,6 +5130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &196644196
@@ -5367,6 +5384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1001 &256932221
@@ -5643,6 +5661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -5652,6 +5671,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &266922217
@@ -6234,6 +6254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &296118168
@@ -6497,6 +6518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &300926006
@@ -7380,6 +7402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &342335247
@@ -7742,6 +7765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1001 &374951180
@@ -8278,6 +8302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -8287,6 +8312,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &410087039
@@ -8958,6 +8984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!4 &436684709 stripped
@@ -9170,6 +9197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -9179,6 +9207,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &456190535
@@ -9601,6 +9630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -9610,6 +9640,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &479869332
@@ -9999,6 +10030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &495267545
@@ -10149,6 +10181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -10158,6 +10191,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &496843511
@@ -10401,6 +10435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &499910892
@@ -10518,6 +10553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &500523883
@@ -11873,6 +11909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -11882,6 +11919,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &553064605
@@ -11999,6 +12037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &554291287
@@ -12116,6 +12155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &559153749
@@ -12297,6 +12337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -12306,6 +12347,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &568534919
@@ -12785,6 +12827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -12794,6 +12837,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &591454871
@@ -12944,6 +12988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -12953,6 +12998,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!137 &593007953 stripped
@@ -13736,6 +13782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &662243137
@@ -13853,6 +13900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &669308275
@@ -14011,6 +14059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &678037393
@@ -14274,6 +14323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &689799312
@@ -14391,6 +14441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &690221623
@@ -14809,6 +14860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -14818,6 +14870,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &745364545
@@ -15108,6 +15161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -15117,6 +15171,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &757554949
@@ -15839,6 +15894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -15848,6 +15904,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &811737172
@@ -15965,6 +16022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &814913722
@@ -16115,6 +16173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -16124,6 +16183,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &817651282
@@ -16241,6 +16301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &823749464
@@ -16939,6 +17000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -16948,6 +17010,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &885558953
@@ -17201,6 +17264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &898297052
@@ -17453,6 +17517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &901549538
@@ -17816,6 +17881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -17825,6 +17891,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &922559610 stripped
@@ -18118,6 +18185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -18127,6 +18195,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &934767365
@@ -18277,6 +18346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -18286,6 +18356,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &935125676
@@ -18403,6 +18474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &935934197
@@ -18770,6 +18842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -18779,6 +18852,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &990182904
@@ -18896,6 +18970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &992496238
@@ -19222,6 +19297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -19231,6 +19307,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1002456810
@@ -19821,6 +19898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -19830,6 +19908,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1029751192
@@ -19980,6 +20059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -19989,6 +20069,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1040996632
@@ -20389,6 +20470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -20398,6 +20480,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &1054943518 stripped
@@ -20628,6 +20711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1071208029
@@ -20881,6 +20965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1074268204
@@ -20998,6 +21083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1075956695
@@ -21472,6 +21558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!4 &1099017110 stripped
@@ -21901,6 +21988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -21910,6 +21998,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1109036852
@@ -22548,6 +22637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1159307223
@@ -22984,6 +23074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1200809375
@@ -23406,6 +23497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -23415,6 +23507,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1212005382
@@ -23565,6 +23658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -23574,6 +23668,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &1219243568
@@ -23997,6 +24092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -24006,6 +24102,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1262523107
@@ -24156,6 +24253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -24165,6 +24263,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1268204717
@@ -24282,6 +24381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1279682344
@@ -24686,6 +24786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1306450422
@@ -24836,6 +24937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -24845,6 +24947,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1307872369
@@ -25380,6 +25483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1326423209
@@ -25633,6 +25737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1346223973
@@ -25750,6 +25855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1348445071
@@ -25900,6 +26006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -25909,6 +26016,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &1353666011
@@ -26343,6 +26451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -26352,6 +26461,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1363783007
@@ -26640,6 +26750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -26649,6 +26760,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1371677799
@@ -26799,6 +26911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -26808,6 +26921,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &1373203024 stripped
@@ -27008,6 +27122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1385758897
@@ -27615,6 +27730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -27624,6 +27740,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1431738417
@@ -28545,6 +28662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1469384083
@@ -29389,6 +29507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -29398,6 +29517,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1510287077
@@ -29906,6 +30026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -29915,6 +30036,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1536964570
@@ -30065,6 +30187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -30074,6 +30197,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &1544473819
@@ -30911,6 +31035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -30920,6 +31045,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &1577590812 stripped
@@ -31080,6 +31206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -31089,6 +31216,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1598824496
@@ -31206,6 +31334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1614398442
@@ -31459,6 +31588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1626612734
@@ -31756,6 +31886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -31765,6 +31896,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1652607604
@@ -32164,6 +32296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1662489270
@@ -32727,6 +32860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1001 &1687024613
@@ -32971,6 +33105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -32980,6 +33115,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1697832074
@@ -33097,6 +33233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1699026231
@@ -33114,7 +33251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1699026232
 Transform:
   m_ObjectHideFlags: 0
@@ -33424,6 +33561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -33433,6 +33571,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1704758768
@@ -33882,6 +34021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -33891,6 +34031,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1710993506
@@ -34041,6 +34182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -34050,6 +34192,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1720504763
@@ -34303,6 +34446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1731977467
@@ -34982,6 +35126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -34991,6 +35136,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1766087482
@@ -35139,6 +35285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1776182089
@@ -35320,6 +35467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -35329,6 +35477,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &1779452259 stripped
@@ -35938,6 +36087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -35947,6 +36097,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1817098995
@@ -36064,6 +36215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1001 &1849995513
@@ -36374,6 +36526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1855317273
@@ -36524,6 +36677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -36533,6 +36687,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1872544619
@@ -36819,6 +36974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -36828,6 +36984,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1874374639
@@ -37089,6 +37246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -37098,6 +37256,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1887291075
@@ -37215,6 +37374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!4 &1889649049 stripped
@@ -37370,6 +37530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -37379,6 +37540,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1893360431
@@ -37571,6 +37733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1909702159
@@ -37688,6 +37851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1921248874
@@ -38098,6 +38262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1947998112
@@ -38248,6 +38413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -38257,6 +38423,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &1957374094 stripped
@@ -38412,6 +38579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -38421,6 +38589,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1959410119
@@ -38613,6 +38782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1976971521
@@ -38730,6 +38900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1981466730
@@ -38880,6 +39051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -38889,6 +39061,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &1985733101 stripped
@@ -39044,6 +39217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -39053,6 +39227,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1997343960
@@ -39481,6 +39656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &2041169590
@@ -39598,6 +39774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &2049939916
@@ -39748,6 +39925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &2054879145
@@ -40167,6 +40345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -40176,6 +40355,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &2079864983
@@ -40293,6 +40473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &2086099841
@@ -40546,6 +40727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1001 &2092879925
@@ -41082,6 +41264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -41091,6 +41274,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &2107382680
@@ -41241,6 +41425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -41250,6 +41435,7 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &2108298681
@@ -47985,6 +48171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &1786108488264776299
@@ -72558,6 +72745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -72567,6 +72755,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &6600911735430015589
@@ -74406,6 +74595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   type: 0
+  slotType: 0
   itemName: 
   description: 
   stackMax: 0
@@ -74415,6 +74605,7 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
+  weaponStats: {fileID: 0}
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &8496395423241968452
@@ -74679,6 +74870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 0}
+  slotTypeTaker: 0
   SlotID: 0
   selected: 0
 --- !u!1 &8637829192640435689
