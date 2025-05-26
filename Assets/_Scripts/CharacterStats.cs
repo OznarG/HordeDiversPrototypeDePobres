@@ -17,6 +17,8 @@ public class CharacterStats : MonoBehaviour, IDamage
     public int maxHealth;
     public float speed;
     public float attackRate;
+    public float attackSpeed;
+    public int attackType;
 
     [Header("--- Movement Stats ---")]
     public float playerFaceSpeed;

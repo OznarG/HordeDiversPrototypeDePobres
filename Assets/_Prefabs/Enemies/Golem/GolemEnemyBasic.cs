@@ -15,6 +15,7 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
     [SerializeField] bool stopAgent;
     private Vector3 playerDir;
     [SerializeField] Transform headPos;
+    internal object anim;
 
     private void Awake()
     {
@@ -124,6 +125,16 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
         }
         else
         {
+            if(characterStats.attackType == 1)
+            {
+                characterStats.attackType = 0;
+            }
+            else
+            {
+                characterStats.attackType = 1;
+            }
+            characterStats.animator.SetInteger("attackNext", characterStats.attackType);
+            characterStats.animator.SetFloat("attackSpeed", characterStats.attackSpeed);
             characterStats.onAttackCoolDown = true;
             characterStats.animator.SetTrigger("AttackRight");
         }

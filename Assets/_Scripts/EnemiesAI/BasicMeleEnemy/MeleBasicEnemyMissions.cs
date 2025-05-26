@@ -154,6 +154,7 @@ namespace BasicEnemyMeleMissions
             {
                 if(enemy.onAttackCoolDown == false)
                 {
+                    enemy.anim.SetFloat("attackSpeed", enemy.characterStats.attackSpeed);
                     enemy.AttackMelle();
                     enemy.onAttackCoolDown = true;
                     wait = 0;
@@ -633,6 +634,7 @@ namespace BasicEnemyGolemMissions
             {
                 if (enemy.characterStats.onAttackCoolDown == false)
                 {
+                   
                     enemy.AttackMelle();
                     enemy.characterStats.onAttackCoolDown = true;
                     wait = 0;
