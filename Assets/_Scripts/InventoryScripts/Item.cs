@@ -21,6 +21,7 @@ public class Item : ScriptableObject
     public int amountToAdd;
     public Sprite icon;
     public GameObject itemPrefab;
-
+    public ItemWeaponStats weaponStats;
+    public SlotType slotType;
 
 }

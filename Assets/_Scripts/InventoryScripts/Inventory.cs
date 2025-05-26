@@ -43,7 +43,7 @@ public class Inventory : MonoBehaviour
             if (invSlot.GetItemStackMax() == 0)
             {
                 invSlot.IncrementStackBy(1);
-                invSlot.AddItemToSlot(stats.ID, stats.type, stats.itemName, stats.description, stats.stackMax, stats.icon, stats.itemPrefab, stats.amountToAdd, stats.usable);
+                invSlot.AddItemToSlot(stats.ID, stats.type, stats.itemName, stats.description, stats.stackMax, stats.icon, stats.itemPrefab, stats.amountToAdd, stats.usable, stats.weaponStats, stats.slotType);
                 invSlot.UpdateSlot();
                 gameManager.instance.inventoryAud.PlayOneShot(gameManager.instance.pickup);
                 return true;

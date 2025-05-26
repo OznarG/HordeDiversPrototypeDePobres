@@ -14,6 +14,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     [Header("Item Information")]
     [SerializeField] int ID;
     [SerializeField] ItemType type;
+    [SerializeField] SlotType slotType;
     [SerializeField] string itemName;
     [SerializeField] string description;
     [SerializeField] int stackMax;
@@ -122,6 +123,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
             addAmount = 0;
             usable = false;
             weaponStats = null;
+            slotType = SlotType.Regular;
         }
         else
         {
@@ -203,6 +205,10 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
         return usable;
     }
 
+    public SlotType GetSlotType()
+    {
+        return slotType;
+    }
 
     // ----- setters -----
     public void SetItemID(int _ID)
@@ -264,7 +270,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
         return stackMax - stackAmount;
     }
 
-    public void AddItemToSlot(int _ID, ItemType _type, string _itemName, string _description, int _stackMax, Sprite _icon, GameObject _itemPrefab, int _addAmount, bool _usable, ItemWeaponStats _weaponStats)
+    public void AddItemToSlot(int _ID, ItemType _type, string _itemName, string _description, int _stackMax, Sprite _icon, GameObject _itemPrefab, int _addAmount, bool _usable, ItemWeaponStats _weaponStats, SlotType _slotType)
     {
         ID = _ID;
         type = _type;
@@ -276,6 +282,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
         addAmount = _addAmount;
         usable = _usable;
         weaponStats = _weaponStats;
+        slotType = _slotType;
     }
     #endregion
 

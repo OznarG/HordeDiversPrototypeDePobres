@@ -8,62 +8,109 @@ using UnityEngine.UI;
 public class SlotBackground : MonoBehaviour, IDropHandler
 {
     [SerializeField] private Slot child;
+    [SerializeField] SlotType slotTypeTaker;
     public int SlotID;
     public bool selected;
+    private bool specialSlot;
 
     private void Awake()
     {
         selected = false;
         child = transform.GetComponentInChildren<Slot>();
     }
-
     public void OnDrop(PointerEventData eventData)
     {
+        
         //Get the slot component of the image that the Cursor is grabbing, then calculate how much free space to stack it has
         Slot sourceSlot = eventData.pointerDrag.GetComponent<Slot>();
-        int freeSpace = child.GetFreeSpace();
-        //If the item you grabing is equals to the item below it
-        if (child.GetID() == sourceSlot.GetID())
+        if (specialSlot)
         {
-            //If it can hold all items that were grabbed
-            if (freeSpace >= sourceSlot.GetItemStackAmount())
+            if (slotTypeTaker == sourceSlot.GetSlotType()) 
             {
-                //Add all stock amount, delete item from source slot, Update the Slot(run checks etc), Update the source slote too
-                child.IncrementStackBy(sourceSlot.GetItemStackAmount());
-                sourceSlot.DecrementStackBy(sourceSlot.GetItemStackAmount());
-                child.UpdateSlot();
-                sourceSlot.UpdateSlot();
+                int freeSpace = child.GetFreeSpace();
+                //If the item you grabing is equals to the item below it
+                if (child.GetID() == sourceSlot.GetID())
+                {
+                    //If it can hold all items that were grabbed
+                    if (freeSpace >= sourceSlot.GetItemStackAmount())
+                    {
+                        //Add all stock amount, delete item from source slot, Update the Slot(run checks etc), Update the source slote too
+                        child.IncrementStackBy(sourceSlot.GetItemStackAmount());
+                        sourceSlot.DecrementStackBy(sourceSlot.GetItemStackAmount());
+                        child.UpdateSlot();
+                        sourceSlot.UpdateSlot();
+                    }
+                    //If not all items fit
+                    else
+                    {
+                        //Fill it to max, subtract what you place on the child slot from the source slot, update both slots
+                        child.IncrementStackBy(freeSpace);
+                        sourceSlot.DecrementStackBy(freeSpace);
+                        child.UpdateSlot();
+                        sourceSlot.UpdateSlot();
+                    }
+                }
+                //If the items are not the same
+                else
+                {
+                    //Swap items location
+                    SwitchItemsLocation(sourceSlot);
+                }
             }
-            //If not all items fit
+        }
+        else
+        {           
+            int freeSpace = child.GetFreeSpace();
+            //If the item you grabing is equals to the item below it
+            if (child.GetID() == sourceSlot.GetID())
+            {
+                //If it can hold all items that were grabbed
+                if (freeSpace >= sourceSlot.GetItemStackAmount())
+                {
+                    //Add all stock amount, delete item from source slot, Update the Slot(run checks etc), Update the source slote too
+                    child.IncrementStackBy(sourceSlot.GetItemStackAmount());
+                    sourceSlot.DecrementStackBy(sourceSlot.GetItemStackAmount());
+                    child.UpdateSlot();
+                    sourceSlot.UpdateSlot();
+                }
+                //If not all items fit
+                else
+                {
+                    //Fill it to max, subtract what you place on the child slot from the source slot, update both slots
+                    child.IncrementStackBy(freeSpace);
+                    sourceSlot.DecrementStackBy(freeSpace);
+                    child.UpdateSlot();
+                    sourceSlot.UpdateSlot();
+                }
+            }
+            //If the items are not the same
             else
             {
-                //Fill it to max, subtract what you place on the child slot from the source slot, update both slots
-                child.IncrementStackBy(freeSpace);
-                sourceSlot.DecrementStackBy(freeSpace);
-                child.UpdateSlot();
-                sourceSlot.UpdateSlot();
+                //Swap items location
+                SwitchItemsLocation(sourceSlot);
             }
+            
         }
-        //If the items are not the same
-        else
-        {
-            //Swap items location
-            SwitchItemsLocation(sourceSlot);
-        }
+        
+        
     }
     private void SwitchItemsLocation(Slot sourceSlot) /* NEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE BACK HERE    */
     {
-        // Create a temporary Slot to add the child information
-        // (cannot call new on objects inheriting from MonoBehavior, so no copy constructor)
-        int tempID = child.GetID();
-        ItemType tempType = child.GetItemType();
-        string tempItemName = child.GetItemName();
-        string tempDescription = child.GetItemDescription();
-        int tempStackMax = child.GetItemStackMax();
-        int tempStackAmount = child.GetItemStackAmount();
-        Sprite tempIcon = child.GetItemIcon();
-        GameObject tempItemPrefab = child.GetItemPrefab();
+        /*
+        //// Create a temporary Slot to add the child information
+        //// (cannot call new on objects inheriting from MonoBehavior, so no copy constructor)
+        //int tempID = child.GetID();
+        //ItemType tempType = child.GetItemType();
+        //string tempItemName = child.GetItemName();
+        //string tempDescription = child.GetItemDescription();
+        //int tempStackMax = child.GetItemStackMax();
+        //int tempStackAmount = child.GetItemStackAmount();
+        //Sprite tempIcon = child.GetItemIcon();
+        //GameObject tempItemPrefab = child.GetItemPrefab(); */
 
+        Slot temp = child;
+
+        /*
         //Set this child information to the source slot
         child.SetItemID(sourceSlot.GetID());
         child.SetItemType(sourceSlot.GetItemType());
@@ -72,8 +119,11 @@ public class SlotBackground : MonoBehaviour, IDropHandler
         child.SetItemStackMax(sourceSlot.GetItemStackMax());
         child.SetItemStackAmount(sourceSlot.GetItemStackAmount());
         child.SetItemIcon(sourceSlot.GetItemIcon());
-        child.SetItemPrefab(sourceSlot.GetItemPrefab());
+        child.SetItemPrefab(sourceSlot.GetItemPrefab()); */
 
+        child = sourceSlot;
+
+        /*
         //Set the source slot to the temporary slot from the child
         sourceSlot.SetItemID(tempID);
         sourceSlot.SetItemType(tempType);
@@ -82,7 +132,9 @@ public class SlotBackground : MonoBehaviour, IDropHandler
         sourceSlot.SetItemStackMax(tempStackMax);
         sourceSlot.SetItemStackAmount(tempStackAmount);
         sourceSlot.SetItemIcon(tempIcon);
-        sourceSlot.SetItemPrefab(tempItemPrefab);
+        sourceSlot.SetItemPrefab(tempItemPrefab); */
+
+        sourceSlot = temp;
 
         //Update both Slot
         child.UpdateSlot();
