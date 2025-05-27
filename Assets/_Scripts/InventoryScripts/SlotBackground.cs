@@ -58,7 +58,8 @@ public class SlotBackground : MonoBehaviour, IDropHandler
                 {
                     //Swap items location
                     SwitchItemsLocation(sourceSlot);
-                }
+                }                           
+                                  
             }
         }
         else
@@ -94,8 +95,9 @@ public class SlotBackground : MonoBehaviour, IDropHandler
             }
             
         }
-        
-        
+        //Maybe needs better why of doing this 
+        gameManager.instance.thirdPersonPlayerController.UpdateEquipSlot();
+
     }
     private void SwitchItemsLocation(Slot sourceSlot) /* NEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE BACK HERE    */
     {

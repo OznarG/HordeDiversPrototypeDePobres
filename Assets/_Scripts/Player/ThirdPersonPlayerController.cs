@@ -15,12 +15,14 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     [SerializeField] CharacterController characterController;
     public Animator playerAnim;
     [SerializeField] ParticleSystem particleLvlUp;
+
     [Header("--- Combat Stats ---")]
     public float meleDamage;
     public float meleAttackSpeed;
     public bool attacking;
     public bool restrictedByAnimation;
     public bool rolling;
+
     [Header("--- Movement Stats ---")]
     [SerializeField] float rotationSpeed;
     [SerializeField] float moveSpeed;
@@ -31,19 +33,27 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     [SerializeField] float rollingSpeedMul;
     private Vector3 lastPosition;
     Vector3 inputDir;
+
     [Header("--- Player States ---")]
     public bool playerDead;
     public bool isgrouded;
     public bool canShoot;
     [SerializeField] bool canMove = true;
+
     [Header("----- Player Belt -----")]
     public int beltAmount;
     [SerializeField] GameObject belt;
     public GameObject[] playerBelt;
     public int currentBeltSelection;
+
     [Header("--- Player Weapons ---")]
     public GameObject currentWeapon;
     public GameObject[] playerWeapons;
+    public Image equipOneImage;
+    public Image equipTwoImage;
+    public Slot equipSlotOne;
+    public Slot equipSlotTwo;
+
     [Header("--- Player Use Stats")]
     [SerializeField] float health;
     [SerializeField] float maxHealth = 100;
@@ -55,6 +65,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     [SerializeField] float maxExpNeeded;
     [SerializeField] int level;
     [SerializeField] int upgradePoints;
+
     [Header("--- Player Bars ---")]
     [SerializeField] Image HealthBar;
     [SerializeField] Image ManaBar;
@@ -120,6 +131,12 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
             health = 0;
         }
         UpdateHealthBar();
+    }
+
+    public void UpdateEquipSlot()
+    {
+        equipOneImage.sprite = equipSlotOne.GetItemIcon();
+        equipTwoImage.sprite = equipSlotTwo.GetItemIcon();
     }
 
     #region ---Movement and gravty---
