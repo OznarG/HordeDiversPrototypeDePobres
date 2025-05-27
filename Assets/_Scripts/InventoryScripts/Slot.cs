@@ -61,7 +61,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
             if(!gameManager.instance.thirdPersonPlayerController.IsAttacking())
             {
                 //NEED BETTER WAY OF DOING THIS
-                if (gameManager.instance.thirdPersonPlayerController.currentWeapon == gameManager.instance.thirdPersonPlayerController.playerWeapons[4])
+                if (gameManager.instance.thirdPersonPlayerController.currentWeapon == gameManager.instance.thirdPersonPlayerController.playerWeapons[5])
                 {
                     gameManager.instance.thirdPersonPlayerController.playerAnim.SetFloat("attackSpeed", gameManager.instance.thirdPersonPlayerController.meleAttackSpeed);
                     gameManager.instance.thirdPersonPlayerController.Attacking();
