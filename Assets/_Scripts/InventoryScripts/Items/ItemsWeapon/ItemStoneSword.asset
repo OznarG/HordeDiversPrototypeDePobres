@@ -22,4 +22,4 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 97f39a6d32594484d8d07f54fd7cd247, type: 3}
   itemPrefab: {fileID: 9113066595247044023, guid: c8f49345dcb72c142a37bfa42730c3d0, type: 3}
   weaponStats: {fileID: 0}
-  slotType: 0
+  slotType: 2

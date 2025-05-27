@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIn: 0
-  thisItem: {fileID: 11400000, guid: c3615992f247e4f47910f4a8ed32327a, type: 2}
+  thisItem: {fileID: 11400000, guid: a86f5cac5418cc946bd1fb9b1f3e54de, type: 2}
 --- !u!1 &3255429039218791192
 GameObject:
   m_ObjectHideFlags: 0
