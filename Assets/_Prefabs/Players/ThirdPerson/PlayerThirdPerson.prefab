@@ -240,7 +240,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 259618227230037836}
   - {fileID: 5041543005742988674}
-  - {fileID: 259618227230037836}
+  - {fileID: 5630387024262489488}
   - {fileID: 259618227230037836}
   - {fileID: 259618227230037836}
   - {fileID: 259618227230037836}
@@ -311,10 +311,7 @@ Animator:
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'Armature'\n\tTransform 'Armature'\n\tTransform
-    'Armature'\n\tFrom animation clip 'slash1_Baked'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -14138,6 +14135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6731981540873609048}
+  - component: {fileID: 8605669068316205913}
   - component: {fileID: 7858628851041276825}
   - component: {fileID: 2614363193372997239}
   - component: {fileID: 1759165811156973619}
@@ -14163,6 +14161,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1852037830690737390}
   m_LocalEulerAnglesHint: {x: -4.626, y: 0, z: -151.895}
+--- !u!114 &8605669068316205913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5630387024262489488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d158dd18638135b42982b075c2166caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &7858628851041276825
 MeshFilter:
   m_ObjectHideFlags: 0

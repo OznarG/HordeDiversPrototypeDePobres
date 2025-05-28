@@ -48,7 +48,9 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
 
     [Header("--- Player Weapons ---")]
     public GameObject currentWeapon;
+    public Collider currentCollider;
     public GameObject[] playerWeapons;
+    public Collider[] weaponsColliders;
     public Image equipOneImage;
     public Image equipTwoImage;
     public Slot equipSlotOne;
@@ -81,7 +83,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         moveSpeed = walkSpeed;
         playerAnim.SetFloat("attackSpeed", meleAttackSpeed);
         rollingSpeed = walkSpeed + 3;
-        SetPlayerBelt();
+        SetPlayerBelt();       
     }
     private void Update()
     {
@@ -98,10 +100,11 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
             HandleMovement(velocity);
             HandleGravity(velocity);
 
-            if (Input.GetButton("Fire1") && rolling == false)
+            if (Input.GetButton("Fire1") && rolling == false && !gameManager.instance.isPaused && currentWeapon.activeSelf)
             {
                 //Need to change the Slot to an actual slot because GetComponent is expensive
-                gameManager.instance.selectedSlot.GetComponent<Slot>().UseItem();
+
+                equipSlotOne.UseItem();
             }
             if(Input.GetButton("Jump") && !rolling && !restrictedByAnimation)
             {
@@ -204,10 +207,12 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     #region ---Animation Functions---
     public void Attacking()
     {
+        
         attacking = true;
     }
     public void NotAttacking()
     {
+        
         attacking = false;
     }
     public void EndRestrictByAnimation()
@@ -236,6 +241,15 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public void DoneUsingTool()
     {
         canMove = true;
+    }
+
+    public void OnCollider()
+    {
+        currentCollider.enabled = true;
+    }
+    public void OffCollider()
+    {
+        currentCollider.enabled = false;
     }
     #endregion
 
@@ -322,7 +336,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
             if (playerBeltSlot.GetItemStackAmount() == 0)
             {
                 playerBeltSlot.IncrementStackBy(1);
-                playerBeltSlot.AddItemToSlot(stats.ID, stats.type, stats.itemName, stats.description, stats.stackMax, stats.icon, stats.itemPrefab, stats.amountToAdd, stats.usable, stats.weaponStats, stats.slotType, stats.weaponLevel, stats.damage, stats.strength, stats.speed, stats._name, stats.index);
+                playerBeltSlot.AddItemToSlot(stats.ID, stats.type, stats.itemName, stats.description, stats.stackMax, stats.icon, stats.itemPrefab, stats.amountToAdd, stats.usable, stats.slotType, stats.weaponLevel, stats.damage, stats.strength, stats.speed, stats._name, stats.index);
                 playerBeltSlot.UpdateSlot();
                 gameManager.instance.inventoryAud.PlayOneShot(gameManager.instance.pickup);
                 return true;
@@ -342,11 +356,23 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
 
     public void SelectEquipOne()
     {
+        if(currentWeapon.activeSelf)
+        {
+            currentWeapon.SetActive(false);
+        }
+        else
+        {
+            currentWeapon.SetActive(false);
+            currentWeapon = playerWeapons[equipSlotOne.GetWeaponIndex()];
+            currentCollider = weaponsColliders[equipSlotOne.GetWeaponIndex()];
+            currentWeapon.SetActive(true);
+        }
 
+        
     }
     public void SelectEquipTwo()
     {
-
+        Debug.Log("Not method for secodn equip yet");
     }
     #endregion
 

@@ -391,7 +391,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &11681486
@@ -3742,7 +3747,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &176383873
@@ -3979,7 +3989,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &186572131
@@ -4753,7 +4768,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &266922217
@@ -5272,7 +5292,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &283520911
@@ -5806,7 +5831,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &303179450
@@ -7080,7 +7110,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &382342594
@@ -8406,7 +8441,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &469379379
@@ -8687,7 +8727,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &475256654
@@ -9521,7 +9566,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &496843511
@@ -9808,7 +9858,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &500523883
@@ -11152,7 +11207,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &553064605
@@ -12049,7 +12109,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &591454871
@@ -12210,7 +12275,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!137 &593007953 stripped
@@ -13129,7 +13199,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &658470182
@@ -13571,6 +13646,11 @@ Transform:
   - {fileID: 1776182090}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &672149353 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2849080529449748795, guid: edb934698097a914eab5eddea3c29475, type: 3}
+  m_PrefabInstance: {fileID: 6080827224903844305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &679058443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8297746083323331988, guid: f4c9d44bc79701e488ef50e2a531c10a, type: 3}
@@ -14200,7 +14280,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &737125142
@@ -14361,7 +14446,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &742339586
@@ -14522,7 +14612,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &745364545
@@ -14823,7 +14918,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &751647567
@@ -15853,7 +15953,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &811737172
@@ -16134,7 +16239,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &817651282
@@ -17668,7 +17778,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &894171753
@@ -18800,7 +18915,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &936441877
@@ -18961,7 +19081,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &943081947
@@ -19339,7 +19464,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &992496238
@@ -19676,7 +19806,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1002456810
@@ -20261,7 +20396,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1029751192
@@ -20422,7 +20562,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1032820281
@@ -20583,7 +20728,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1040996632
@@ -21130,7 +21280,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &1054943518 stripped
@@ -21780,7 +21935,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1075956695
@@ -22082,7 +22242,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1089126830
@@ -23009,7 +23174,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &1126476378
@@ -23660,7 +23830,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1159307223
@@ -24124,7 +24299,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1188472501
@@ -24285,7 +24465,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &1195838194
@@ -25031,7 +25216,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1211492390
@@ -25448,7 +25638,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &1219243568
@@ -25699,7 +25894,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1235418070
@@ -26208,7 +26408,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1257469628
@@ -26641,7 +26846,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1279682344
@@ -27089,7 +27299,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &1309090163
@@ -27780,7 +27995,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1346223973
@@ -28061,7 +28281,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &1353666011
@@ -28644,7 +28869,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1371677799
@@ -28805,7 +29035,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &1373203024 stripped
@@ -29939,7 +30174,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1431486844
@@ -30100,7 +30340,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1431738417
@@ -31339,7 +31584,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1498573264
@@ -32069,7 +32319,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1536964570
@@ -32230,7 +32485,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1541426955
@@ -32584,7 +32844,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1561556289
@@ -33505,7 +33770,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1621983752
@@ -34429,7 +34699,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1639905451
@@ -36060,7 +36335,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1697832074
@@ -36937,7 +37217,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1720504763
@@ -38133,7 +38418,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1776182089
@@ -38643,7 +38933,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &1815257122 stripped
@@ -39049,7 +39344,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1833990377
@@ -39659,7 +39959,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1001 &1867384111
@@ -40149,7 +40454,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1874374639
@@ -40421,7 +40731,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1883252554
@@ -40895,7 +41210,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1933112598
@@ -41202,7 +41522,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1948778868
@@ -41363,7 +41688,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &1957374094 stripped
@@ -41529,7 +41859,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1976971521
@@ -41951,7 +42286,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &1997343960
@@ -44297,7 +44637,12 @@ MonoBehaviour:
   defaultImage: {fileID: 21300000, guid: d1b9a5efba09a8945b35c6489984447f, type: 3}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &60282183060333531
@@ -44499,9 +44844,9 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &288751652104678815 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5630387024262489488, guid: edb934698097a914eab5eddea3c29475, type: 3}
+--- !u!65 &288751652104678817 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1759165811156973619, guid: edb934698097a914eab5eddea3c29475, type: 3}
   m_PrefabInstance: {fileID: 6080827224903844305}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &303711020787691280
@@ -55549,9 +55894,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerThirdPerson
       objectReference: {fileID: 0}
-    - target: {fileID: 207396494693409858, guid: edb934698097a914eab5eddea3c29475, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 259618227230037836, guid: edb934698097a914eab5eddea3c29475, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1617105687009325979, guid: edb934698097a914eab5eddea3c29475, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55593,9 +55938,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5781320868927553721, guid: edb934698097a914eab5eddea3c29475, type: 3}
-      propertyPath: m_WarningMessage
-      value: 
+    - target: {fileID: 1759165811156973619, guid: edb934698097a914eab5eddea3c29475, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849080529449748795, guid: edb934698097a914eab5eddea3c29475, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630387024262489488, guid: edb934698097a914eab5eddea3c29475, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
       propertyPath: belt
@@ -55634,6 +55987,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 765406296}
     - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
+      propertyPath: playerWeapons.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
       propertyPath: 'playerWeapons.Array.data[0]'
       value: 
       objectReference: {fileID: 919132149173898083}
@@ -55646,9 +56003,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 919132149173898083}
     - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
-      propertyPath: 'playerWeapons.Array.data[5]'
+      propertyPath: weaponsColliders.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
+      propertyPath: 'weaponsColliders.Array.data[3]'
       value: 
-      objectReference: {fileID: 288751652104678815}
+      objectReference: {fileID: 672149353}
+    - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
+      propertyPath: 'weaponsColliders.Array.data[5]'
+      value: 
+      objectReference: {fileID: 288751652104678817}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -56105,7 +56470,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!4 &6600911735430015589
@@ -57579,6 +57949,34 @@ PrefabInstance:
       propertyPath: 'waypoints.Array.data[3]'
       value: 
       objectReference: {fileID: 1776182090}
+    - target: {fileID: 4578611820300732348, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578611820300732348, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693460588165548777, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693460588165548777, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649853134165061212, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064559302387375331, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375083535877957607, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9028474454142424417, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
       propertyPath: attackSpeed
       value: 0.4
@@ -58047,7 +58445,12 @@ MonoBehaviour:
   defaultImage: {fileID: 0}
   addAmount: 0
   usable: 0
-  weaponStats: {fileID: 0}
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0
   selected: 0
   canvas: {fileID: 8876391822784956042}
 --- !u!1 &8496395423241968452

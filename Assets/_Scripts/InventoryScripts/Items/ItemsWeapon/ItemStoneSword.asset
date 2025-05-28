@@ -23,3 +23,9 @@ MonoBehaviour:
   itemPrefab: {fileID: 9113066595247044023, guid: c8f49345dcb72c142a37bfa42730c3d0, type: 3}
   weaponStats: {fileID: 0}
   slotType: 2
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 5

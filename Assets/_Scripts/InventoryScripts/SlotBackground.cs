@@ -182,14 +182,14 @@ public class SlotBackground : MonoBehaviour, IDropHandler
             //Add description into the description area
             //gameManager.instance.playerScript.itemDescription.text =
             //   "Descrition: \n" + child.GetItemDescription();
-            if (WeaponOnHand())
-            {
-                gameManager.instance.thirdPersonPlayerController.currentWeapon.SetActive(false);
-                int indexWeapon = gameManager.instance.selectedSlot.GetComponentInParent<SlotBackground>().GetComponentInChildren<Slot>().GetID();
-                gameManager.instance.thirdPersonPlayerController.currentWeapon = gameManager.instance.thirdPersonPlayerController.playerWeapons[indexWeapon];
-                gameManager.instance.thirdPersonPlayerController.currentWeapon.SetActive(true);
-                Debug.Log("SE supone que se active el " + gameManager.instance.thirdPersonPlayerController.currentWeapon);
-            }
+            //if (WeaponOnHand())
+            //{
+            //    gameManager.instance.thirdPersonPlayerController.currentWeapon.SetActive(false);
+            //    int indexWeapon = gameManager.instance.selectedSlot.GetComponentInParent<SlotBackground>().GetComponentInChildren<Slot>().GetID();
+            //    gameManager.instance.thirdPersonPlayerController.currentWeapon = gameManager.instance.thirdPersonPlayerController.playerWeapons[indexWeapon];
+            //    gameManager.instance.thirdPersonPlayerController.currentWeapon.SetActive(true);
+            //    Debug.Log("SE supone que se active el " + gameManager.instance.thirdPersonPlayerController.currentWeapon);
+            //}
         }
         else
         {

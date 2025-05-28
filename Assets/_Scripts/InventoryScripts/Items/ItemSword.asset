@@ -23,3 +23,9 @@ MonoBehaviour:
   itemPrefab: {fileID: 0}
   weaponStats: {fileID: 0}
   slotType: 2
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 3
