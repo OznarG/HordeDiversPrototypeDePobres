@@ -24,6 +24,14 @@ public class InventoryControllerThirdPerson : MonoBehaviour
             gameManager.instance.selectedSlot.GetComponentInParent<SlotBackground>().selected = true;
             gameManager.instance.selectedSlot.GetComponentInParent<SlotBackground>().UpdateSelection();
         }
+        if(Input.GetKey(KeyCode.Alpha1)) 
+        {
+
+        }
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+
+        }
     }
 
 }

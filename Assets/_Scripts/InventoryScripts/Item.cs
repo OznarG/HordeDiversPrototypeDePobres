@@ -20,5 +20,11 @@ public class Item : ScriptableObject
     public SlotType slotType;
     //ID 
     //--Weapons--
-    
+    [Header("Item Weapon")]
+    public int weaponLevel;
+    public float damage;
+    public float strength;
+    public float speed;
+    public string _name;
+    public int index;
 }

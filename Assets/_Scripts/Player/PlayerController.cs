@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
             if (playerBelt[i].GetComponent<Slot>().GetItemStackAmount() == 0)
             {
                 playerBelt[i].GetComponent<Slot>().IncrementStackBy(1);
-                playerBelt[i].GetComponent<Slot>().AddItemToSlot(stats.ID, stats.type, stats.itemName, stats.description, stats.stackMax, stats.icon, stats.itemPrefab, stats.amountToAdd, stats.usable, stats.weaponStats, stats.slotType);
+                playerBelt[i].GetComponent<Slot>().AddItemToSlot(stats.ID, stats.type, stats.itemName, stats.description, stats.stackMax, stats.icon, stats.itemPrefab, stats.amountToAdd, stats.usable, stats.slotType, stats.weaponLevel, stats.damage, stats.strength, stats.speed, stats._name, stats.index);
                 playerBelt[i].GetComponent<Slot>().UpdateSlot();
                 gameManager.instance.inventoryAud.PlayOneShot(gameManager.instance.pickup);
                 return true;

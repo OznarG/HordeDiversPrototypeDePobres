@@ -24,7 +24,14 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     [SerializeField] Sprite defaultImage;
     [SerializeField] int addAmount;
     [SerializeField] bool usable;
-    [SerializeField] ItemWeaponStats weaponStats;
+
+    [Header("Item Weapon")]
+    [SerializeField] int weaponLevel;
+    [SerializeField] float damage;
+    [SerializeField] float strength;
+    [SerializeField] float speed;
+    [SerializeField] string _name;
+    [SerializeField] int index;
 
     [Header("Slot Information")]
     [SerializeField] bool selected;
@@ -124,6 +131,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
             //Set everything to default(empty) ID = 0 is a empty Slot
             this.GetComponent<Image>().sprite = defaultImage;
             //defaultImage.GetComponent<Image>().color = Color.black;
+
             this.GetComponentInChildren<TMP_Text>().text = " ";
             ID = 0;
             type = ItemType.Empty;
@@ -134,15 +142,20 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
             itemPrefab = null;
             addAmount = 0;
             usable = false;
-            weaponStats = null;
             slotType = SlotType.Regular;
+
+            copyWeapongStats(0, 0, 0, 0, " ", 0);
         }
         else
         {
             //Set the visual to the item placed on top and update the ammount text
             //Why how does it know or were was the icon changed? It is changed on the SlotBacground Script int SwitchItemsLocation function
             this.GetComponent<Image>().sprite = icon;
-            this.GetComponentInChildren<TMP_Text>().text = stackAmount.ToString();
+            if (stackAmount > 1)
+            {
+                this.GetComponentInChildren<TMP_Text>().text = stackAmount.ToString();                
+            }
+
 
         }
     }
@@ -221,9 +234,30 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     {
         return slotType;
     }
-    public ItemWeaponStats GetWeaponStats()
+    public int GetWeaponLevel() 
+    {      
+        return weaponLevel;
+    }
+    public float GetWeaponDamage()
     {
-        return weaponStats;
+        return damage;
+    }
+    public float GetWeaponStrength()
+    {
+        return strength;
+    }
+    public float GetWeaponSpeed()
+    {
+        return speed;
+    }
+    public string GetWeaponName()
+    {
+        return _name;
+    }
+    public int GetWeaponIndex()
+    {
+
+        return index;
     }
 
     // ----- setters -----
@@ -270,16 +304,45 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     {
          slotType = _slotType;
     }
-    public void SetWeaponStats(ItemWeaponStats _weaponStats)
+    public void SetWeaponLevel(int _weaponLevel)
     {
-         weaponStats = _weaponStats;
+         weaponLevel = _weaponLevel;
+    }
+    public void SetWeaponDamage(float _damage)
+    {
+        damage = _damage;
+    }
+    public void SetWeaponStrength(float _strength)
+    {
+         strength = _strength;
+    }
+    public void SetWeaponSpeed(float _speed)
+    {
+         speed = _speed;
+    }
+    public void SetWeaponName(string name)
+    {
+         _name = name;
+    }
+    public void SetWeaponIndex(int _index)
+    {
+
+        index = _index;
     }
 
     #endregion
 
     #region Helper Functions
     // ----- helper funcs -----
-
+    public void copyWeapongStats(int _weaponLevel, float _damage, float _strength, float _speed, string name, int _index)
+    {
+        weaponLevel = _weaponLevel;
+        damage = _damage;
+        strength = _strength;
+        speed = _speed;
+        _name = name;
+        index = _index;
+    } 
     public void IncrementStackBy(int amount)
     {
         stackAmount += amount;
@@ -295,7 +358,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
         return stackMax - stackAmount;
     }
 
-    public void AddItemToSlot(int _ID, ItemType _type, string _itemName, string _description, int _stackMax, Sprite _icon, GameObject _itemPrefab, int _addAmount, bool _usable, ItemWeaponStats _weaponStats, SlotType _slotType)
+    public void AddItemToSlot(int _ID, ItemType _type, string _itemName, string _description, int _stackMax, Sprite _icon, GameObject _itemPrefab, int _addAmount, bool _usable, SlotType _slotType, int _weaponLevel, float _damage, float _strength, float _speed, string name, int _index)
     {
         ID = _ID;
         type = _type;
@@ -306,8 +369,14 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
         itemPrefab = _itemPrefab;
         addAmount = _addAmount;
         usable = _usable;
-        weaponStats = _weaponStats;
         slotType = _slotType;
+
+        weaponLevel = _weaponLevel;
+        damage = _damage;
+        strength = _strength;
+        speed = _speed;
+        _name = name;
+        index = _index;
     }
     #endregion
 

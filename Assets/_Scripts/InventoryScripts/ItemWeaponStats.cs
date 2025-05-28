@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class ItemWeaponStats : MonoBehaviour
 {
-    [SerializeField] int weaponLevel;
-    [SerializeField] float damage;
-    [SerializeField] float strength;
-    [SerializeField] float speed;
-    [SerializeField] string _name;
+    public int weaponLevel;
+    public float damage;
+    public float strength;
+    public float speed;
+    public string _name;
+    public int index;
 }

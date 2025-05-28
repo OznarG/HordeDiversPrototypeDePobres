@@ -322,7 +322,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
             if (playerBeltSlot.GetItemStackAmount() == 0)
             {
                 playerBeltSlot.IncrementStackBy(1);
-                playerBeltSlot.AddItemToSlot(stats.ID, stats.type, stats.itemName, stats.description, stats.stackMax, stats.icon, stats.itemPrefab, stats.amountToAdd, stats.usable, stats.weaponStats, stats.slotType);
+                playerBeltSlot.AddItemToSlot(stats.ID, stats.type, stats.itemName, stats.description, stats.stackMax, stats.icon, stats.itemPrefab, stats.amountToAdd, stats.usable, stats.weaponStats, stats.slotType, stats.weaponLevel, stats.damage, stats.strength, stats.speed, stats._name, stats.index);
                 playerBeltSlot.UpdateSlot();
                 gameManager.instance.inventoryAud.PlayOneShot(gameManager.instance.pickup);
                 return true;
@@ -338,6 +338,15 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
             gameManager.instance.selectedSlot.GetComponentInParent<SlotBackground>().UpdateSelection();
         }
         return false;
+    }
+
+    public void SelectEquipOne()
+    {
+
+    }
+    public void SelectEquipTwo()
+    {
+
     }
     #endregion
 

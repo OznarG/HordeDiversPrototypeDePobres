@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.HID;
 using UnityEngine.UI;
 
 public class SlotBackground : MonoBehaviour, IDropHandler
@@ -113,10 +114,17 @@ public class SlotBackground : MonoBehaviour, IDropHandler
         int tempStackAmount = child.GetItemStackAmount();
         Sprite tempIcon = child.GetItemIcon();
         GameObject tempItemPrefab = child.GetItemPrefab();
-        ItemWeaponStats weaponStats = child.GetWeaponStats();
         SlotType slotType = child.GetSlotType();
 
-        Slot temp = child;
+        //ADD IF IS A WEAPON HERE ===================================================< >
+        int tempweaponLevel = child.GetWeaponLevel();
+        float tempdamage = child.GetWeaponDamage();
+        float tempstrength = child.GetWeaponStrength();
+        float tempspeed = child.GetWeaponSpeed();
+        string temp_name = child.GetWeaponName();
+        int tempindex = child.GetWeaponIndex();
+
+        //Slot temp = child;
 
         
         //Set this child information to the source slot
@@ -128,11 +136,18 @@ public class SlotBackground : MonoBehaviour, IDropHandler
         child.SetItemStackAmount(sourceSlot.GetItemStackAmount());
         child.SetItemIcon(sourceSlot.GetItemIcon());
         child.SetItemPrefab(sourceSlot.GetItemPrefab()); 
-        child.SetWeaponStats(sourceSlot.GetWeaponStats());
         child.SetSlotType(sourceSlot.GetSlotType());
         //child = sourceSlot;
 
-        
+        //ADD IF IS A WEAPON HERE ===================================================< >
+        child.SetWeaponLevel(sourceSlot.GetWeaponLevel());
+        child.SetWeaponDamage(sourceSlot.GetWeaponDamage());
+        child.SetWeaponStrength(sourceSlot.GetWeaponStrength());
+        child.SetWeaponSpeed(sourceSlot.GetWeaponSpeed());
+        child.SetWeaponName(sourceSlot.GetWeaponName());
+        child.SetWeaponIndex(sourceSlot.GetWeaponIndex());
+
+
         //Set the source slot to the temporary slot from the child
         sourceSlot.SetItemID(tempID);
         sourceSlot.SetItemType(tempType);
@@ -142,9 +157,15 @@ public class SlotBackground : MonoBehaviour, IDropHandler
         sourceSlot.SetItemStackAmount(tempStackAmount);
         sourceSlot.SetItemIcon(tempIcon);
         sourceSlot.SetItemPrefab(tempItemPrefab);
-        sourceSlot.SetWeaponStats(weaponStats);
         sourceSlot.SetSlotType(slotType);
         //sourceSlot = temp;
+        //ADD IF IS A WEAPON HERE ===================================================< >
+        sourceSlot.SetWeaponLevel(tempweaponLevel);
+        sourceSlot.SetWeaponDamage(tempdamage);
+        sourceSlot.SetWeaponStrength(tempstrength);
+        sourceSlot.SetWeaponSpeed(tempspeed);
+        sourceSlot.SetWeaponName(temp_name);
+        sourceSlot.SetWeaponIndex(tempindex);
 
         //Update both Slot
         child.UpdateSlot();
