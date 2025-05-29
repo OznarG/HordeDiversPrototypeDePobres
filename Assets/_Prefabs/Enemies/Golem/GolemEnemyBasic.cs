@@ -11,15 +11,24 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
     [SerializeField] Transform[] waypoints;
     [SerializeField] GameObject damageSource;
     [SerializeField] DamagePlayerOntrigger damageSourceScrpt;
+    [SerializeField] FatherSpawner fatherSpawner;
 
     [SerializeField] bool stopAgent;
     private Vector3 playerDir;
     [SerializeField] Transform headPos;
     internal object anim;
 
-    private void Awake()
+    protected override void Start()
     {
-
+        base.Start();
+        fatherSpawner = GetComponent<FatherSpawner>();
+        if (fatherSpawner != null)
+        {
+            for (int i = 0; i < waypoints.Length; i++)
+            {
+                waypoints[i] = fatherSpawner.GetTransform(i);
+            }
+        }
         damageSourceScrpt.SetDamage(10);
     }
     protected override BehaviorTreeMila.Node SetupTree()

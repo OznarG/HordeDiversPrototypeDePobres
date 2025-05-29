@@ -11,13 +11,25 @@ public class SkeletonEnemyDefault : BehaviorTreeMila.Tree
     [SerializeField] Transform[] waypoints;
     [SerializeField] GameObject damageSource;
     [SerializeField] DamagePlayerOntrigger damageSourceScrpt;
+    private FatherSpawner fatherSpawner;
 
     [SerializeField] bool stopAgent;
     private Vector3 playerDir;
     [SerializeField] Transform headPos;
 
-    private void Awake()
+    protected override void Start()
     {
+        base.Start();
+        fatherSpawner = GetComponent<FatherSpawner>();
+        if(fatherSpawner != null )
+        {
+            waypoints = new Transform[8];
+            for (int i = 0; i < waypoints.Length; i++)
+            {
+                waypoints[i] = fatherSpawner.GetTransform(i);
+            }
+        }
+
         characterStats.agent = GetComponent<NavMeshAgent>();
         characterStats.animator = GetComponentInChildren<Animator>();
         damageSourceScrpt.SetDamage(10);

@@ -201,6 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1634682862806454942}
+  - component: {fileID: 7406879205514520543}
   - component: {fileID: 9028474454142424417}
   - component: {fileID: 2592239106273406899}
   - component: {fileID: 4353397219986456828}
@@ -231,6 +232,29 @@ Transform:
   - {fileID: 2793154479990004408}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 140.942, z: 0}
+--- !u!114 &7406879205514520543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127520788990094899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d608f8d6b35a05744a800dfbf1efb642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transforms:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &9028474454142424417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,7 +275,8 @@ MonoBehaviour:
   maxHealth: 200
   speed: 0
   attackRate: 0
-  attackSpeed: 0.5
+  attackSpeed: 0.4
+  attackType: 0
   playerFaceSpeed: 120
   isDead: 0
   inDanger: 0
@@ -280,6 +305,7 @@ MonoBehaviour:
   - {fileID: 0}
   damageSource: {fileID: 6064559302387375331}
   damageSourceScrpt: {fileID: 5764391952945370856}
+  fatherSpawner: {fileID: 0}
   stopAgent: 0
   headPos: {fileID: 1634682862806454942}
 --- !u!95 &4353397219986456828
@@ -317,7 +343,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -1294,7 +1320,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0

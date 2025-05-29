@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class EnemiesManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static EnemiesManager instance;
+    public GameObject[] enemies;
+
+    private void Awake()
     {
-        
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

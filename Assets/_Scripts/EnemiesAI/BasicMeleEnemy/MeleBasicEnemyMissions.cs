@@ -434,40 +434,43 @@ namespace BasicEnemyGolemMissions
 
         public override NodeState Evaluate()
         {
-            if (_waiting)
-            {
-                _waitCounter += Time.deltaTime;
-                if (_waitCounter >= _waitTime)
-                {
-                    _agent.stoppingDistance = 1;
-                    _waiting = false;
-                    //_animator.SetBool("Walking", true);
-                }
-            }
-            else
-            {
-                Transform wp = _waypoints[_currentWaypointIndex];
-                //Debug.Log(Vector3.Distance(_transform.position, wp.position));
-                if (Vector3.Distance(_transform.position, wp.position) < 1.6)
-                {
-                    //_transform.position = wp.position;
-                    _waitCounter = 0f;
-                    _waiting = true;
+         
+          if (_waiting)
+          {
+              _waitCounter += Time.deltaTime;
+              if (_waitCounter >= _waitTime)
+              {
+                  _agent.stoppingDistance = 1;
+                  _waiting = false;
+                  //_animator.SetBool("Walking", true);
+              }
+          }
+          else
+          {
+              Transform wp = _waypoints[_currentWaypointIndex];
+              //Debug.Log(Vector3.Distance(_transform.position, wp.position));
+              if (Vector3.Distance(_transform.position, wp.position) < 1.6)
+              {
+                  //_transform.position = wp.position;
+                  _waitCounter = 0f;
+                  _waiting = true;
 
-                    _currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
-                    //_animator.SetBool("Walking", false);
-                }
-                else
-                {
-                    if (_agent.enabled)
-                    {
-                        _agent.SetDestination(wp.position);
-                        LookAtTarget(wp, _transform);
-                    }
+                  _currentWaypointIndex = Random.Range(0, _waypoints.Length);
+                  //_animator.SetBool("Walking", false);
+              }
+              else
+              {
+                  if (_agent.enabled)
+                  {
+                      _agent.SetDestination(wp.position);
+                      LookAtTarget(wp, _transform);
+                  }
 
-                    // _transform.LookAt(wp.position);
-                }
-            }
+                  // _transform.LookAt(wp.position);
+              }
+          }
+            
+            
 
 
             state = NodeState.RUNNING;
