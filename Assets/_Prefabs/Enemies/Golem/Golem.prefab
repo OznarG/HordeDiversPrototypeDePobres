@@ -303,6 +303,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   damageSource: {fileID: 6064559302387375331}
   damageSourceScrpt: {fileID: 5764391952945370856}
   fatherSpawner: {fileID: 0}

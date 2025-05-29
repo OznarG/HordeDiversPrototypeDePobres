@@ -456,6 +456,7 @@ namespace BasicEnemyGolemMissions
                   _waiting = true;
 
                   _currentWaypointIndex = Random.Range(0, _waypoints.Length);
+                    Debug.Log("Current index is" + _currentWaypointIndex);
                   //_animator.SetBool("Walking", false);
               }
               else
