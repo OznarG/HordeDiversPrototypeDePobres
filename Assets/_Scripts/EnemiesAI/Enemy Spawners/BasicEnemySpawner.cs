@@ -12,7 +12,7 @@ public class BasicEnemySpawner : MonoBehaviour
     [SerializeField] int minToSpawn;
     [SerializeField] int maxToSpawn;
     [SerializeField] bool randomized;
-    public Transform[] transformsPAths;
+    [SerializeField] Transform[] transformsPAths;
     [SerializeField] Transform[] SpawnSpot;
     private List<GameObject> enemies;
     bool playerIn;
