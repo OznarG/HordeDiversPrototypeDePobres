@@ -8,7 +8,6 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
 {
     [Header("--- References ---")]
     public CharacterStats characterStats;
-    [SerializeField] Transform[] waypoints;
     [SerializeField] GameObject damageSource;
     [SerializeField] DamagePlayerOntrigger damageSourceScrpt;
     [SerializeField] FatherSpawner fatherSpawner;
@@ -22,13 +21,7 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
     {
         base.Start();
         fatherSpawner = GetComponent<FatherSpawner>();
-        if (fatherSpawner != null)
-        {
-            for (int i = 0; i < waypoints.Length; i++)
-            {
-                waypoints[i] = fatherSpawner.GetTransform(i);
-            }
-        }
+
         damageSourceScrpt.SetDamage(10);
     }
     protected override BehaviorTreeMila.Node SetupTree()
@@ -39,7 +32,7 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
             new Sequence(new List<Node>{new EnemyDead(this), new DestroyEnemy(this)}),
             new Sequence(new List<Node>{new IsInAttackRange(this), new AttackPlayer(this)}),
             new Sequence(new List<Node> { new CheckEnemyInChaseRange(this),new ChasePlayer(this),}),
-            new TaskPatrol(transform, waypoints, characterStats.agent),
+            new TaskPatrol(transform, fatherSpawner.transforms, characterStats.agent),
 
         });
 

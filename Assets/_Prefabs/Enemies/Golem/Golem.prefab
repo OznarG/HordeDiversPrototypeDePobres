@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1634682862806454942}
-  - component: {fileID: 7406879205514520543}
+  - component: {fileID: 8236987485780335078}
   - component: {fileID: 9028474454142424417}
   - component: {fileID: 2592239106273406899}
   - component: {fileID: 4353397219986456828}
@@ -232,7 +232,7 @@ Transform:
   - {fileID: 2793154479990004408}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 140.942, z: 0}
---- !u!114 &7406879205514520543
+--- !u!114 &8236987485780335078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,7 +245,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transforms:
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -298,20 +297,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterStats: {fileID: 9028474454142424417}
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   damageSource: {fileID: 6064559302387375331}
   damageSourceScrpt: {fileID: 5764391952945370856}
-  fatherSpawner: {fileID: 0}
+  fatherSpawner: {fileID: 8236987485780335078}
   stopAgent: 0
   headPos: {fileID: 1634682862806454942}
 --- !u!95 &4353397219986456828
