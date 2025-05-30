@@ -48,6 +48,7 @@ public class BasicEnemySpawner : MonoBehaviour
         {
             //Instantiate(enemy, spawnPos[Random.Range(0, spawnPos.Length)].position, enemy.transform.rotation);            
             int spawnAmount = Random.Range(minToSpawn, maxToSpawn);
+            Debug.Log(minToSpawn + " " + spawnAmount + " " + maxToSpawn);
             for(int i = 0; i < spawnAmount; i++)
             {
 
