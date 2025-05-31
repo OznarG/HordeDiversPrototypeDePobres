@@ -475,12 +475,13 @@ namespace BasicEnemyGolemMissions
                         // _transform.LookAt(wp.position);
                     }
                 }
-
+                else
+                {
+                    state = NodeState.FAILURE;
+                    return state;
+                }
           }
-            
-            
-
-
+                    
             state = NodeState.RUNNING;
             return state;
         }

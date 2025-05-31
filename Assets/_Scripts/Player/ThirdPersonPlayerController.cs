@@ -111,7 +111,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
                 rolling = true;
                 restrictedByAnimation = true;
                 playerAnim.SetTrigger("Roll");              
-                Debug.Log("Rollings");
+                //Debug.Log("Rollings");
                 
             }
             if(rolling)

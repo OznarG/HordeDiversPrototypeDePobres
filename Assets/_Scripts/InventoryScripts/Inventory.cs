@@ -23,7 +23,7 @@ public class Inventory : MonoBehaviour
     {
         //Get all the slot child of the slot holder and add them to a slot array
         slotAmount = inventoryHolder.transform.childCount;
-        Debug.Log("slot amunt is " + slotAmount);
+        //Debug.Log("slot amunt is " + slotAmount);
         slots = new GameObject[slotAmount];
         for (int i = 0; i < slotAmount; i++)
         {

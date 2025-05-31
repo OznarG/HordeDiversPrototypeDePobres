@@ -11,7 +11,7 @@ public class ItemPickUp : MonoBehaviour
     {
         if (other.CompareTag("Player") && playerIn == false)
         {
-            Debug.Log("INSIDE");
+            //Debug.Log("INSIDE");
             playerIn = true;
             //SCRIPT CACA PARA OTRA COSA
             ////Player Belt is not implemented YET, SO it will be added later
@@ -49,7 +49,7 @@ public class ItemPickUp : MonoBehaviour
 
             //NEED TO MAKE THIS FOR BOTH, PLAYERCONTROLLER AND THIRD PERSON
             bool spaceInBelt = gameManager.instance.thirdPersonPlayerController.PlayerBeltHaveSpace(thisItem);
-            Debug.Log(spaceInBelt);
+           
             if (spaceInBelt)
             {
                 if (gameManager.instance.thirdPersonPlayerController.AddItem(thisItem))

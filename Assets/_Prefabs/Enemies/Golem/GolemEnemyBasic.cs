@@ -41,6 +41,7 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
     protected override void Update()
     {
         base.Update();
+        Debug.Log(characterStats.agent.enabled);
         if (stopAgent)
         {
             characterStats.agent.enabled = false;

@@ -13,7 +13,7 @@ public class DamagePlayerOntrigger : MonoBehaviour
         
         if(other.CompareTag("Player"))
         {
-            Debug.Log("Player was hit");
+            //Debug.Log("Player was hit");
             gameManager.instance.thirdPersonPlayerController.TakeDamage(_damage);
         }
     }

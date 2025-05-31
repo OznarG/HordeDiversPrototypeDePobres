@@ -29,6 +29,6 @@ public class ToolSeed : MonoBehaviour
                 Debug.Log("nothing farming land");
             }
         }
-        Debug.Log("Shotting");
+       // Debug.Log("Shotting");
     }
 }

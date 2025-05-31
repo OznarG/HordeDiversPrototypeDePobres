@@ -32,7 +32,7 @@ public class TimeManager : MonoBehaviour
 
     private void OnMinutesChange(int value)
     {
-        Debug.Log("Minutes Update");
+        //Debug.Log("Minutes Update");
         if(value >= 60)
         {
             Hours++;            
