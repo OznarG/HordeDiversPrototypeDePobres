@@ -1,6 +1,7 @@
 using BehaviorTreeMila;
 using UnityEngine;
 using UnityEngine.AI;
+using static EnemiesEnums;
 
 namespace BasicEnemyMeleMissions
 {
@@ -430,11 +431,13 @@ namespace BasicEnemyGolemMissions
             //_animator = transform.GetComponent<Animator>();
             _waypoints = waypoints;
             _agent = agent;
+            _currentWaypointIndex = Random.Range(0, _waypoints.Length);
         }
 
         public override NodeState Evaluate()
         {
          
+
           if (_waiting)
           {
               _waitCounter += Time.deltaTime;
@@ -445,30 +448,34 @@ namespace BasicEnemyGolemMissions
                   //_animator.SetBool("Walking", true);
               }
           }
-          else
+            else
           {
-              Transform wp = _waypoints[_currentWaypointIndex];
-              //Debug.Log(Vector3.Distance(_transform.position, wp.position));
-              if (Vector3.Distance(_transform.position, wp.position) < 1.6)
-              {
-                  //_transform.position = wp.position;
-                  _waitCounter = 0f;
-                  _waiting = true;
+                if (_agent.enabled)
+                {
+                    Transform wp = _waypoints[_currentWaypointIndex];
+                    //Debug.Log(Vector3.Distance(_transform.position, wp.position));
+                    if (Vector3.Distance(_transform.position, wp.position) < 1.6)
+                    {
+                        //_transform.position = wp.position;
+                        _waitCounter = 0f;
+                        _waiting = true;
 
-                  _currentWaypointIndex = Random.Range(0, _waypoints.Length);
-                    Debug.Log("Current index is" + _currentWaypointIndex);
-                  //_animator.SetBool("Walking", false);
-              }
-              else
-              {
-                  if (_agent.enabled)
-                  {
-                      _agent.SetDestination(wp.position);
-                      LookAtTarget(wp, _transform);
-                  }
+                        _currentWaypointIndex = Random.Range(0, _waypoints.Length);
+                          Debug.Log("Current index is" + _currentWaypointIndex);
+                        //_animator.SetBool("Walking", false);
+                    }
+                    else
+                    {
+                        if (_agent.enabled)
+                        {
+                            _agent.SetDestination(wp.position);
+                            LookAtTarget(wp, _transform);
+                        }
 
-                  // _transform.LookAt(wp.position);
-              }
+                        // _transform.LookAt(wp.position);
+                    }
+                }
+
           }
             
             

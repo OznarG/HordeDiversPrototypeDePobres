@@ -96,18 +96,34 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
     public void IsAttaking()
     {
         characterStats.isAttacking = true;
-        damageSource.SetActive(true);
+        stopAgent = true;
     }
     public void IsNotAttacking()
     {
         characterStats.isAttacking = true;
-        damageSource.SetActive(false);
+        stopAgent = false;
         characterStats.attackCounter = 0;
         characterStats.onAttackCoolDown = true;
     }
     public void EnemyDead()
     {
         Destroy(gameObject, 10);
+    }
+    public void ActivateDamage()
+    {
+        damageSource.SetActive(true);
+    }
+    public void DesactivateDamage()
+    {
+        damageSource.SetActive(false);
+    }
+    public void RestrictMovement()
+    {
+        stopAgent = true;
+    }
+    public void AllowMovement()
+    {
+        stopAgent = false;
     }
     #endregion
 
