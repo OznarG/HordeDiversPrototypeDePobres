@@ -22,7 +22,7 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
         base.Start();
         fatherSpawner = GetComponent<FatherSpawner>();
 
-        damageSourceScrpt.SetDamage(10);
+        damageSourceScrpt.SetDamage(characterStats.damage);
     }
     protected override BehaviorTreeMila.Node SetupTree()
     {

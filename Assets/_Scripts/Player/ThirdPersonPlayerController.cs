@@ -22,6 +22,9 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public bool attacking;
     public bool restrictedByAnimation;
     public bool rolling;
+    public int comboNumber;
+    public float comboCounter;
+    public float counterMinutes;
 
     [Header("--- Movement Stats ---")]
     [SerializeField] float rotationSpeed;
@@ -39,6 +42,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public bool isgrouded;
     public bool canShoot;
     [SerializeField] bool canMove = true;
+
 
     [Header("----- Player Belt -----")]
     public int beltAmount;
@@ -207,7 +211,14 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     #region ---Animation Functions---
     public void Attacking()
     {
-        
+        if(comboNumber > 2)
+        {
+            comboNumber = 0;
+        }
+        else
+        {
+            comboNumber++;
+        }
         attacking = true;
     }
     public void NotAttacking()
