@@ -70,10 +70,14 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
                 //NEED BETTER WAY OF DOING THIS
                 if (gameManager.instance.thirdPersonPlayerController.currentWeapon == gameManager.instance.thirdPersonPlayerController.playerWeapons[5])
                 {
-                    gameManager.instance.thirdPersonPlayerController.playerAnim.SetFloat("attackSpeed", gameManager.instance.thirdPersonPlayerController.meleAttackSpeed);
-                    gameManager.instance.thirdPersonPlayerController.Attacking();
+                    gameManager.instance.thirdPersonPlayerController.playerAnim.SetFloat("attackSpeed", gameManager.instance.thirdPersonPlayerController.meleAttackSpeed);                    
                     gameManager.instance.thirdPersonPlayerController.playerAnim.SetInteger("ComboState", gameManager.instance.thirdPersonPlayerController.comboNumber);
+                    gameManager.instance.thirdPersonPlayerController.Attacking();
                     gameManager.instance.thirdPersonPlayerController.playerAnim.SetTrigger("AttackOneHand");
+                    if(gameManager.instance.thirdPersonPlayerController.comboNumber > 2)
+                    {
+                        gameManager.instance.thirdPersonPlayerController.comboNumber = 0;
+                    }
                     Debug.Log("Attack called");
                 }
                 else

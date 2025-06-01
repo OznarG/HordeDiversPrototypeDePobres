@@ -211,14 +211,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     #region ---Animation Functions---
     public void Attacking()
     {
-        if(comboNumber > 2)
-        {
-            comboNumber = 0;
-        }
-        else
-        {
-            comboNumber++;
-        }
+        comboNumber++;      
         attacking = true;
     }
     public void NotAttacking()
