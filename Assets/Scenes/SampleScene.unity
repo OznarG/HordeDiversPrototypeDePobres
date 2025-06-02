@@ -18458,8 +18458,8 @@ MonoBehaviour:
   pathArea: {fileID: 0}
   enemyToSpawn: 1
   numberOfEnemies: 10
-  minToSpawn: 1
-  maxToSpawn: 8
+  minToSpawn: 10000
+  maxToSpawn: 20000
   randomized: 1
   transformsPAths:
   - {fileID: 1294006612}
