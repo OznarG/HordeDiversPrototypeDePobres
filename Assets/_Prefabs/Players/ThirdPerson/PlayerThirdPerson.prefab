@@ -218,6 +218,9 @@ MonoBehaviour:
   attacking: 0
   restrictedByAnimation: 0
   rolling: 0
+  comboNumber: 0
+  comboCounter: 0
+  counterMinutes: 0
   rotationSpeed: 7
   moveSpeed: 5
   walkSpeed: 2.5
@@ -234,6 +237,7 @@ MonoBehaviour:
   playerBelt: []
   currentBeltSelection: 0
   currentWeapon: {fileID: 5041543005742988674}
+  currentCollider: {fileID: 0}
   playerWeapons:
   - {fileID: 0}
   - {fileID: 0}
@@ -241,16 +245,13 @@ MonoBehaviour:
   - {fileID: 259618227230037836}
   - {fileID: 5041543005742988674}
   - {fileID: 5630387024262489488}
-  - {fileID: 259618227230037836}
-  - {fileID: 259618227230037836}
-  - {fileID: 259618227230037836}
-  - {fileID: 259618227230037836}
-  - {fileID: 259618227230037836}
-  - {fileID: 259618227230037836}
-  - {fileID: 259618227230037836}
-  - {fileID: 259618227230037836}
-  - {fileID: 259618227230037836}
-  - {fileID: 259618227230037836}
+  weaponsColliders:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 2849080529449748795}
+  - {fileID: 0}
+  - {fileID: 1759165811156973619}
   equipOneImage: {fileID: 0}
   equipTwoImage: {fileID: 0}
   equipSlotOne: {fileID: 0}
@@ -391,7 +392,7 @@ GameObject:
   - component: {fileID: 147577234161177228}
   - component: {fileID: 5963492990411889513}
   - component: {fileID: 2849080529449748795}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SwrodOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +496,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.29118016, y: 1.08, z: 0.08}
   m_Center: {x: -0.00028596944, y: 0.68, z: -0.00012219769}
@@ -1083,6 +1084,93 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3481884716972504443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1250952760813426095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844423323822397105}
+  - component: {fileID: 5225719473535164926}
+  - component: {fileID: 354697131117217179}
+  m_Layer: 0
+  m_Name: Pickaxe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844423323822397105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250952760813426095}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.057970073, y: 0.02537264, z: 0.36561978, w: -0.92861074}
+  m_LocalPosition: {x: -0.1, y: -0.066, z: 0.235}
+  m_LocalScale: {x: 32.509743, y: 32.50974, z: 34.330288}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1852037830690737390}
+  m_LocalEulerAnglesHint: {x: 5.112, y: -5.156, z: -43.212}
+--- !u!33 &5225719473535164926
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250952760813426095}
+  m_Mesh: {fileID: 4987632398419711469, guid: 6cf8f739832503c49ba5d6cb7c805a8f, type: 3}
+--- !u!23 &354697131117217179
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250952760813426095}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 7555185752953191562, guid: 6cf8f739832503c49ba5d6cb7c805a8f, type: 3}
+  - {fileID: -5257373725119719655, guid: 6cf8f739832503c49ba5d6cb7c805a8f, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1255603990107331448
 GameObject:
   m_ObjectHideFlags: 0
@@ -14139,7 +14227,7 @@ GameObject:
   - component: {fileID: 7858628851041276825}
   - component: {fileID: 2614363193372997239}
   - component: {fileID: 1759165811156973619}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StoneSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14244,7 +14332,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.0022784956, y: 0.0015581193, z: 0.01}
   m_Center: {x: 0.0000145390995, y: 0.0000053766717, z: 0.006}
@@ -14605,6 +14693,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2799954701433739454}
+  - {fileID: 8844423323822397105}
   - {fileID: 6731981540873609048}
   - {fileID: 8307247703613271768}
   - {fileID: 1437040680654022245}
