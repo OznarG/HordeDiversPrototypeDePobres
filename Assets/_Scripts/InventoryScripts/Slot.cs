@@ -100,32 +100,20 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
         }
         else if(type == ItemType.Tool)
         {
-            if (Time.time >= nextTimeTofire)
+            if (gameManager.instance.thirdPersonPlayerController.currentWeapon == gameManager.instance.thirdPersonPlayerController.playerWeapons[6])
             {
-                nextTimeTofire = Time.time + 1f / 5;
+                gameManager.instance.thirdPersonPlayerController.playerAnim.SetTrigger("PicaxeUse");
 
-                /*FOR FIRST PERSON CHARACTER
-                RaycastHit hit;
-                if (Physics.Raycast(gameManager.instance.playerCamera.transform.position, gameManager.instance.playerCamera.transform.forward, out hit, 50f))
-                {
-                    FarmingLand target = hit.transform.GetComponent<FarmingLand>();
-                    if (target != null)
-                    {
-                        //target.TakeDamage(damage);
-                        target.GetLandReady();
-                    }
-                    else
-                    {
-                        Debug.Log("nothing farming land");
-                    }
-                }
-                Debug.Log("Getting Land Ready"); */
 
+            }
+            else
+            {
                 gameManager.instance.thirdPersonPlayerController.playerAnim.SetTrigger("axToolUse");
             }
         }
         else
         {
+
             UnityEngine.Debug.Log("No method yet");
         }
     }
