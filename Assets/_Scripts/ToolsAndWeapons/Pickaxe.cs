@@ -13,7 +13,7 @@ public class Pickaxe : MonoBehaviour
             //NEED TO CHANGE THIS TO PICKAXE ---------------------------------<=================================>----------------
             if(farmeableItem.damagableBy == ItemType.Tool)
             {
-                farmeableItem.TakeDamage(damage);
+                farmeableItem.TakeDamage(damage, gameManager.instance.thirdPersonPlayerController.weaponIndex);
             }
         }
     }
