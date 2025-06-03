@@ -48,27 +48,30 @@ public class ItemPickUp : MonoBehaviour
             //}
 
             //NEED TO MAKE THIS FOR BOTH, PLAYERCONTROLLER AND THIRD PERSON
-            bool spaceInBelt = gameManager.instance.thirdPersonPlayerController.PlayerBeltHaveSpace(thisItem);
+            //bool spaceInBelt = gameManager.instance.thirdPersonPlayerController.PlayerBeltHaveSpace(thisItem);
            
-            if (spaceInBelt)
-            {
-                if (gameManager.instance.thirdPersonPlayerController.AddItem(thisItem))
-                {
-                    Destroy(gameObject);
-                }
+            //if (spaceInBelt)
+            //{
+            //    if (gameManager.instance.thirdPersonPlayerController.AddItem(thisItem))
+            //    {
+            //        Destroy(gameObject);
+            //    }
                 
-            }
+            //}
 
-            else
-            {
-                //Add this item to the player inventory
-                if (gameManager.instance.playerInventoryScript.AddItem(thisItem))
-                {
-                    Destroy(gameObject);
-                }
+            //else
+            //{
+            //    //Add this item to the player inventory
+            //    if (gameManager.instance.playerInventoryScript.AddItem(thisItem))
+            //    {
+            //        Destroy(gameObject);
+            //    }
                 
+            //}
+            if (gameManager.instance.playerInventoryScript.AddItem(thisItem))
+            {
+                Destroy(gameObject);
             }
-
 
 
         }

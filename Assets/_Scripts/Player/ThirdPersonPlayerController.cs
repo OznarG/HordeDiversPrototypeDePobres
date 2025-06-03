@@ -59,6 +59,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public Image equipTwoImage;
     public Slot equipSlotOne;
     public Slot equipSlotTwo;
+    public int weaponIndex;
 
     [Header("--- Player Use Stats")]
     [SerializeField] float health;
@@ -367,8 +368,9 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         else
         {
             currentWeapon.SetActive(false);
-            currentWeapon = playerWeapons[equipSlotOne.GetWeaponIndex()];
-            currentCollider = weaponsColliders[equipSlotOne.GetWeaponIndex()];
+            weaponIndex = equipSlotOne.GetWeaponIndex();
+            currentWeapon = playerWeapons[weaponIndex];
+            currentCollider = weaponsColliders[weaponIndex];          
             currentWeapon.SetActive(true);
         }
 
