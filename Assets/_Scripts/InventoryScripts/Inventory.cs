@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] GameObject inventoryHolder;
     GameObject[] slots;
+    public Dictionary<string, int> itemsOnHand;
 
     [Header("---Drag Stats---")]
     int slotAmount;
@@ -31,6 +32,7 @@ public class Inventory : MonoBehaviour
             slots[i] = inventoryHolder.transform.GetChild(i).GetChild(0).gameObject;
             slots[i].GetComponentInParent<SlotBackground>().SlotID = i;
         }
+        itemsOnHand = new Dictionary<string, int>();
     }
 
     public bool AddItem(Item stats)
@@ -46,6 +48,14 @@ public class Inventory : MonoBehaviour
                 invSlot.AddItemToSlot(stats.ID, stats.type, stats.itemName, stats.description, stats.stackMax, stats.icon, stats.itemPrefab, stats.amountToAdd, stats.usable, stats.slotType, stats.weaponLevel, stats.damage, stats.strength, stats.speed, stats._name, stats.index);
                 invSlot.UpdateSlot();
                 gameManager.instance.inventoryAud.PlayOneShot(gameManager.instance.pickup);
+                if(itemsOnHand.ContainsKey(stats.itemName))
+                {
+                    itemsOnHand[stats.itemName] += 1;
+                }
+                else
+                {
+                    itemsOnHand.Add(stats.itemName, 1);
+                }
                 return true;
             }
             //if the slot has the same item and it has space, add one //THIS IS ASSUMING ALL ITEMS WE PICK HAS ONE ONLY
@@ -55,6 +65,14 @@ public class Inventory : MonoBehaviour
                 invSlot.IncrementStackBy(1);
                 invSlot.UpdateSlot();
                 gameManager.instance.inventoryAud.PlayOneShot(gameManager.instance.pickup);
+                if (itemsOnHand.ContainsKey(stats.itemName))
+                {
+                    itemsOnHand[stats.itemName] += 1;
+                }
+                else
+                {
+                    itemsOnHand.Add(stats.itemName, 1);
+                }
                 return true;
             }
         }

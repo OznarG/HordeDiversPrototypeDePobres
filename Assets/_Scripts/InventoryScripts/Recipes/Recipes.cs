@@ -2,8 +2,8 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Recipes : ScriptableObject
 {
-    [SerializeField] Item[] items;
-    [SerializeField] int[] amount;
-    [SerializeField] int index;
-    [SerializeField] string recipeName;
+    public Item[] items;
+    public int[] amount;
+    public int index;
+    public string recipeName;
 }
