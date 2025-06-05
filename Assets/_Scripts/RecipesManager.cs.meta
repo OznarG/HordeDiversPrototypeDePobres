@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: 593b258f4394ee74b8fb9105fde34b1b
+guid: 84b2bb26f0b896645bec8ae2aa9b1e61
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - stonePickaxe: {instanceID: 0}
+  - stoneSword: {instanceID: 0}
+  - stoneAxe: {instanceID: 0}
   executionOrder: 0
   icon: {fileID: 2800000, guid: 667c43b5f05aac64db08caf86e53a7f4, type: 3}
   userData: 

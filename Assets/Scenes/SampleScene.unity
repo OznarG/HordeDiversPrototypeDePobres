@@ -10056,6 +10056,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 669308276}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &502113260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 502113262}
+  - component: {fileID: 502113261}
+  m_Layer: 0
+  m_Name: Manegers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &502113261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502113260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b2bb26f0b896645bec8ae2aa9b1e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stonePickaxe: {fileID: 11400000, guid: 80109dd20e9ffdc40b5695d00a5ac7dd, type: 2}
+  stoneSword: {fileID: 11400000, guid: c45d9dd80e892c74eab6ef786111d0a5, type: 2}
+  stoneAxe: {fileID: 11400000, guid: 4efa81471529338499dcc07f923cfbd4, type: 2}
+--- !u!4 &502113262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502113260}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1575.6874, y: -0.49577892, z: 482.39383}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &505181600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65740,3 +65787,4 @@ SceneRoots:
   - {fileID: 8650853302318751317}
   - {fileID: 1752302670}
   - {fileID: 1759069605}
+  - {fileID: 502113262}
