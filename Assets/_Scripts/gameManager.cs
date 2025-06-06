@@ -114,6 +114,7 @@ public class gameManager : MonoBehaviour
 
             playerInventoryScript.isOpen = false;
             instance.CharacterStatsMenu.SetActive(false);
+            instance.playerInventory.SetActive(false);
             //***IMPLEMENT WHEN I ADD WEAPON ****
             //if (selectedSlot.GetComponentInParent<SlotBackground>().GetComponentInChildren<Slot>().GetItemType() == 10)
             //{
@@ -140,6 +141,7 @@ public class gameManager : MonoBehaviour
         {
             //open Inventory and set as main
             instance.CharacterStatsMenu.SetActive(true);
+            instance.playerInventory.SetActive(true);
             instance.activeMenu = instance.CharacterStatsMenu;
             instance.isPaused = true;
             instance.playerInventoryScript.isOpen = true;
