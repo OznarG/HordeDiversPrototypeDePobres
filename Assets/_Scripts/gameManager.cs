@@ -113,7 +113,7 @@ public class gameManager : MonoBehaviour
             selectedSlot.GetComponentInParent<SlotBackground>().UpdateSelection();
 
             playerInventoryScript.isOpen = false;
-            instance.CharacterStatsMenu.SetActive(false);
+            //instance.CharacterStatsMenu.SetActive(false);
             instance.playerInventory.SetActive(false);
             //***IMPLEMENT WHEN I ADD WEAPON ****
             //if (selectedSlot.GetComponentInParent<SlotBackground>().GetComponentInChildren<Slot>().GetItemType() == 10)

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 [CreateAssetMenu]
 public class Recipes : ScriptableObject
 {
@@ -6,4 +7,5 @@ public class Recipes : ScriptableObject
     public int[] amount;
     public int index;
     public string recipeName;
+    public Sprite image;
 }
