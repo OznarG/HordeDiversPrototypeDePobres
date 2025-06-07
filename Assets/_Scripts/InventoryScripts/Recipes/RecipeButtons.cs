@@ -1,41 +1,77 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using VFolders.Libs;
 
 public class RecipeButtons : MonoBehaviour
 {
     [SerializeField] Recipes recipe;
     [SerializeField] Image _image;
+    [SerializeField] Image filler;
+    UpdaterRecipes updater;
+    public float timeToComplete;
+    [SerializeField] bool bussy;
     //NEED TO GRAB THIS FROM AN INSTANCE GAMEMANAGER FORM THE CRAFTING MENU REFERENCE
     public Dictionary<string, int> itemsOnHand;
+
+    public float craftingTime;
     private void Start()
     {
         _image.sprite = recipe.image; 
     }
     public void CanBeCrafted()
     {
-        itemsOnHand = gameManager.instance.playerInventoryScript.itemsOnHand;
-        for (int i = 0; i < recipe.index; i++)
+        Debug.Log("Pressed");
+        if (!bussy)
         {
-            if (itemsOnHand.ContainsKey(recipe.items[i].itemName))
+            bool result = true;
+            itemsOnHand = gameManager.instance.playerInventoryScript.itemsOnHand;
+            for (int i = 0; i < recipe.index; i++)
             {
-                if (itemsOnHand[recipe.items[i].itemName] >= recipe.amount[i])
+                if (itemsOnHand.ContainsKey(recipe.items[i].itemName))
                 {
-                    //continue;
+                    if (itemsOnHand[recipe.items[i].itemName] >= recipe.amount[i])
+                    {
+                        //continue;
+                        result = true;
+                    }
+                    else
+                    {
+                        result = false;
+                        Debug.Log("Not Enough Items");
+                        //return false;
+                    }
                 }
                 else
                 {
                     Debug.Log("Not Enough Items");
-                    //return false;
+                    result = false;
                 }
             }
-            else
+            if (result)
             {
-                Debug.Log("Not Enough Items");
-                //return false;
+                filler.enabled = true;
+                updater = gameObject.AddComponent<UpdaterRecipes>();
+                updater.Initialize(this); // Pass the RecipeButtons reference
             }
+            Debug.Log("Enough Items");
+            //return true;
         }
-        Debug.Log("Enough Items");
-        //return true;
+
+    }
+
+    public void Fill()
+    {
+        Debug.Log("Calling Fill");
+        timeToComplete += Time.unscaledDeltaTime;
+        filler.fillAmount = timeToComplete / craftingTime;
+        if(timeToComplete >= craftingTime)
+        {
+            gameManager.instance.playerInventoryScript.AddItem(recipe.returnItem);
+            Destroy(updater);
+            filler.enabled = false;
+            bussy = false;
+            timeToComplete = 0;
+        }
     }
 }

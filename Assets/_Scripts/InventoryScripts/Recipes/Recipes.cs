@@ -8,4 +8,5 @@ public class Recipes : ScriptableObject
     public int index;
     public string recipeName;
     public Sprite image;
+    public Item returnItem;
 }

@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class UpdaterRecipes : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private RecipeButtons buttons;
+
+    public void Initialize(RecipeButtons buttons)
     {
-        
+        this.buttons = buttons;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        Debug.Log("About to call Fill");
+        buttons.Fill();
     }
+
 }
