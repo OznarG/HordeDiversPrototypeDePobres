@@ -24,6 +24,7 @@ public class RecipeButtons : MonoBehaviour
         Debug.Log("Pressed");
         if (!bussy)
         {
+            bussy = true;
             bool result = true;
             itemsOnHand = gameManager.instance.playerInventoryScript.itemsOnHand;
             for (int i = 0; i < recipe.index; i++)
