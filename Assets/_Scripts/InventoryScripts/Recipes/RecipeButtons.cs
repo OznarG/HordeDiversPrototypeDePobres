@@ -38,6 +38,7 @@ public class RecipeButtons : MonoBehaviour
                     }
                     else
                     {
+                        bussy = false;
                         result = false;
                         Debug.Log("Not Enough Items");
                         //return false;
@@ -47,6 +48,7 @@ public class RecipeButtons : MonoBehaviour
                 {
                     Debug.Log("Not Enough Items");
                     result = false;
+                    bussy = false;
                 }
             }
             if (result)
