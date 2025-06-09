@@ -106,7 +106,7 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-    public void RemoveItem()
+    public void ReturnItem()
     {
 
     }

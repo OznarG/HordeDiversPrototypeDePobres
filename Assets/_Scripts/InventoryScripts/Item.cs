@@ -25,4 +25,5 @@ public class Item : ScriptableObject
     public float speed;
     public string _name;
     public int index;
+
 }
