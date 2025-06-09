@@ -86,9 +86,12 @@ public class Inventory : MonoBehaviour
         for (int i = 0; i < slotAmount; i++)
         {
             invSlot = slots[i].GetComponent<Slot>();
-            if (invSlot.GetItemName() == item)
+            string name = invSlot.GetItemName();
+            if (name == item)
             {
+                //Can try to hard code this iusing invSlot instead
                 itemsInUse.Add(invSlot);
+                invSlot.DecrementStackBy(1);
             }
         }
     }
@@ -99,7 +102,8 @@ public class Inventory : MonoBehaviour
         for (int i = 0; i < slotAmount; i++)
         {
             invSlot = slots[i].GetComponent<Slot>();
-            if (invSlot.GetItemName() == item)
+            string name = invSlot.GetItemName();
+            if (name == item)
             {
                 invSlot.DecrementStackBy(1);
                 invSlot.UpdateSlot();

@@ -34,6 +34,11 @@ public class RecipeButtons : MonoBehaviour
                     {
                         //continue;
                         result = true;
+                        for(int j = 0; j < recipe.amount[i]; j++)
+                        {
+                            gameManager.instance.playerInventoryScript.HoldItem(recipe.items[i].itemName);
+                        }
+
                     }
                     else
                     {
@@ -52,10 +57,6 @@ public class RecipeButtons : MonoBehaviour
             }
             if (result)
             {
-                for(int i = 0; i < recipe.index; i++)
-                {
-                    gameManager.instance.playerInventoryScript.HoldItem(recipe.items[i].itemName);
-                }
                 filler.enabled = true;
                 RecipesManager.instance.updater = gameObject.AddComponent<UpdaterRecipes>();
                 RecipesManager.instance.updater.Initialize(this); // Pass the RecipeButtons reference

@@ -196,7 +196,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
 
     public string GetItemName()
     {
-        return name;
+        return itemName;
     }
 
     public string GetItemDescription()
