@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class RecipesManager : MonoBehaviour
 {
+    [Header("--- References ---")]
+    public UpdaterRecipes updater;
     public static RecipesManager instance;
 
     [SerializeField] Recipes stonePickaxe;
@@ -12,4 +14,5 @@ public class RecipesManager : MonoBehaviour
     {
         instance = this;
     }
+
 }

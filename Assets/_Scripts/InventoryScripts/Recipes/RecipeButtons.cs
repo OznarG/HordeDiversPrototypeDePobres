@@ -8,7 +8,6 @@ public class RecipeButtons : MonoBehaviour
     [SerializeField] Recipes recipe;
     [SerializeField] Image _image;
     [SerializeField] Image filler;
-    UpdaterRecipes updater;
     public float timeToComplete;
     [SerializeField] bool bussy;
     //NEED TO GRAB THIS FROM AN INSTANCE GAMEMANAGER FORM THE CRAFTING MENU REFERENCE
@@ -54,8 +53,8 @@ public class RecipeButtons : MonoBehaviour
             if (result)
             {
                 filler.enabled = true;
-                updater = gameObject.AddComponent<UpdaterRecipes>();
-                updater.Initialize(this); // Pass the RecipeButtons reference
+                RecipesManager.instance.updater = gameObject.AddComponent<UpdaterRecipes>();
+                RecipesManager.instance.updater.Initialize(this); // Pass the RecipeButtons reference
             }
             Debug.Log("Enough Items");
             //return true;
@@ -71,7 +70,7 @@ public class RecipeButtons : MonoBehaviour
         if(timeToComplete >= craftingTime)
         {
             gameManager.instance.playerInventoryScript.AddItem(recipe.returnItem);
-            Destroy(updater);
+            Destroy(RecipesManager.instance.updater);
             filler.enabled = false;
             bussy = false;
             timeToComplete = 0;

@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] GameObject inventoryHolder;
     GameObject[] slots;
     public Dictionary<string, int> itemsOnHand;
+    public List<Slot> itemsInUse;
 
     [Header("---Drag Stats---")]
     int slotAmount;
@@ -33,6 +34,7 @@ public class Inventory : MonoBehaviour
             slots[i].GetComponentInParent<SlotBackground>().SlotID = i;
         }
         itemsOnHand = new Dictionary<string, int>();
+        itemsInUse = new List<Slot>();
     }
 
     public bool AddItem(Item stats)
@@ -77,5 +79,35 @@ public class Inventory : MonoBehaviour
             }
         }
         return false;
+    }
+    public void HoldItem(string item)
+    {
+        Slot invSlot;
+        for (int i = 0; i < slotAmount; i++)
+        {
+            invSlot = slots[i].GetComponent<Slot>();
+            if (invSlot.GetItemName() == item)
+            {
+                itemsInUse.Add(invSlot);
+            }
+        }
+    }
+
+    public void RemoveItem(string item)
+    {
+        Slot invSlot;
+        for (int i = 0; i < slotAmount; i++)
+        {
+            invSlot = slots[i].GetComponent<Slot>();
+            if (invSlot.GetItemName() == item)
+            {
+                invSlot.DecrementStackBy(1);
+                invSlot.UpdateSlot();
+            }
+        }
+    }
+    public void RemoveItem()
+    {
+
     }
 }
