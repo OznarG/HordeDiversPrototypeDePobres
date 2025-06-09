@@ -19,3 +19,5 @@ MonoBehaviour:
   amount: 050000000100000002000000
   index: 3
   recipeName: Stone Sword
+  image: {fileID: 21300000, guid: 97f39a6d32594484d8d07f54fd7cd247, type: 3}
+  returnItem: {fileID: 11400000, guid: f904a0810ba522c4f8164bf36c90b74e, type: 2}

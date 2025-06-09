@@ -92,6 +92,7 @@ public class Inventory : MonoBehaviour
                 //Can try to hard code this iusing invSlot instead
                 itemsInUse.Add(invSlot);
                 invSlot.DecrementStackBy(1);
+                invSlot.UpdateSlot();
             }
         }
     }
