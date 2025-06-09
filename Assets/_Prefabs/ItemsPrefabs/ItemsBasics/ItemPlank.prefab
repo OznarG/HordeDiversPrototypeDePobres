@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2842802448748914308}
   - component: {fileID: 5158200006162534196}
   - component: {fileID: 4412353019265985684}
+  - component: {fileID: 564028290279393742}
+  - component: {fileID: 2770158539873892362}
   m_Layer: 0
   m_Name: ItemPlank
   m_TagString: Untagged
@@ -69,6 +71,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIn: 0
   thisItem: {fileID: 11400000, guid: 2079ab7c8954d3c4ba0d3aa69440c1c6, type: 2}
+--- !u!136 &564028290279393742
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2258137720046105952}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.12
+  m_Height: 0.88
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &2770158539873892362
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2258137720046105952}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0.2, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 0
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7735765906038116779
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,13 +147,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7735765906038116779}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5417082, y: 0, z: 0, w: 0.84056664}
+  m_LocalRotation: {x: 0.017907001, y: -0, z: -0, w: 0.99983966}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 30.11, y: 28.8, z: 34.96}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2842802448748914308}
-  m_LocalEulerAnglesHint: {x: 65.6, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.052, y: 0, z: 0}
 --- !u!33 &1454787512003169580
 MeshFilter:
   m_ObjectHideFlags: 0
