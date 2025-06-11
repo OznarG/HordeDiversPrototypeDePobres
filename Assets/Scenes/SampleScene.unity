@@ -13241,7 +13241,7 @@ MonoBehaviour:
   filler: {fileID: 1718497931}
   timeToComplete: 0
   bussy: 0
-  craftingTime: 15
+  craftingTime: 5
 --- !u!1 &618268495
 GameObject:
   m_ObjectHideFlags: 0
@@ -16320,7 +16320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &798646820
 Transform:
   m_ObjectHideFlags: 0
@@ -20156,7 +20156,7 @@ MonoBehaviour:
   filler: {fileID: 298942798}
   timeToComplete: 0
   bussy: 0
-  craftingTime: 13
+  craftingTime: 5
 --- !u!114 &969254490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37055,7 +37055,7 @@ MonoBehaviour:
   filler: {fileID: 1588568570}
   timeToComplete: 0
   bussy: 0
-  craftingTime: 15
+  craftingTime: 5
 --- !u!114 &1642616867
 MonoBehaviour:
   m_ObjectHideFlags: 0

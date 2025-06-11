@@ -9,7 +9,6 @@ public class RecipeButtons : MonoBehaviour
     [SerializeField] Image _image;
     [SerializeField] Image filler;
     public float timeToComplete;
-    [SerializeField] bool bussy;
     //NEED TO GRAB THIS FROM AN INSTANCE GAMEMANAGER FORM THE CRAFTING MENU REFERENCE
     public Dictionary<string, int> itemsOnHand;
 
@@ -21,9 +20,9 @@ public class RecipeButtons : MonoBehaviour
     public void CanBeCrafted()
     {
         Debug.Log("Pressed");
-        if (!bussy)
+        if (!RecipesManager.instance.GetState())
         {
-            bussy = true;
+            RecipesManager.instance.SetState(true);
             bool result = true;
             itemsOnHand = gameManager.instance.playerInventoryScript.itemsOnHand;
             for (int i = 0; i < recipe.index; i++)
@@ -38,21 +37,19 @@ public class RecipeButtons : MonoBehaviour
                         {
                             gameManager.instance.playerInventoryScript.HoldItem(recipe.items[i].itemName);
                         }
-
                     }
                     else
-                    {
-                        bussy = false;
+                    {                        
                         result = false;
                         Debug.Log("Not Enough Items");
-                        //return false;
+                        break;
                     }
                 }
                 else
                 {
                     Debug.Log("Not Enough Items");
-                    result = false;
-                    bussy = false;
+                    result = false;                   
+                    break;
                 }
             }
             if (result)
@@ -61,10 +58,12 @@ public class RecipeButtons : MonoBehaviour
                 RecipesManager.instance.updater = RecipesManager.instance.gameObject.AddComponent<UpdaterRecipes>();
                 RecipesManager.instance.updater.Initialize(this); // Pass the RecipeButtons reference
             }
-            Debug.Log("Enough Items");
-            //return true;
+            else
+            {
+                RecipesManager.instance.SetState(false);
+            }
+            Debug.Log("Enough Items");           
         }
-
     }
 
     public void Fill()
@@ -75,9 +74,19 @@ public class RecipeButtons : MonoBehaviour
         if(timeToComplete >= craftingTime)
         {
             gameManager.instance.playerInventoryScript.AddItem(recipe.returnItem);
+            foreach(Slot item in gameManager.instance.playerInventoryScript.itemsInUse)
+            {
+                Debug.Log(item.GetItemName() + " Is the current tem in use" );
+                if(gameManager.instance.playerInventoryScript.itemsOnHand.ContainsKey(item.GetItemName()))
+                {
+                    gameManager.instance.playerInventoryScript.itemsOnHand[item.GetItemName()] -= 1;
+                    Debug.Log(item.GetItemName() + " was removed from items on hand");
+                }
+            }
+            gameManager.instance.playerInventoryScript.itemsInUse.Clear();
             Destroy(RecipesManager.instance.updater);
             filler.enabled = false;
-            bussy = false;
+            RecipesManager.instance.SetState(false);
             timeToComplete = 0;
         }
     }
