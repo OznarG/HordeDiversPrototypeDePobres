@@ -82,17 +82,20 @@ public class Inventory : MonoBehaviour
     }
     public void HoldItem(string item)
     {
-        Slot invSlot;
+        Slot invSlot = new Slot();
+        Slot temp;
         for (int i = 0; i < slotAmount; i++)
         {
-            invSlot = slots[i].GetComponent<Slot>();
+            invSlot.CopySlot(slots[i].GetComponent<Slot>());
+            temp = slots[i].GetComponent<Slot>();
             string name = invSlot.GetItemName();
             if (name == item)
             {
                 //Can try to hard code this iusing invSlot instead
                 itemsInUse.Add(invSlot);
-                invSlot.DecrementStackBy(1);
-                invSlot.UpdateSlot();
+                temp.DecrementStackBy(1);
+                temp.UpdateSlot();
+                break;
             }
         }
     }

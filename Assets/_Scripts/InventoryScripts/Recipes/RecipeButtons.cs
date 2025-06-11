@@ -11,11 +11,13 @@ public class RecipeButtons : MonoBehaviour
     public float timeToComplete;
     //NEED TO GRAB THIS FROM AN INSTANCE GAMEMANAGER FORM THE CRAFTING MENU REFERENCE
     public Dictionary<string, int> itemsOnHand;
+    public List<string> itemsTohold;
 
     public float craftingTime;
     private void Start()
     {
         _image.sprite = recipe.image; 
+        itemsTohold = new List<string>();
     }
     public void CanBeCrafted()
     {
@@ -35,7 +37,8 @@ public class RecipeButtons : MonoBehaviour
                         result = true;
                         for(int j = 0; j < recipe.amount[i]; j++)
                         {
-                            gameManager.instance.playerInventoryScript.HoldItem(recipe.items[i].itemName);
+                            //gameManager.instance.playerInventoryScript.HoldItem(recipe.items[i].itemName);
+                            itemsTohold.Add(recipe.items[i].itemName);
                         }
                     }
                     else
@@ -55,6 +58,10 @@ public class RecipeButtons : MonoBehaviour
             if (result)
             {
                 filler.enabled = true;
+                foreach(string item in itemsTohold)
+                {
+                    gameManager.instance.playerInventoryScript.HoldItem(item);
+                }
                 RecipesManager.instance.updater = RecipesManager.instance.gameObject.AddComponent<UpdaterRecipes>();
                 RecipesManager.instance.updater.Initialize(this); // Pass the RecipeButtons reference
             }
@@ -73,7 +80,6 @@ public class RecipeButtons : MonoBehaviour
         filler.fillAmount = timeToComplete / craftingTime;
         if(timeToComplete >= craftingTime)
         {
-            gameManager.instance.playerInventoryScript.AddItem(recipe.returnItem);
             foreach(Slot item in gameManager.instance.playerInventoryScript.itemsInUse)
             {
                 Debug.Log(item.GetItemName() + " Is the current tem in use" );
@@ -84,6 +90,7 @@ public class RecipeButtons : MonoBehaviour
                 }
             }
             gameManager.instance.playerInventoryScript.itemsInUse.Clear();
+            gameManager.instance.playerInventoryScript.AddItem(recipe.returnItem);
             Destroy(RecipesManager.instance.updater);
             filler.enabled = false;
             RecipesManager.instance.SetState(false);

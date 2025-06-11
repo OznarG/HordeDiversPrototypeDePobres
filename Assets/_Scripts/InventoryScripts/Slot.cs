@@ -188,7 +188,10 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     {
         return ID;
     }
-
+    public bool GetItemUsable()
+    {
+        return usable;
+    }
     public ItemType GetItemType()
     {
         return type;
@@ -256,6 +259,10 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     {
 
         return index;
+    }
+    public int GetItemAddAmount()
+    {
+        return addAmount;
     }
 
     // ----- setters -----
@@ -375,6 +382,26 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
         speed = _speed;
         _name = name;
         index = _index;
+    }
+    public void CopySlot(Slot copySlot)
+    {
+        ID = copySlot.GetID();
+        type = copySlot.GetItemType();
+        itemName = copySlot.GetItemName();
+        description = copySlot.GetItemDescription();
+        stackMax = copySlot.GetItemStackAmount();
+        icon = GetItemIcon();
+        itemPrefab = copySlot.GetItemPrefab();
+        addAmount = copySlot.GetItemAddAmount();
+        usable = copySlot.GetItemUsable();
+        slotType = copySlot.GetSlotType();
+
+        weaponLevel = copySlot.GetWeaponLevel();
+        damage = copySlot.GetWeaponDamage();
+        strength = copySlot.GetWeaponStrength();
+        speed = copySlot.GetWeaponSpeed();
+        _name = copySlot.GetWeaponName();
+        index = copySlot.GetWeaponIndex();
     }
     #endregion
 
