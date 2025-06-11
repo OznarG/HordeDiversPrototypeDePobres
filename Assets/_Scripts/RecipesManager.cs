@@ -15,4 +15,5 @@ public class RecipesManager : MonoBehaviour
         instance = this;
     }
 
+
 }

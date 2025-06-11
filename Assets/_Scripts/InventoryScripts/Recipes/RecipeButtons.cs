@@ -58,7 +58,7 @@ public class RecipeButtons : MonoBehaviour
             if (result)
             {
                 filler.enabled = true;
-                RecipesManager.instance.updater = gameObject.AddComponent<UpdaterRecipes>();
+                RecipesManager.instance.updater = RecipesManager.instance.gameObject.AddComponent<UpdaterRecipes>();
                 RecipesManager.instance.updater.Initialize(this); // Pass the RecipeButtons reference
             }
             Debug.Log("Enough Items");
