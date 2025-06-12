@@ -149,7 +149,8 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
             //Set the visual to the item placed on top and update the ammount text
             //Why how does it know or were was the icon changed? It is changed on the SlotBacground Script int SwitchItemsLocation function
             this.GetComponent<Image>().sprite = icon;
-            if (stackAmount > 1)
+            //THIS NEEDS CHANGE SO IT DOESN:"T SHOW WEAPON 1
+            if (stackAmount >= 1)
             {
                 this.GetComponentInChildren<TMP_Text>().text = stackAmount.ToString();                
             }
@@ -409,6 +410,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     public void OnBeginDrag(PointerEventData eventData)
     {
         //Set parent to cursor
+             
              parentAfterDrag = transform.parent;
              transform.SetParent(transform.root);
              //Is not colliding with what is under

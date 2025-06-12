@@ -27,6 +27,7 @@ public class SlotBackground : MonoBehaviour, IDropHandler
         
         //Get the slot component of the image that the Cursor is grabbing, then calculate how much free space to stack it has
         Slot sourceSlot = eventData.pointerDrag.GetComponent<Slot>();
+        
         if (specialSlot)
         {
             if (slotTypeTaker == sourceSlot.GetSlotType()) 
@@ -39,10 +40,11 @@ public class SlotBackground : MonoBehaviour, IDropHandler
                     if (freeSpace >= sourceSlot.GetItemStackAmount())
                     {
                         //Add all stock amount, delete item from source slot, Update the Slot(run checks etc), Update the source slote too
+                        
                         child.IncrementStackBy(sourceSlot.GetItemStackAmount());
-                        sourceSlot.DecrementStackBy(sourceSlot.GetItemStackAmount());
-                        child.UpdateSlot();
+                        sourceSlot.DecrementStackBy(sourceSlot.GetItemStackAmount());                      
                         sourceSlot.UpdateSlot();
+                        child.UpdateSlot();
                     }
                     //If not all items fit
                     else
@@ -73,10 +75,13 @@ public class SlotBackground : MonoBehaviour, IDropHandler
                 if (freeSpace >= sourceSlot.GetItemStackAmount())
                 {
                     //Add all stock amount, delete item from source slot, Update the Slot(run checks etc), Update the source slote too
-                    child.IncrementStackBy(sourceSlot.GetItemStackAmount());
+                    int amount = sourceSlot.GetItemStackAmount();
                     sourceSlot.DecrementStackBy(sourceSlot.GetItemStackAmount());
-                    child.UpdateSlot();
+                    child.IncrementStackBy(amount);
+
                     sourceSlot.UpdateSlot();
+                    child.UpdateSlot();
+
                 }
                 //If not all items fit
                 else
