@@ -200,7 +200,11 @@ public class SlotBackground : MonoBehaviour, IDropHandler
         {
             transform.GetComponent<Image>().color = slotColor;
             //if is not selected do nothing, Set it white
-            gameManager.instance.thirdPersonPlayerController.currentWeapon.SetActive(false);
+            if(gameManager.instance.thirdPersonPlayerController.currentWeapon != null)
+            {
+                gameManager.instance.thirdPersonPlayerController.currentWeapon.SetActive(false);
+
+            }
             
         }
 

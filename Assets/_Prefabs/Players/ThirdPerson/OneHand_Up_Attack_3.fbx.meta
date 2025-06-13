@@ -62,14 +62,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.32432073
+      - time: 0.353926
         functionName: OnCollider
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.35367185
+      - time: 0.55432975
         functionName: OffCollider
         data: 
         objectReferenceParameter: {instanceID: 0}

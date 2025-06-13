@@ -379,18 +379,24 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
 
     public void SelectEquipOne()
     {
-        if(currentWeapon.activeSelf)
+        if (currentWeapon != null)
         {
-            currentWeapon.SetActive(false);
+            if (currentWeapon.activeSelf)
+            {
+                currentWeapon.SetActive(false);
+            }
+            else
+            {
+                currentWeapon.SetActive(false);
+                weaponIndex = equipSlotOne.GetWeaponIndex();
+                currentWeapon = playerWeapons[weaponIndex];
+                currentCollider = weaponsColliders[weaponIndex];   
+                currentWeapon.SetActive(true);
+                
+
+            }            
         }
-        else
-        {
-            currentWeapon.SetActive(false);
-            weaponIndex = equipSlotOne.GetWeaponIndex();
-            currentWeapon = playerWeapons[weaponIndex];
-            currentCollider = weaponsColliders[weaponIndex];          
-            currentWeapon.SetActive(true);
-        }
+
 
         
     }
