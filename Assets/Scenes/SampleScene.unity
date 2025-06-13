@@ -1717,6 +1717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!1 &89594092
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,6 +3173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!1 &149659764
 GameObject:
   m_ObjectHideFlags: 0
@@ -5161,6 +5165,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 636797403}
   - {fileID: 502113262}
   - {fileID: 1520069603}
   m_Father: {fileID: 0}
@@ -5321,6 +5326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!1 &280130610
 GameObject:
   m_ObjectHideFlags: 0
@@ -5974,6 +5981,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!1 &296129312
 GameObject:
   m_ObjectHideFlags: 0
@@ -10503,6 +10512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 502113262}
+  - component: {fileID: 502113264}
   - component: {fileID: 502113261}
   - component: {fileID: 502113263}
   m_Layer: 0
@@ -10569,6 +10579,20 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &502113264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502113260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 636797402}
 --- !u!1001 &505181600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11699,6 +11723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!1 &550143075
 GameObject:
   m_ObjectHideFlags: 0
@@ -11845,6 +11871,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!1 &552465295
 GameObject:
   m_ObjectHideFlags: 0
@@ -14104,6 +14132,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6297677ca8a7f2543a5ad2f7d08613e4, type: 3}
+--- !u!1 &636797402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 636797403}
+  m_Layer: 0
+  m_Name: falsemenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &636797403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636797402}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 270827044}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &637518523
 GameObject:
   m_ObjectHideFlags: 0
@@ -14650,6 +14709,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!1 &659438610
 GameObject:
   m_ObjectHideFlags: 0
@@ -16710,6 +16771,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!1001 &763645480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21538,6 +21601,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!1 &1000722823
 GameObject:
   m_ObjectHideFlags: 0
@@ -29844,6 +29909,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!1 &1293176114
 GameObject:
   m_ObjectHideFlags: 0
@@ -35228,6 +35295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!1 &1520069602
 GameObject:
   m_ObjectHideFlags: 0
@@ -36503,6 +36572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!1 &1570532169
 GameObject:
   m_ObjectHideFlags: 0
@@ -38948,6 +39019,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!114 &1653789306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39308,6 +39381,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!1 &1667086839
 GameObject:
   m_ObjectHideFlags: 0
@@ -42881,6 +42956,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4831ca842086d4490f63e8a85a4212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftMenuOpen: 0
+  falseMenu: {fileID: 0}
 --- !u!1 &1800608835
 GameObject:
   m_ObjectHideFlags: 0
@@ -50597,7 +50674,7 @@ MonoBehaviour:
   farmingLandHolder: {fileID: 1693806147}
   farmingCubes: []
   isPaused: 0
-  activeMenu: {fileID: 0}
+  activeMenu: {fileID: 636797402}
   pauseMenu: {fileID: 4543341869626484914}
   looseMenu: {fileID: 0}
   playerInventory: {fileID: 1707484578}
@@ -50607,6 +50684,7 @@ MonoBehaviour:
   CollectiblesMenu: {fileID: 2054879145}
   infoMenu: {fileID: 1561556289}
   settingsMenu: {fileID: 1388039609}
+  buttonsMenus: {fileID: 502113264}
   previuslySelectedSlot: {fileID: 0}
   selectedSlot: {fileID: 0}
   backgroundColor: {r: 0, g: 0, b: 0, a: 0}

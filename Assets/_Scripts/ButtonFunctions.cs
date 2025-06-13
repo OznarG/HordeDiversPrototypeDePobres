@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ButtonsFunctions : MonoBehaviour
 {
+    public bool craftMenuOpen;
+    public GameObject falseMenu;
+
     public void Resume()
     {
         gameManager.instance.UnPauseGame();
@@ -41,8 +44,19 @@ public class ButtonsFunctions : MonoBehaviour
     }
     public void OpenCrafting()
     {
-        gameManager.instance.activeMenu.gameObject.SetActive(false);
+         
+
+        gameManager.instance.activeMenu.gameObject.SetActive(false);     
         gameManager.instance.activeMenu = gameManager.instance.CraftingMenu;
+        craftMenuOpen = true;
+        //open Inventory and set as main
+        gameManager.instance.playerInventory.SetActive(true);
+        gameManager.instance.isPaused = true;
+        gameManager.instance.playerInventoryScript.isOpen = true;
+        //NEED TO IMPLEMENT THIS IF WE ADD A BACK BUTTON ON THE MENU  ---------<===>
+        //instance.playerinventoryScrpt.backButton.SetActive(false);
+        gameManager.instance.previuslySelectedSlot = gameManager.instance.selectedSlot;
+        gameManager.instance.PauseGame();
         gameManager.instance.activeMenu.gameObject.SetActive(true);
     }
     public void OpenSkills()

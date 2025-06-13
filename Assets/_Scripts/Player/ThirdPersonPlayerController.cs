@@ -97,7 +97,19 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         {
             gameManager.instance.ToggleInventory();
         }
-
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            if(gameManager.instance.buttonsMenus.craftMenuOpen)
+            {
+                gameManager.instance.buttonsMenus.Resume();
+                gameManager.instance.buttonsMenus.craftMenuOpen = false;
+            }
+            else
+            {
+                gameManager.instance.buttonsMenus.OpenCrafting();
+                gameManager.instance.buttonsMenus.craftMenuOpen = true;
+            }
+        }
         if (canMove)
         {
             //Need to check if is expensive

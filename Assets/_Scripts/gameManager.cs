@@ -30,6 +30,7 @@ public class gameManager : MonoBehaviour
     public GameObject CollectiblesMenu;
     public GameObject infoMenu;
     public GameObject settingsMenu;
+    public ButtonsFunctions buttonsMenus;
 
 
     [Header("----- Inventory Management -----")]
@@ -131,7 +132,7 @@ public class gameManager : MonoBehaviour
           activeMenu.SetActive(false);
         }
 
-        activeMenu = null;
+        activeMenu = buttonsMenus.falseMenu;
         Cursor.visible = false;
     }
 
