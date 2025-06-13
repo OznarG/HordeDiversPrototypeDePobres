@@ -102,12 +102,14 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
         {
             if (gameManager.instance.thirdPersonPlayerController.weaponIndex == 6)
             {
+                gameManager.instance.thirdPersonPlayerController.UsingTool();
                 gameManager.instance.thirdPersonPlayerController.playerAnim.SetTrigger("PicaxeUse");
 
 
             }
-            if(gameManager.instance.thirdPersonPlayerController.weaponIndex == 7)
+            else if(gameManager.instance.thirdPersonPlayerController.weaponIndex == 7)
             {
+                gameManager.instance.thirdPersonPlayerController.UsingTool();
                 gameManager.instance.thirdPersonPlayerController.playerAnim.SetTrigger("UseAxe");
             }
             else

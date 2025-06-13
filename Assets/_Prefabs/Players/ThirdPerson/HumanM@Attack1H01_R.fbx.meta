@@ -34,8 +34,8 @@ ModelImporter:
       name: HumanM@Attack1H01_R
       takeName: Untitled
       internalID: 3094330708855449807
-      firstFrame: 0
-      lastFrame: 42
+      firstFrame: 4
+      lastFrame: 37
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -62,8 +62,15 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.97168505
-        functionName: EndRestrictByAnimation
+      - time: 0.22746582
+        functionName: OnCollider
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.41746762
+        functionName: OffCollider
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -76,15 +83,15 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.29983425
-        functionName: OnCollider
+      - time: 0.97168505
+        functionName: EndRestrictByAnimation
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.35496762
-        functionName: OffCollider
+      - time: 0.97339445
+        functionName: DoneUsingTool
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

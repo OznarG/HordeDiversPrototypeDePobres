@@ -25,6 +25,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public int comboNumber;
     public float comboCounter;
     public float counterMinutes;
+    public bool usingTool;
 
     [Header("--- Movement Stats ---")]
     [SerializeField] float rotationSpeed;
@@ -140,7 +141,6 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         }
         UpdateHealthBar();
     }
-
     public void UpdateEquipSlot()
     {
         equipOneImage.sprite = equipSlotOne.GetItemIcon();
@@ -242,10 +242,14 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public void UsingTool()
     {
         canMove = false;
+        attacking = true;
+        usingTool = true;
     }
     public void DoneUsingTool()
     {
         canMove = true;
+        attacking = false;
+        usingTool = false;
     }
 
     public void OnCollider()
@@ -256,6 +260,8 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     {
         currentCollider.enabled = false;
     }
+
+
     #endregion
 
     #region --State Bars Functions--
