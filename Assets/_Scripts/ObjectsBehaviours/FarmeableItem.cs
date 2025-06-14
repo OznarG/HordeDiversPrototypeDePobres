@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class FarmeableItem : MonoBehaviour
 {
+    [SerializeField] AudioClip clip;
     [SerializeField]  float health;
     [SerializeField] Item itemToDrop;
     public ItemType damagableBy;
@@ -12,6 +13,7 @@ public class FarmeableItem : MonoBehaviour
     {
         if(indexDamageTool == index)
         {
+            AudioManager.instance.PlaySFX(clip);
             health -= _damage;
             if(health <= 0 )
             {
