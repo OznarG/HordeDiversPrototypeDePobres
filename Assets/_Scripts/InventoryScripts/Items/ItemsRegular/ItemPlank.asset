@@ -18,8 +18,14 @@ MonoBehaviour:
   description: Plank to build
   stackMax: 15
   usable: 0
-  amountToAdd: 1
+  amountToAdd: 5
   icon: {fileID: 21300000, guid: 85da10547c8c5c04fa767ba4f30154c4, type: 3}
   itemPrefab: {fileID: 2258137720046105952, guid: 6297677ca8a7f2543a5ad2f7d08613e4, type: 3}
   weaponStats: {fileID: 0}
   slotType: 0
+  weaponLevel: 0
+  damage: 0
+  strength: 0
+  speed: 0
+  _name: 
+  index: 0

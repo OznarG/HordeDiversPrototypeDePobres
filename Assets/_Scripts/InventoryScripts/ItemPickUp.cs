@@ -70,6 +70,7 @@ public class ItemPickUp : MonoBehaviour
             //}
             if (gameManager.instance.playerInventoryScript.AddItem(thisItem))
             {
+                AudioManager.instance.PlaySFX(AudioManager.instance.pickUp);
                 Destroy(gameObject);
             }
 

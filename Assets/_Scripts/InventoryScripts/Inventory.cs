@@ -37,7 +37,7 @@ public class Inventory : MonoBehaviour
         itemsInUse = new List<Slot>();
     }
 
-    public bool AddItem(Item stats)
+    public bool AddItem(Item stats/*, int amount*/)
     {
         Slot invSlot;
         for (int i = 0; i < slotAmount; i++)
@@ -66,7 +66,7 @@ public class Inventory : MonoBehaviour
             {
                 invSlot.IncrementStackBy(1);
                 invSlot.UpdateSlot();
-                gameManager.instance.inventoryAud.PlayOneShot(gameManager.instance.pickup);
+                //gameManager.instance.inventoryAud.PlayOneShot(gameManager.instance.pickup);
                 if (itemsOnHand.ContainsKey(stats.itemName))
                 {
                     itemsOnHand[stats.itemName] += 1;

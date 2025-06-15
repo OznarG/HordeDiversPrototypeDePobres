@@ -90,6 +90,7 @@ public class RecipeButtons : MonoBehaviour
                 }
             }
             gameManager.instance.playerInventoryScript.itemsInUse.Clear();
+            itemsTohold.Clear();
             gameManager.instance.playerInventoryScript.AddItem(recipe.returnItem);
             Destroy(RecipesManager.instance.updater);
             filler.enabled = false;
