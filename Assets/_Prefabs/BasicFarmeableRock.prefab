@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 49c3ea4d4681bbb45a758f8d464dc634, type: 3}
   health: 100
-  itemToDrop: {fileID: 11400000, guid: a86f5cac5418cc946bd1fb9b1f3e54de, type: 2}
+  itemToDrop: {fileID: 11400000, guid: ab2a783d99717ad4a8313ee62641273c, type: 2}
   damagableBy: 6
   indexDamageTool: 6
   dropAmount: 6

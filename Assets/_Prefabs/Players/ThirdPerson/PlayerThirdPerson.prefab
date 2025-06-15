@@ -237,8 +237,8 @@ MonoBehaviour:
   belt: {fileID: 0}
   playerBelt: []
   currentBeltSelection: 0
-  currentWeapon: {fileID: 0}
-  currentCollider: {fileID: 0}
+  currentWeapon: {fileID: 4238133708446568556}
+  currentCollider: {fileID: 7121658166608484376}
   playerWeapons:
   - {fileID: 4238133708446568556}
   - {fileID: 1250952760813426095}
@@ -13097,7 +13097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6657448747074135126
 Transform:
   m_ObjectHideFlags: 0
@@ -15414,7 +15414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67a2379f4c3d7e4cb04b6c201132e2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 20
 --- !u!33 &1877875456350245649
 MeshFilter:
   m_ObjectHideFlags: 0

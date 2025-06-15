@@ -32331,16 +32331,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448185830}
   m_CullTransparentMesh: 1
---- !u!1 &1448852788 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4238133708446568556, guid: edb934698097a914eab5eddea3c29475, type: 3}
-  m_PrefabInstance: {fileID: 6080827224903844305}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &1448852789 stripped
-SphereCollider:
-  m_CorrespondingSourceObject: {fileID: 7121658166608484376, guid: edb934698097a914eab5eddea3c29475, type: 3}
-  m_PrefabInstance: {fileID: 6080827224903844305}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1453788745
 GameObject:
   m_ObjectHideFlags: 0
@@ -62050,10 +62040,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4238133708446568556, guid: edb934698097a914eab5eddea3c29475, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
       propertyPath: belt
       value: 
@@ -62083,10 +62069,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1276203868}
     - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
-      propertyPath: currentWeapon
-      value: 
-      objectReference: {fileID: 1448852788}
-    - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
       propertyPath: equipOneImage
       value: 
       objectReference: {fileID: 1893360433}
@@ -62094,10 +62076,6 @@ PrefabInstance:
       propertyPath: equipTwoImage
       value: 
       objectReference: {fileID: 765406296}
-    - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
-      propertyPath: currentCollider
-      value: 
-      objectReference: {fileID: 1448852789}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -64556,10 +64534,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 185210845}
     m_Modifications:
-    - target: {fileID: 3473543353136794295, guid: 364c0bf421b28044893c9c4b071b69d3, type: 3}
-      propertyPath: dropAmount
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4712939215358135472, guid: 364c0bf421b28044893c9c4b071b69d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.514282
