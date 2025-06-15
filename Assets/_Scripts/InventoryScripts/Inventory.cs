@@ -37,7 +37,7 @@ public class Inventory : MonoBehaviour
         itemsInUse = new List<Slot>();
     }
 
-    public bool AddItem(Item stats/*, int amount*/)
+    public bool AddItem(Item stats, int amount = 0)
     {
         Slot invSlot;
         for (int i = 0; i < slotAmount; i++)
@@ -46,17 +46,28 @@ public class Inventory : MonoBehaviour
             //Add the passed Item to the next empty Slot
             if (invSlot.GetItemStackMax() == 0)
             {
-                invSlot.IncrementStackBy(1);
+                //NUNCA DEBO DE ANADIRMAS DE LO QUE SE DEBE, PORQUE SE CRASHEA?
+                //int fitAmount = (invSlot.GetItemStackMax() - invSlot.GetItemStackAmount());
+                ////amount -= fitAmount;
+                //if (amount > fitAmount)
+                //{
+                //    AddItem(stats, amount - fitAmount);
+                //}
+                //else
+                //{
+                //    fitAmount = amount;
+                //}
+                invSlot.IncrementStackBy(amount);
                 invSlot.AddItemToSlot(stats.ID, stats.type, stats.itemName, stats.description, stats.stackMax, stats.icon, stats.itemPrefab, stats.amountToAdd, stats.usable, stats.slotType, stats.weaponLevel, stats.damage, stats.strength, stats.speed, stats._name, stats.index);
                 invSlot.UpdateSlot();
                 gameManager.instance.inventoryAud.PlayOneShot(gameManager.instance.pickup);
                 if(itemsOnHand.ContainsKey(stats.itemName))
                 {
-                    itemsOnHand[stats.itemName] += 1;
+                    itemsOnHand[stats.itemName] += amount;
                 }
                 else
                 {
-                    itemsOnHand.Add(stats.itemName, 1);
+                    itemsOnHand.Add(stats.itemName, amount);
                 }
                 return true;
             }
@@ -64,17 +75,39 @@ public class Inventory : MonoBehaviour
             //We need to updated to take more than one 
             else if (invSlot.GetID() == stats.ID && invSlot.GetItemStackAmount() < stats.stackMax)
             {
-                invSlot.IncrementStackBy(1);
-                invSlot.UpdateSlot();
-                //gameManager.instance.inventoryAud.PlayOneShot(gameManager.instance.pickup);
-                if (itemsOnHand.ContainsKey(stats.itemName))
+                int fitAmount = (invSlot.GetItemStackMax() - invSlot.GetItemStackAmount());
+                //amount -= fitAmount;
+                if (amount > fitAmount)
                 {
-                    itemsOnHand[stats.itemName] += 1;
+                    invSlot.IncrementStackBy(fitAmount);
+                    invSlot.UpdateSlot();
+                    //gameManager.instance.inventoryAud.PlayOneShot(gameManager.instance.pickup);
+                    if (itemsOnHand.ContainsKey(stats.itemName))
+                    {
+                        itemsOnHand[stats.itemName] += fitAmount;
+                    }
+                    else
+                    {
+                        itemsOnHand.Add(stats.itemName, fitAmount);
+                    }
+                    AddItem(stats, amount - fitAmount);
                 }
                 else
                 {
-                    itemsOnHand.Add(stats.itemName, 1);
+                    fitAmount = amount;
+                    invSlot.IncrementStackBy(fitAmount);
+                    invSlot.UpdateSlot();
+                    //gameManager.instance.inventoryAud.PlayOneShot(gameManager.instance.pickup);
+                    if (itemsOnHand.ContainsKey(stats.itemName))
+                    {
+                        itemsOnHand[stats.itemName] += fitAmount;
+                    }
+                    else
+                    {
+                        itemsOnHand.Add(stats.itemName, fitAmount);
+                    }
                 }
+
                 return true;
             }
         }

@@ -2327,6 +2327,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1301858381575865032, guid: b8caea3db8a3f6944abdd0c672d5d943, type: 3}
+      propertyPath: amounToAdd
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2068392338648909610, guid: b8caea3db8a3f6944abdd0c672d5d943, type: 3}
       propertyPath: m_Name
       value: ItemPlantFiber
@@ -7685,6 +7689,7 @@ MonoBehaviour:
   _image: {fileID: 364389724}
   filler: {fileID: 1401898126}
   timeToComplete: 0
+  addAmount: 0
   itemsTohold: []
   craftingTime: 5
 --- !u!114 &391672539
@@ -13070,6 +13075,7 @@ MonoBehaviour:
   _image: {fileID: 1006996772}
   filler: {fileID: 1718497931}
   timeToComplete: 0
+  addAmount: 0
   itemsTohold: []
   craftingTime: 10
 --- !u!1 &618268495
@@ -19767,6 +19773,7 @@ MonoBehaviour:
   _image: {fileID: 1991938864}
   filler: {fileID: 298942798}
   timeToComplete: 0
+  addAmount: 0
   itemsTohold: []
   craftingTime: 10
 --- !u!114 &969254490
@@ -36777,6 +36784,7 @@ MonoBehaviour:
   _image: {fileID: 1130987650}
   filler: {fileID: 1588568570}
   timeToComplete: 0
+  addAmount: 0
   itemsTohold: []
   craftingTime: 10
 --- !u!114 &1642616867

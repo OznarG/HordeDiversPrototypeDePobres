@@ -6,6 +6,7 @@ public class ItemPickUp : MonoBehaviour
 {
     [SerializeField] bool playerIn;
     [SerializeField] Item thisItem;
+    [SerializeField] int amounToAdd;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -68,7 +69,7 @@ public class ItemPickUp : MonoBehaviour
             //    }
                 
             //}
-            if (gameManager.instance.playerInventoryScript.AddItem(thisItem))
+            if (gameManager.instance.playerInventoryScript.AddItem(thisItem, thisItem.amountToAdd + amounToAdd))
             {
                 AudioManager.instance.PlaySFX(AudioManager.instance.pickUp);
                 Destroy(gameObject);

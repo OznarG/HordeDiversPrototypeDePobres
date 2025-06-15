@@ -7,6 +7,7 @@ public class FarmeableItem : MonoBehaviour
     [SerializeField] Item itemToDrop;
     public ItemType damagableBy;
     [SerializeField] int indexDamageTool;
+    [SerializeField] int dropAmount;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void TakeDamage(float _damage, int index)
@@ -18,7 +19,7 @@ public class FarmeableItem : MonoBehaviour
             if(health <= 0 )
             {
                 itemToDrop.amountToAdd = 5;
-                gameManager.instance.playerInventoryScript.AddItem(itemToDrop);
+                gameManager.instance.playerInventoryScript.AddItem(itemToDrop, itemToDrop.amountToAdd + dropAmount);
                 Destroy(gameObject, 5);
             }
         }

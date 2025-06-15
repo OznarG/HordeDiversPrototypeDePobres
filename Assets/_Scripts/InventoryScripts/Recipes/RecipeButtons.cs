@@ -9,6 +9,7 @@ public class RecipeButtons : MonoBehaviour
     [SerializeField] Image _image;
     [SerializeField] Image filler;
     public float timeToComplete;
+    [SerializeField] int addAmount;
     //NEED TO GRAB THIS FROM AN INSTANCE GAMEMANAGER FORM THE CRAFTING MENU REFERENCE
     public Dictionary<string, int> itemsOnHand;
     public List<string> itemsTohold;
@@ -91,7 +92,7 @@ public class RecipeButtons : MonoBehaviour
             }
             gameManager.instance.playerInventoryScript.itemsInUse.Clear();
             itemsTohold.Clear();
-            gameManager.instance.playerInventoryScript.AddItem(recipe.returnItem);
+            gameManager.instance.playerInventoryScript.AddItem(recipe.returnItem, addAmount);
             Destroy(RecipesManager.instance.updater);
             filler.enabled = false;
             RecipesManager.instance.SetState(false);
