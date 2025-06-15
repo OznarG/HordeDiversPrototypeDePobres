@@ -520,6 +520,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 11400000, guid: b3b053205f5a4844fa4c68d9e1cbc772, type: 2}
   damagableBy: 6
   indexDamageTool: 7
+  dropAmount: 2
 --- !u!136 &7626424187574648612
 CapsuleCollider:
   m_ObjectHideFlags: 0

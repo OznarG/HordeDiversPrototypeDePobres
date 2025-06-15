@@ -3277,9 +3277,9 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.472
+  m_Volume: 0.167
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -7689,7 +7689,7 @@ MonoBehaviour:
   _image: {fileID: 364389724}
   filler: {fileID: 1401898126}
   timeToComplete: 0
-  addAmount: 0
+  addAmount: 5
   itemsTohold: []
   craftingTime: 5
 --- !u!114 &391672539
@@ -64556,6 +64556,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 185210845}
     m_Modifications:
+    - target: {fileID: 3473543353136794295, guid: 364c0bf421b28044893c9c4b071b69d3, type: 3}
+      propertyPath: dropAmount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4712939215358135472, guid: 364c0bf421b28044893c9c4b071b69d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.514282

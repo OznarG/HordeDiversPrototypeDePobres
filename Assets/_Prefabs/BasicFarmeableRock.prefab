@@ -52,6 +52,7 @@ MonoBehaviour:
   itemToDrop: {fileID: 11400000, guid: a86f5cac5418cc946bd1fb9b1f3e54de, type: 2}
   damagableBy: 6
   indexDamageTool: 6
+  dropAmount: 6
 --- !u!33 &8746784182187769550
 MeshFilter:
   m_ObjectHideFlags: 0
