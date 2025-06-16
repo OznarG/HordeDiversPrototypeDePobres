@@ -162,12 +162,11 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
                             distanceCurren = Vector3.Distance(targetLockOn.position, enemiesInRange[i].position);
                             if(distanceCurren < distancePrevious)
                             {
-                                targetLockOn = enemiesInRange[0];
+                                targetLockOn = enemiesInRange[i];
+
                             }
-                            else
-                            {
-                                distancePrevious = distanceCurren;
-                            }
+                            distancePrevious = distanceCurren;
+                            
                         }
                         lockedOn = true;
                     }
