@@ -250,17 +250,20 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
                 //float speed = velocity.magnitude;
                 // Update the Animator's Speed parameter
                 // Move the player
-                Vector2 directionToEnemy = (targetLockOn.position - transform.position).normalized;
-                playerObj.rotation = Quaternion.Slerp(playerObj.rotation, Quaternion.LookRotation(directionToEnemy), Time.deltaTime * rotationSpeed);
+                Vector3 directionToEnemy = (targetLockOn.position - transform.position).normalized;
+                directionToEnemy.y = 0;
+               
 
-                Vector3 moveDir = (transform.right * horizontalInput) + (transform.forward * verticalInput);
+                Vector3 moveDir = (transform.right * horizontalInput) + (transform.forward * verticalInput );
 
                 if (inputDir != Vector3.zero)
                 {
                     // Rotate the player to face the movement direction
-                    playerObj.rotation = Quaternion.Slerp(playerObj.rotation, Quaternion.LookRotation(inputDir), Time.deltaTime * rotationSpeed);
+                    player.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(directionToEnemy), Time.deltaTime * rotationSpeed);
+                    playerObj.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(directionToEnemy), Time.deltaTime * rotationSpeed);
+
                     // Move the player
-                    characterController.Move(inputDir.normalized * moveSpeed * Time.deltaTime);
+                    characterController.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
                 }
                 //Debug.Log(speed);
                 playerAnim.SetFloat("Speed", characterController.velocity.magnitude);
