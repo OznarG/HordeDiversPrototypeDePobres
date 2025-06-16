@@ -73,6 +73,7 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
         if (other.CompareTag("Player"))
         {
             characterStats.playerInRange = true;
+            gameManager.instance.thirdPersonPlayerController.enemiesInRange.Add(characterStats.lockInTarget);
         }
     }
     private void OnTriggerExit(Collider other)
@@ -80,6 +81,8 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
         if (other.CompareTag("Player"))
         {
             characterStats.playerInRange = false;
+            gameManager.instance.thirdPersonPlayerController.enemiesInRange.Remove(characterStats.lockInTarget);
+
         }
     }
 

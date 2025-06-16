@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
+
 //using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +17,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     [SerializeField] CharacterController characterController;
     public Animator playerAnim;
     [SerializeField] ParticleSystem particleLvlUp;
+    public List<Transform> enemiesInRange;
 
     [Header("--- Combat Stats ---")]
     public float meleDamage;
@@ -26,6 +29,8 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public float comboCounter;
     public float counterMinutes;
     public bool usingTool;
+    public bool lockedOn;
+    public Transform targetLockOn;
 
     [Header("--- Movement Stats ---")]
     [SerializeField] float rotationSpeed;
@@ -89,6 +94,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         moveSpeed = walkSpeed;
         playerAnim.SetFloat("attackSpeed", meleAttackSpeed);
         rollingSpeed = walkSpeed + 3;
+        enemiesInRange = new List<Transform>();
         SetPlayerBelt();       
     }
     private void Update()
@@ -136,6 +142,34 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
             {
                 characterController.Move(inputDir.normalized * rollingSpeed * rollingSpeedMul * Time.deltaTime);
                 playerObj.rotation = Quaternion.Slerp(playerObj.rotation, Quaternion.LookRotation(inputDir), Time.deltaTime * 15);
+            }
+            if(Input.GetKeyUp(KeyCode.LeftControl))
+            {
+                if(enemiesInRange.Count > 0)
+                {
+                    if(lockedOn)
+                    {
+                        lockedOn = false;
+                    }
+                    else
+                    {
+                        targetLockOn = enemiesInRange[0];
+                        float distancePrevious = 500;
+                        float distanceCurren;
+                        for (int i = 0; i < enemiesInRange.Count; i++)
+                        {
+                            distanceCurren = Vector3.Distance(targetLockOn.position, enemiesInRange[i].position);
+                            if(distanceCurren < distancePrevious)
+                            {
+                                targetLockOn = enemiesInRange[0];
+                            }
+                            else
+                            {
+                                distancePrevious = distanceCurren;
+                            }
+                        }
+                    }
+                }
             }
             //Debug.Log(characterController.velocity.magnitude);
         }

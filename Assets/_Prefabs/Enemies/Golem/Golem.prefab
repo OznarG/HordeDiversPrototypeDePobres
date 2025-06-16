@@ -230,6 +230,7 @@ Transform:
   m_Children:
   - {fileID: 3187571366043402911}
   - {fileID: 2793154479990004408}
+  - {fileID: 2307318743609388707}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 140.942, z: 0}
 --- !u!114 &8236987485780335078
@@ -269,6 +270,7 @@ MonoBehaviour:
   model: {fileID: 0}
   animator: {fileID: 4353397219986456828}
   agent: {fileID: 6375083535877957607}
+  lockInTarget: {fileID: 6440018082610957990}
   attackCounter: 0
   health: 0
   maxHealth: 200
@@ -1505,6 +1507,37 @@ Transform:
   - {fileID: 6756459434469246922}
   - {fileID: 4940034180537590222}
   m_Father: {fileID: 7398103015403210433}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6440018082610957990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2307318743609388707}
+  m_Layer: 0
+  m_Name: target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2307318743609388707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6440018082610957990}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.145, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1634682862806454942}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6843482092594008979
 GameObject:
