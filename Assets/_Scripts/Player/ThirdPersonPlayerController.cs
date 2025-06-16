@@ -202,6 +202,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         float verticalInput = Input.GetAxis("Vertical");     // W/S or Up/Down
         if(!lockedOn)
         {
+            playerAnim.SetFloat("MovementMode", 0);
              if ((horizontalInput != 0 || verticalInput != 0) && restrictedByAnimation == false)
              {
                 // Get camera's forward and right vectors
@@ -235,7 +236,8 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         }
         if (lockedOn)
         {
-            if ((horizontalInput != 0 || verticalInput != 0) && restrictedByAnimation == false)
+            playerAnim.SetFloat("MovementMode", 1);
+            if (/*(horizontalInput != 0 || verticalInput != 0) && */restrictedByAnimation == false)
             {
                 // Get camera's forward and right vectors
                 //Vector3 cameraForward = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z).normalized;
