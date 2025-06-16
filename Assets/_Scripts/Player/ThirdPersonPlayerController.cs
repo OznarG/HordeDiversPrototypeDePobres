@@ -200,36 +200,78 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         // Get input
         float horizontalInput = Input.GetAxis("Horizontal"); // A/D or Left/Right
         float verticalInput = Input.GetAxis("Vertical");     // W/S or Up/Down
-        if ((horizontalInput != 0 || verticalInput != 0) && restrictedByAnimation == false)
+        if(!lockedOn)
         {
-            // Get camera's forward and right vectors
-            Vector3 cameraForward = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z).normalized;
-            Vector3 cameraRight = new Vector3(cameraTransform.right.x, 0, cameraTransform.right.z).normalized;
-            // Calculate movement direction relative to the camera
-            inputDir = cameraForward * verticalInput + cameraRight * horizontalInput;
-            // Calculate velocity based on position change
-            velocity = (transform.position - lastPosition) / Time.deltaTime;
-            // Update last position for the next frame
-            lastPosition = transform.position/*.normalized*/; //this was changed recently
-            // Get speed (magnitude of velocity)
-            float speed = velocity.magnitude;
-            // Update the Animator's Speed parameter
-            // Move the player
-            if (inputDir != Vector3.zero)
-            {
-                // Rotate the player to face the movement direction
-                playerObj.rotation = Quaternion.Slerp(playerObj.rotation, Quaternion.LookRotation(inputDir), Time.deltaTime * rotationSpeed);
+             if ((horizontalInput != 0 || verticalInput != 0) && restrictedByAnimation == false)
+             {
+                // Get camera's forward and right vectors
+                Vector3 cameraForward = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z).normalized;
+                Vector3 cameraRight = new Vector3(cameraTransform.right.x, 0, cameraTransform.right.z).normalized;
+                // Calculate movement direction relative to the camera
+                inputDir = cameraForward * verticalInput + cameraRight * horizontalInput;
+                // Calculate velocity based on position change
+                velocity = (transform.position - lastPosition) / Time.deltaTime;
+                // Update last position for the next frame
+                lastPosition = transform.position/*.normalized*/; //this was changed recently
+                // Get speed (magnitude of velocity)
+                float speed = velocity.magnitude;
+                // Update the Animator's Speed parameter
                 // Move the player
-                characterController.Move(inputDir.normalized * moveSpeed * Time.deltaTime);
-            }
-            //Debug.Log(speed);
-            playerAnim.SetFloat("Speed", characterController.velocity.magnitude);
-        }
-        else
-        {
-            playerAnim.SetFloat("Speed", 0);
+                if (inputDir != Vector3.zero)
+                 {
+                     // Rotate the player to face the movement direction
+                     playerObj.rotation = Quaternion.Slerp(playerObj.rotation, Quaternion.LookRotation(inputDir), Time.deltaTime * rotationSpeed);
+                     // Move the player
+                     characterController.Move(inputDir.normalized * moveSpeed * Time.deltaTime);
+                 }
+                 //Debug.Log(speed);
+                 playerAnim.SetFloat("Speed", characterController.velocity.magnitude);
+             }
+             else
+             {
+                 playerAnim.SetFloat("Speed", 0);
 
+             }
         }
+        if (lockedOn)
+        {
+            if ((horizontalInput != 0 || verticalInput != 0) && restrictedByAnimation == false)
+            {
+                // Get camera's forward and right vectors
+                //Vector3 cameraForward = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z).normalized;
+                //Vector3 cameraRight = new Vector3(cameraTransform.right.x, 0, cameraTransform.right.z).normalized;
+                // Calculate movement direction relative to the camera
+                //inputDir = cameraForward * verticalInput + cameraRight * horizontalInput;
+                // Calculate velocity based on position change
+                //velocity = (transform.position - lastPosition) / Time.deltaTime;
+                // Update last position for the next frame
+                //lastPosition = transform.position/*.normalized*/; //this was changed recently
+                // Get speed (magnitude of velocity)
+                //float speed = velocity.magnitude;
+                // Update the Animator's Speed parameter
+                // Move the player
+                Vector2 directionToEnemy = (targetLockOn.position - transform.position).normalized;
+                playerObj.rotation = Quaternion.Slerp(playerObj.rotation, Quaternion.LookRotation(directionToEnemy), Time.deltaTime * rotationSpeed);
+
+                Vector3 moveDir = (transform.right * horizontalInput) + (transform.forward * verticalInput);
+
+                if (inputDir != Vector3.zero)
+                {
+                    // Rotate the player to face the movement direction
+                    playerObj.rotation = Quaternion.Slerp(playerObj.rotation, Quaternion.LookRotation(inputDir), Time.deltaTime * rotationSpeed);
+                    // Move the player
+                    characterController.Move(inputDir.normalized * moveSpeed * Time.deltaTime);
+                }
+                //Debug.Log(speed);
+                playerAnim.SetFloat("Speed", characterController.velocity.magnitude);
+            }
+            else
+            {
+                playerAnim.SetFloat("Speed", 0);
+
+            }
+        }
+
     }
     private void HandleRunning()
     {
