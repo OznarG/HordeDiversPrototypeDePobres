@@ -38421,7 +38421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1699026232
 Transform:
   m_ObjectHideFlags: 0
@@ -43051,6 +43051,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893360431}
   m_CullTransparentMesh: 1
+--- !u!4 &1894085448 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2307318743609388707, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
+  m_PrefabInstance: {fileID: 7970815027785159736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1907552071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6639832492601548729, guid: 2633ad019cc834d4a815232473127d8a, type: 3}
@@ -62057,6 +62062,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerThirdPerson
       objectReference: {fileID: 0}
+    - target: {fileID: 1162218738643469455, guid: edb934698097a914eab5eddea3c29475, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1617105687009325979, guid: edb934698097a914eab5eddea3c29475, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1577.27
@@ -63792,6 +63801,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Golem
       objectReference: {fileID: 0}
+    - target: {fileID: 1127520788990094899, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1634682862806454942, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.418091
@@ -63832,6 +63845,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2592239106273406899, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
+      propertyPath: lockInTarget
+      value: 
+      objectReference: {fileID: 1894085448}
+    - target: {fileID: 9028474454142424417, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
+      propertyPath: lockInTarget
+      value: 
+      objectReference: {fileID: 1894085448}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

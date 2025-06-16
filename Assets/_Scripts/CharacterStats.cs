@@ -8,7 +8,6 @@ public class CharacterStats : MonoBehaviour, IDamage
     public SkinnedMeshRenderer model;
     public Animator animator;
     public NavMeshAgent agent;
-    public GameObject lockInTarget;
 
     [Header("--- Helpfull Variables ---")]
     public float attackCounter;

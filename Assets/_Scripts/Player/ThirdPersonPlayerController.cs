@@ -150,6 +150,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
                     if(lockedOn)
                     {
                         lockedOn = false;
+                        targetLockOn = null;
                     }
                     else
                     {
@@ -168,6 +169,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
                                 distancePrevious = distanceCurren;
                             }
                         }
+                        lockedOn = true;
                     }
                 }
             }

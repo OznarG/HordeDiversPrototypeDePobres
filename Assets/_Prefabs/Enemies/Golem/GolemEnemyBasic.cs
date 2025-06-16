@@ -11,11 +11,13 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
     [SerializeField] GameObject damageSource;
     [SerializeField] DamagePlayerOntrigger damageSourceScrpt;
     [SerializeField] FatherSpawner fatherSpawner;
+    public Transform lockInTarget;
 
     [SerializeField] bool stopAgent;
     private Vector3 playerDir;
     [SerializeField] Transform headPos;
     internal object anim;
+    bool playerIn;
 
     protected override void Start()
     {
@@ -70,18 +72,20 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !playerIn)
         {
             characterStats.playerInRange = true;
-            gameManager.instance.thirdPersonPlayerController.enemiesInRange.Add(characterStats.lockInTarget);
+            playerIn = true;
+            gameManager.instance.thirdPersonPlayerController.enemiesInRange.Add(lockInTarget);
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && playerIn)
         {
             characterStats.playerInRange = false;
-            gameManager.instance.thirdPersonPlayerController.enemiesInRange.Remove(characterStats.lockInTarget);
+            playerIn = false;
+            gameManager.instance.thirdPersonPlayerController.enemiesInRange.Remove(lockInTarget);
 
         }
     }
