@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using Unity.VisualScripting;
 
 //using Unity.Android.Gradle.Manifest;
@@ -18,6 +19,10 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     public Animator playerAnim;
     [SerializeField] ParticleSystem particleLvlUp;
     public List<Transform> enemiesInRange;
+
+    [Header("--- Cameras ---")]
+    public CinemachineCamera nonLockCamera;
+    public CinemachineCamera lockedCamera;
 
     [Header("--- Combat Stats ---")]
     public float meleDamage;
@@ -151,6 +156,9 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
                     {
                         lockedOn = false;
                         targetLockOn = null;
+                        lockedCamera.Priority = 0;
+                        nonLockCamera.Priority = 1;
+
                     }
                     else
                     {
@@ -169,6 +177,9 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
                             
                         }
                         lockedOn = true;
+                        lockedCamera.Priority = 1;
+                        nonLockCamera.Priority = 0;
+                        
                     }
                 }
             }
