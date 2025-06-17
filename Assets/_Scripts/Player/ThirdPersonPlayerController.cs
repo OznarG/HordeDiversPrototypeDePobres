@@ -121,6 +121,10 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
                 gameManager.instance.buttonsMenus.craftMenuOpen = true;
             }
         }
+        if(targetLockOn != null)
+        {
+            Debug.Log(Vector3.Distance(transform.position, targetLockOn.position));
+        }
         if (canMove)
         {
             //Need to check if is expensive
@@ -317,6 +321,18 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     #region ---Animation Functions---
     public void Attacking()
     {
+        if(lockedOn)
+        {
+            float desiredDistance = 2.2f; // Distance from enemy
+            Vector3 directionToEnemy = (targetLockOn.position - transform.position).normalized;
+
+            // Calculate target position 2.2 units away from the enemy
+            Vector3 targetPosition = targetLockOn.position - directionToEnemy * desiredDistance;
+
+            // Move the player toward that target position
+            characterController.Move(targetPosition * Time.deltaTime * 30);
+
+        }
         comboNumber++;      
         attacking = true;
     }
