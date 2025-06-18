@@ -524,7 +524,6 @@ namespace BasicEnemyGolemMissions
 
         }
     }
-
     public class IsInAttackRange : Node
     {
         GolemEnemyBasic _enemy;
@@ -554,7 +553,6 @@ namespace BasicEnemyGolemMissions
 
         }
     }
-
     public class ChasePlayer : Node
     {
         GolemEnemyBasic _enemy;
@@ -571,7 +569,6 @@ namespace BasicEnemyGolemMissions
             return state;
         }
     }
-
     public class EnemyDead : Node
     {
         GolemEnemyBasic _enemy;
@@ -595,7 +592,6 @@ namespace BasicEnemyGolemMissions
             }
         }
     }
-
     public class DestroyEnemy : Node
     {
         GolemEnemyBasic enemy;
@@ -617,7 +613,6 @@ namespace BasicEnemyGolemMissions
             return state;
         }
     }
-
     public class AttackPlayer : Node
     {
         GolemEnemyBasic enemy;
@@ -791,6 +786,7 @@ namespace BasicEnemyDefaultSkeletonMissions
                 state = NodeState.SUCCESS;
                 _enemy.characterStats.agent.stoppingDistance = 2;
                 _enemy.facePlayer();
+                Debug.Log("IS IN RANGE");
                 return state;
             }
             else

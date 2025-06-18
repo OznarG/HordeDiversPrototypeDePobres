@@ -266,6 +266,73 @@ Transform:
   - {fileID: 6514188407417578603}
   m_Father: {fileID: 6690274837240962284}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1036323741118482790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6682265522661453186}
+  - component: {fileID: 3883606502937086122}
+  - component: {fileID: 8871838377529181283}
+  m_Layer: 0
+  m_Name: SkeletonSword
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6682265522661453186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036323741118482790}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0014160604, y: 0.029151345, z: -0.9981111, w: -0.05406015}
+  m_LocalPosition: {x: -0.13470016, y: 0, z: 0.030799415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3554075472905994316}
+  m_LocalEulerAnglesHint: {x: 3.345, y: -0.019, z: -186.201}
+--- !u!114 &3883606502937086122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036323741118482790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04427696457aec47a2910f163da7eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 10
+--- !u!65 &8871838377529181283
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036323741118482790}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2466853, y: 1.2226394, z: 0.06769173}
+  m_Center: {x: 0.00012203089, y: 0.48690906, z: 0.0000038586204}
 --- !u!1 &1224998818727328883
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,6 +781,7 @@ Transform:
   - {fileID: 7869231743844712302}
   - {fileID: 7935592712129095885}
   - {fileID: 1974055074798832305}
+  - {fileID: 6682265522661453186}
   m_Father: {fileID: 2931320412851079006}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3714062373844496044
@@ -950,10 +1018,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6860877610074469446}
+  - component: {fileID: 3531015551154693034}
   - component: {fileID: 1534296096137047079}
   - component: {fileID: 5669571623547137038}
   - component: {fileID: 9129833708552157699}
   - component: {fileID: 1761134858411211951}
+  - component: {fileID: 1250882846255115678}
+  - component: {fileID: 2025327541502633454}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -979,6 +1050,28 @@ Transform:
   - {fileID: 7310203167398248365}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -173.228, z: 0}
+--- !u!114 &3531015551154693034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4402014925213990099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d608f8d6b35a05744a800dfbf1efb642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transforms:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1534296096137047079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -999,18 +1092,18 @@ MonoBehaviour:
   maxHealth: 100
   speed: 0
   attackRate: 0
-  attackSpeed: 0.2
+  attackSpeed: 0.5
   attackType: 0
   damage: 15
   strongDamage: 0
-  playerFaceSpeed: 0
+  playerFaceSpeed: 120
   isDead: 0
   inDanger: 0
   onAttackCoolDown: 0
   isAttacking: 0
   playerInRange: 0
   isTakingDamage: 0
-  xpPointDrop: 0
+  xpPointDrop: 20
 --- !u!114 &5669571623547137038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1023,10 +1116,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b4b0cb3b2f9f449a06dad2934b538a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterStats: {fileID: 0}
-  damageSource: {fileID: 7250956094172602961}
-  damageSourceScrpt: {fileID: 1824135821927180261}
-  fatherSpawner: {fileID: 0}
+  characterStats: {fileID: 1534296096137047079}
+  damageSource: {fileID: 1036323741118482790}
+  damageSourceScrpt: {fileID: 3883606502937086122}
+  fatherSpawner: {fileID: 3531015551154693034}
   lockInTarget: {fileID: 7310203167398248365}
   stopAgent: 0
   headPos: {fileID: 2385568539295068119}
@@ -1074,6 +1167,50 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!135 &1250882846255115678
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4402014925213990099}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 15
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &2025327541502633454
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4402014925213990099}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &4456859958743864859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,8 +2111,6 @@ GameObject:
   - component: {fileID: 1974055074798832305}
   - component: {fileID: 5485539083780927812}
   - component: {fileID: 1988775622408219044}
-  - component: {fileID: 1824135821927180261}
-  - component: {fileID: 1625991231219393809}
   m_Layer: 0
   m_Name: SkeletonSword
   m_TagString: Untagged
@@ -2051,40 +2186,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1824135821927180261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7250956094172602961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04427696457aec47a2910f163da7eee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damage: 10
---- !u!65 &1625991231219393809
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7250956094172602961}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.2466853, y: 1.2226394, z: 0.06769173}
-  m_Center: {x: 0.00012203089, y: 0.48690906, z: 0.0000038586204}
 --- !u!1 &7440463855041702571
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -35,6 +36,10 @@ public class CharacterStats : MonoBehaviour, IDamage
 
     [Header("--- Drop / Loot ---")]
     public float xpPointDrop;
+
+    //Delegates and functions variables?
+    public Action actionDamageAnimation;
+    public Action actionDeadAnimation;
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -61,6 +66,7 @@ public class CharacterStats : MonoBehaviour, IDamage
    private void Die()
    {
        isDead = true;
+        actionDeadAnimation?.Invoke();
         gameManager.instance.thirdPersonPlayerController.AddExp(xpPointDrop);
    }
    private void SetHealthTo(int healthToSetTo)
@@ -81,7 +87,7 @@ public class CharacterStats : MonoBehaviour, IDamage
             }
             if (animator != null && !isDead)
             {
-                animator.SetTrigger("damage");
+                actionDamageAnimation?.Invoke();
             }
             
         }

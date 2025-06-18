@@ -2,6 +2,7 @@ using UnityEngine;
 using BasicEnemyDefaultSkeletonMissions;
 using System.Collections.Generic;
 using BehaviorTreeMila;
+using System;
 
 public class BasicSkeleton : BehaviorTreeMila.Tree
 {
@@ -23,6 +24,9 @@ public class BasicSkeleton : BehaviorTreeMila.Tree
         fatherSpawner = GetComponent<FatherSpawner>();
 
         damageSourceScrpt.SetDamage(characterStats.damage);
+
+        characterStats.actionDamageAnimation = DamageAnimation;
+        characterStats.actionDeadAnimation = DieAnimation;
     }
 
     protected override BehaviorTreeMila.Node SetupTree()
@@ -95,7 +99,7 @@ public class BasicSkeleton : BehaviorTreeMila.Tree
     #region Animation Methods
     public void IsTakingDamage()
     {
-        characterStats.isTakingDamage = true;
+        characterStats.isTakingDamage = true;        
         RestrictMovement();
     }
     public void DoneTakingDamage()
@@ -135,6 +139,14 @@ public class BasicSkeleton : BehaviorTreeMila.Tree
     {
         stopAgent = false;
     }
+    public void DamageAnimation()
+    {
+        characterStats.animator.SetTrigger("Hit");
+    }
+    public void DieAnimation()
+    {
+        characterStats.animator.SetTrigger("Dead");
+    }
     #endregion
 
     public void SetCountToTrue()
@@ -150,18 +162,9 @@ public class BasicSkeleton : BehaviorTreeMila.Tree
         }
         else
         {
-            if (characterStats.attackType == 1)
-            {
-                characterStats.attackType = 0;
-            }
-            else
-            {
-                characterStats.attackType = 1;
-            }
-            characterStats.animator.SetInteger("attackNext", characterStats.attackType);
             characterStats.animator.SetFloat("attackSpeed", characterStats.attackSpeed);
             characterStats.onAttackCoolDown = true;
-            characterStats.animator.SetTrigger("AttackRight");
+            characterStats.animator.SetTrigger("Attack");
         }
 
     }
