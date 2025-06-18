@@ -3,6 +3,7 @@ using BasicEnemyDefaultSkeletonMissions;
 using System.Collections.Generic;
 using BehaviorTreeMila;
 using System;
+using VFolders.Libs;
 
 public class BasicSkeleton : BehaviorTreeMila.Tree
 {
@@ -12,6 +13,7 @@ public class BasicSkeleton : BehaviorTreeMila.Tree
     [SerializeField] DamagePlayerOntrigger damageSourceScrpt;
     [SerializeField] FatherSpawner fatherSpawner;
     public Transform lockInTarget;
+    [SerializeField] Collider colliderCur;
 
     [SerializeField] bool stopAgent;
     private Vector3 playerDir;
@@ -146,7 +148,10 @@ public class BasicSkeleton : BehaviorTreeMila.Tree
     public void DieAnimation()
     {
         characterStats.animator.SetTrigger("Dead");
+        Destroy(gameObject, 10);
+        colliderCur.Destroy();
     }
+    
     #endregion
 
     public void SetCountToTrue()

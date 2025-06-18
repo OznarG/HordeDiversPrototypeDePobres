@@ -1121,6 +1121,7 @@ MonoBehaviour:
   damageSourceScrpt: {fileID: 3883606502937086122}
   fatherSpawner: {fileID: 3531015551154693034}
   lockInTarget: {fileID: 7310203167398248365}
+  colliderCur: {fileID: 2025327541502633454}
   stopAgent: 0
   headPos: {fileID: 2385568539295068119}
 --- !u!95 &9129833708552157699
