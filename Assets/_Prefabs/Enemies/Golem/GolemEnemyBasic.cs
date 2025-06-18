@@ -3,6 +3,7 @@ using BehaviorTreeMila;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using VFolders.Libs;
 
 public class GolemEnemyBasic : BehaviorTreeMila.Tree
 {
@@ -18,6 +19,7 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
     [SerializeField] Transform headPos;
     internal object anim;
     bool playerIn;
+    [SerializeField] Collider colliderCur;
 
     protected override void Start()
     {
@@ -25,6 +27,10 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
         fatherSpawner = GetComponent<FatherSpawner>();
 
         damageSourceScrpt.SetDamage(characterStats.damage);
+
+        characterStats.actionDamageAnimation = DamageAnimation;
+        characterStats.actionDeadAnimation = DieAnimation;
+
     }
     protected override BehaviorTreeMila.Node SetupTree()
     {
@@ -135,6 +141,16 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
     {
         stopAgent = false;
     }
+    public void DamageAnimation()
+    {
+        characterStats.animator.SetTrigger("damage");
+    }
+    public void DieAnimation()
+    {
+        characterStats.animator.SetTrigger("Dead");
+        Destroy(gameObject, 10);
+        colliderCur.Destroy();
+    }
     #endregion
 
 
@@ -156,10 +172,12 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
             if(characterStats.attackType == 1)
             {
                 characterStats.attackType = 0;
+                damageSourceScrpt.SetDamage(20);
             }
             else
             {
                 characterStats.attackType = 1;
+                damageSourceScrpt.SetDamage(30);
             }
             characterStats.animator.SetInteger("attackNext", characterStats.attackType);
             characterStats.animator.SetFloat("attackSpeed", characterStats.attackSpeed);

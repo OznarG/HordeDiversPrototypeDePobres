@@ -420,7 +420,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.6135936
+      - time: 0.57244134
         functionName: DesactivateDamage
         data: 
         objectReferenceParameter: {instanceID: 0}

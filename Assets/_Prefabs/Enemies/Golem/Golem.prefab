@@ -306,6 +306,7 @@ MonoBehaviour:
   lockInTarget: {fileID: 2307318743609388707}
   stopAgent: 0
   headPos: {fileID: 1634682862806454942}
+  colliderCur: {fileID: 4693460588165548777}
 --- !u!95 &4353397219986456828
 Animator:
   serializedVersion: 7

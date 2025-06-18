@@ -61193,6 +61193,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1634682862806454942, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
   m_PrefabInstance: {fileID: 7970815027785159736}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &4722660210984880491 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 4693460588165548777, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
+  m_PrefabInstance: {fileID: 7970815027785159736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!136 &4737392067967637416
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -63029,11 +63034,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6860877610074469446, guid: 5f1ce67fe044f564eab7f8d93db6bf0f, type: 3}
   m_PrefabInstance: {fileID: 8721759710146461128}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &6496442592544553224 stripped
-CapsuleCollider:
-  m_CorrespondingSourceObject: {fileID: 2025327541502633454, guid: 5f1ce67fe044f564eab7f8d93db6bf0f, type: 3}
-  m_PrefabInstance: {fileID: 8721759710146461128}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6522278535073072504
 Transform:
   m_ObjectHideFlags: 0
@@ -64321,10 +64321,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Golem
       objectReference: {fileID: 0}
-    - target: {fileID: 1127520788990094899, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1634682862806454942, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.418091
@@ -64365,6 +64361,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2592239106273406899, guid: eda6ac5c2da76bf40b3386d06e8cdfd5, type: 3}
+      propertyPath: colliderCur
+      value: 
+      objectReference: {fileID: 4722660210984880491}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -65217,10 +65217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
-    - target: {fileID: 5669571623547137038, guid: 5f1ce67fe044f564eab7f8d93db6bf0f, type: 3}
-      propertyPath: colliderCur
-      value: 
-      objectReference: {fileID: 6496442592544553224}
+    - target: {fileID: 4402014925213990099, guid: 5f1ce67fe044f564eab7f8d93db6bf0f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6860877610074469446, guid: 5f1ce67fe044f564eab7f8d93db6bf0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.3671875

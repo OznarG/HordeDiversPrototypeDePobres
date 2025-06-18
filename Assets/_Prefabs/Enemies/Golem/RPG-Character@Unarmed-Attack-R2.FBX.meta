@@ -413,21 +413,21 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.34810072
+      - time: 0.3810225
         functionName: ActivateDamage
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.5856034
+      - time: 0.53210545
         functionName: DesactivateDamage
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.67872566
+      - time: 0.7445693
         functionName: AllowMovement
         data: 
         objectReferenceParameter: {instanceID: 0}
