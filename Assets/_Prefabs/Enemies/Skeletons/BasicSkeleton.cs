@@ -43,6 +43,7 @@ public class BasicSkeleton : BehaviorTreeMila.Tree
     protected override void Update()
     {
         base.Update();
+        //THERE SHOULD BE A BETTER WAY OF DOING THIS
         if (stopAgent)
         {
             characterStats.agent.enabled = false;
