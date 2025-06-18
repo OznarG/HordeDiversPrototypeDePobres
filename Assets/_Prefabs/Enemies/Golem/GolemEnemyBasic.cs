@@ -100,6 +100,7 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
     public void DoneTakingDamage()
     {
         characterStats.isTakingDamage = false;
+        characterStats.isAttacking = false;
         AllowMovement();
     }
     public void IsAttaking()
