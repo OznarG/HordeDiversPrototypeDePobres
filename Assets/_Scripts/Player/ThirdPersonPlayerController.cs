@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using Unity.Cinemachine;
 using Unity.VisualScripting;
 
@@ -124,6 +125,14 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         if(targetLockOn != null)
         {
             Debug.Log(Vector3.Distance(transform.position, targetLockOn.position));
+            float desiredDistance = 2.2f; // Distance from enemy
+            Vector3 directionToEnemy = (targetLockOn.position - transform.position).normalized;
+            Debug.Log("direction: " +directionToEnemy);
+            // Calculate target position 2.2 units away from the enemy
+            Vector3 targetPosition = targetLockOn.position - directionToEnemy;
+            Debug.Log("target position: "+targetPosition);
+            // Move the player toward that target position
+            //characterController.Move(targetPosition * Time.deltaTime);
         }
         if (canMove)
         {
@@ -323,14 +332,15 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     {
         if(lockedOn)
         {
+            Debug.Log(Vector3.Distance(transform.position, targetLockOn.position));
             float desiredDistance = 2.2f; // Distance from enemy
             Vector3 directionToEnemy = (targetLockOn.position - transform.position).normalized;
-
+            Debug.Log("direction: " + directionToEnemy);
             // Calculate target position 2.2 units away from the enemy
-            Vector3 targetPosition = targetLockOn.position - directionToEnemy * desiredDistance;
-
+            Vector3 targetPosition = targetLockOn.position - directionToEnemy;
+            Debug.Log("target position: " + targetPosition);
             // Move the player toward that target position
-            characterController.Move(targetPosition * Time.deltaTime * 30);
+            characterController.Move(directionToEnemy * 5 * ( Time.deltaTime * 1));
 
         }
         comboNumber++;      

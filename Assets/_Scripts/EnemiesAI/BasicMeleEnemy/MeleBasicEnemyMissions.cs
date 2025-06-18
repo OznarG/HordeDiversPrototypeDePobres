@@ -659,5 +659,248 @@ namespace BasicEnemyGolemMissions
         }
     }
 }
+namespace BasicEnemyDefaultSkeletonMissions
+{
+    public class TaskPatrol : Node
+    {
+        private Transform _transform;
+        //private Animator _animator;
+        private Transform[] _waypoints;
 
+        private int _currentWaypointIndex = 0;
+
+        private float _waitTime = 1f; // in seconds
+        private float _waitCounter = 0f;
+        private bool _waiting = false;
+        NavMeshAgent _agent;
+
+        public TaskPatrol(Transform transform, Transform[] waypoints, NavMeshAgent agent)
+        {
+            _transform = transform;
+            //_animator = transform.GetComponent<Animator>();
+            _waypoints = waypoints;
+            _agent = agent;
+            _currentWaypointIndex = Random.Range(0, _waypoints.Length);
+        }
+
+        public override NodeState Evaluate()
+        {
+
+
+            if (_waiting)
+            {
+                _waitCounter += Time.deltaTime;
+                if (_waitCounter >= _waitTime)
+                {
+                    _agent.stoppingDistance = 1;
+                    _waiting = false;
+                    //_animator.SetBool("Walking", true);
+                }
+            }
+            else
+            {
+                if (_agent.enabled)
+                {
+                    Transform wp = _waypoints[_currentWaypointIndex];
+                    //Debug.Log(Vector3.Distance(_transform.position, wp.position));
+                    if (Vector3.Distance(_transform.position, wp.position) < 1.6)
+                    {
+                        //_transform.position = wp.position;
+                        _waitCounter = 0f;
+                        _waiting = true;
+
+                        _currentWaypointIndex = Random.Range(0, _waypoints.Length);
+                        Debug.Log("Current index is" + _currentWaypointIndex);
+                        //_animator.SetBool("Walking", false);
+                    }
+                    else
+                    {
+                        if (_agent.enabled)
+                        {
+                            _agent.SetDestination(wp.position);
+                            LookAtTarget(wp, _transform);
+                        }
+
+                        // _transform.LookAt(wp.position);
+                    }
+                }
+                else
+                {
+                    state = NodeState.FAILURE;
+                    return state;
+                }
+            }
+
+            state = NodeState.RUNNING;
+            return state;
+        }
+        private void LookAtTarget(Transform target, Transform transform)
+        {
+            Vector3 lookPos = target.position - transform.position;
+            lookPos.y = 0;
+            Quaternion rotation = Quaternion.LookRotation(lookPos);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.2f);
+        }
+
+    }
+    public class MeleBasicEnemyMissions : Node
+    {
+    }
+    public class CheckEnemyInChaseRange : Node
+    {
+        BasicSkeleton _enemy;
+
+        public CheckEnemyInChaseRange(BasicSkeleton enemy)
+        {
+            _enemy = enemy;
+        }
+
+        public override NodeState Evaluate()
+        {
+            if (_enemy.characterStats.playerInRange && _enemy.characterStats.agent.enabled)
+            {
+                Debug.Log("player in range");
+                state = NodeState.SUCCESS;
+                _enemy.characterStats.agent.stoppingDistance = 3;
+                return state;
+            }
+            else
+            {
+                state = NodeState.FAILURE;
+                _enemy.characterStats.agent.stoppingDistance = 1;
+                return state;
+            }
+
+        }
+    }
+    public class IsInAttackRange : Node
+    {
+        BasicSkeleton _enemy;
+
+        public IsInAttackRange(BasicSkeleton enemy)
+        {
+            _enemy = enemy;
+        }
+
+        public override NodeState Evaluate()
+        {
+            float distanceToPlayer = Vector3.Distance(_enemy.transform.position, gameManager.instance.thirdPersonPlayerController.transform.position);
+            //Debug.Log(distanceToPlayer);
+            if (_enemy.characterStats.playerInRange && distanceToPlayer <= _enemy.characterStats.agent.stoppingDistance)
+            {
+                state = NodeState.SUCCESS;
+                _enemy.characterStats.agent.stoppingDistance = 2;
+                _enemy.facePlayer();
+                return state;
+            }
+            else
+            {
+                state = NodeState.FAILURE;
+
+                return state;
+            }
+
+        }
+    }
+    public class ChasePlayer : Node
+    {
+        BasicSkeleton _enemy;
+        public ChasePlayer(BasicSkeleton enemy)
+        {
+            _enemy = enemy;
+        }
+
+        public override NodeState Evaluate()
+        {
+            Debug.Log("Chacing player");
+            _enemy.characterStats.agent.SetDestination(gameManager.instance.thirdPersonPlayerController.transform.position);
+            state = NodeState.RUNNING;
+            return state;
+        }
+    }
+    public class EnemyDead : Node
+    {
+        BasicSkeleton _enemy;
+
+        public EnemyDead(BasicSkeleton enemy)
+        {
+            _enemy = enemy;
+        }
+        public override NodeState Evaluate()
+        {
+            if (_enemy.characterStats.IsDead())
+            {
+                state = NodeState.SUCCESS;
+                _enemy.characterStats.agent.enabled = false;
+                return state;
+            }
+            else
+            {
+                state = NodeState.FAILURE;
+                return state;
+            }
+        }
+    }
+    public class DestroyEnemy : Node
+    {
+        BasicSkeleton enemy;
+        bool _deadTriggered = false;
+
+        public DestroyEnemy(BasicSkeleton enemy)
+        {
+            this.enemy = enemy;
+        }
+        public override NodeState Evaluate()
+        {
+            if (!_deadTriggered)
+            {
+                enemy.characterStats.animator.SetTrigger("Dead");
+                _deadTriggered = true;
+            }
+
+            state = NodeState.RUNNING;
+            return state;
+        }
+    }
+    public class AttackPlayer : Node
+    {
+        BasicSkeleton enemy;
+        bool isWaiting = true;
+        float wait;
+        public AttackPlayer(BasicSkeleton enemy)
+        {
+            this.enemy = enemy;
+        }
+        public override NodeState Evaluate()
+        {
+
+            if (enemy.characterStats.isAttacking)
+            {
+                //OK
+            }
+            if (isWaiting)
+            {
+                wait += Time.deltaTime;
+                if (wait > 2)
+                {
+                    isWaiting = false;
+                }
+            }
+            else
+            {
+                if (enemy.characterStats.onAttackCoolDown == false)
+                {
+
+                    enemy.AttackMelle();
+                    enemy.characterStats.onAttackCoolDown = true;
+                    wait = 0;
+                    isWaiting = true;
+                }
+
+            }
+            state = NodeState.RUNNING;
+            return state;
+        }
+    }
+}
 
