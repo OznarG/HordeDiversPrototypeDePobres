@@ -12047,6 +12047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3344657060923428390}
   - component: {fileID: 7089845954262780411}
+  - component: {fileID: 6879625828159265546}
   - component: {fileID: 7509364660899985827}
   - component: {fileID: 6727293772181397915}
   m_Layer: 0
@@ -12097,6 +12098,36 @@ MonoBehaviour:
   affectionLevel: 0
   female: 0
   characterProfile: {fileID: 21300000, guid: 146ff2c18b2e6dd45813c07f2513b0c7, type: 3}
+  agent: {fileID: 6879625828159265546}
+  animator: {fileID: 7509364660899985827}
+  normalPathOne: {fileID: 0}
+  normalPathTwo: {fileID: 0}
+  normalPathThree: {fileID: 0}
+  specialPathOne: {fileID: 0}
+  specialPathTwo: {fileID: 0}
+  specialPathThree: {fileID: 0}
+--- !u!195 &6879625828159265546
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3878393237008173218}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!95 &7509364660899985827
 Animator:
   serializedVersion: 7
@@ -12107,7 +12138,7 @@ Animator:
   m_GameObject: {fileID: 3878393237008173218}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: d49c65de9fce66146b5d0e164b1f9d2d, type: 3}
-  m_Controller: {fileID: 9100000, guid: d3a17543f9bdd7841a4a1bed8d17fa0f, type: 2}
+  m_Controller: {fileID: 9100000, guid: bad6f57642f4e5e4dba50d5c12022d11, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1

@@ -62,21 +62,21 @@ public class TimeManager : MonoBehaviour
     public void UpdateTheRoamer()
     {
         roamerCalculator++;
-        if(roamerCalculator == 1) 
-        {
-            gameManager.instance.test[0].GetPath();
-        }
-        if (roamerCalculator == 21)
-        {
-            gameManager.instance.test[0].GetPath();
-        }
-        if (roamerCalculator == 41)
-        {
-            gameManager.instance.test[0].GetPath();
-        }
-        if (roamerCalculator >= 60) 
-        {
-            roamerCalculator = 0;
-        }
+        //if(roamerCalculator == 1) 
+        //{
+        //    gameManager.instance.test[0].GetPath();
+        //}
+        //if (roamerCalculator == 21)
+        //{
+        //    gameManager.instance.test[0].GetPath();
+        //}
+        //if (roamerCalculator == 41)
+        //{
+        //    gameManager.instance.test[0].GetPath();
+        //}
+        //if (roamerCalculator >= 60) 
+        //{
+        //    roamerCalculator = 0;
+        //}
     }
 }
