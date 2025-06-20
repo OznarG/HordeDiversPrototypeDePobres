@@ -7653,7 +7653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRanged: {fileID: 0}
   pathArea: {fileID: 0}
-  enemyToSpawn: 0
+  enemyToSpawn: 1
   numberOfEnemies: 5
   minToSpawn: 100
   maxToSpawn: 150
@@ -17325,7 +17325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRanged: {fileID: 0}
   pathArea: {fileID: 0}
-  enemyToSpawn: 1
+  enemyToSpawn: 0
   numberOfEnemies: 5
   minToSpawn: 100
   maxToSpawn: 150
