@@ -148,6 +148,7 @@ public class BasicSkeleton : BehaviorTreeMila.Tree
     public void DieAnimation()
     {
         characterStats.animator.SetTrigger("Dead");
+        gameManager.instance.thirdPersonPlayerController.enemiesInRange.Remove(lockInTarget);
         Destroy(gameObject, 10);
         colliderCur.Destroy();
     }
