@@ -3,7 +3,6 @@ using BehaviorTreeMila;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using VFolders.Libs;
 
 public class GolemEnemyBasic : BehaviorTreeMila.Tree
 {
@@ -149,7 +148,7 @@ public class GolemEnemyBasic : BehaviorTreeMila.Tree
     {
         characterStats.animator.SetTrigger("Dead");
         Destroy(gameObject, 10);
-        colliderCur.Destroy();
+        Destroy(colliderCur);
     }
     #endregion
 

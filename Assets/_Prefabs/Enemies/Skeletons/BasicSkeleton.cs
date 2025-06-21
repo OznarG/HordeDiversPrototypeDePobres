@@ -3,7 +3,6 @@ using BasicEnemyDefaultSkeletonMissions;
 using System.Collections.Generic;
 using BehaviorTreeMila;
 using System;
-using VFolders.Libs;
 
 public class BasicSkeleton : BehaviorTreeMila.Tree
 {
@@ -150,7 +149,7 @@ public class BasicSkeleton : BehaviorTreeMila.Tree
         characterStats.animator.SetTrigger("Dead");
         gameManager.instance.thirdPersonPlayerController.enemiesInRange.Remove(lockInTarget);
         Destroy(gameObject, 10);
-        colliderCur.Destroy();
+        Destroy(colliderCur);
     }
     
     #endregion
