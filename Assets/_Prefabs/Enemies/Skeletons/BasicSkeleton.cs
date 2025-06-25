@@ -13,6 +13,7 @@ public class BasicSkeleton : BehaviorTreeMila.Tree
     [SerializeField] FatherSpawner fatherSpawner;
     public Transform lockInTarget;
     [SerializeField] Collider colliderCur;
+    []
 
     [SerializeField] bool stopAgent;
     private Vector3 playerDir;
