@@ -17326,7 +17326,7 @@ MonoBehaviour:
   playerRanged: {fileID: 0}
   pathArea: {fileID: 0}
   enemyToSpawn: 0
-  numberOfEnemies: 5
+  numberOfEnemies: 3
   minToSpawn: 100
   maxToSpawn: 150
   randomized: 0
@@ -56778,6 +56778,14 @@ PrefabInstance:
       propertyPath: HealthBar
       value: 
       objectReference: {fileID: 1385758899}
+    - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
+      propertyPath: attackRange
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
+      propertyPath: magnetRange
+      value: 2.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8250831585826476858, guid: edb934698097a914eab5eddea3c29475, type: 3}
       propertyPath: equipSlotOne
       value: 

@@ -94,8 +94,9 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     [SerializeField] Image ExpBar;
 
     [Header("TESTING VARIABLES AND THINGS")]
-    public float attackRange = 1f;
-    public float magnetRange = 2f;
+    [SerializeField] float attackRange = 2f;
+    [SerializeField] float magnetRange = 3f;
+    [SerializeField] float magnetSpeed;
 
     private void Start()
     {
@@ -131,14 +132,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         if(targetLockOn != null)
         {
             Debug.Log(Vector3.Distance(transform.position, targetLockOn.position));
-            float desiredDistance = 2.2f; // Distance from enemy
-            Vector3 directionToEnemy = (targetLockOn.position - transform.position).normalized;
-            Debug.Log("direction: " +directionToEnemy);
-            // Calculate target position 2.2 units away from the enemy
-            Vector3 targetPosition = targetLockOn.position - directionToEnemy;
-            Debug.Log("target position: "+targetPosition);
-            // Move the player toward that target position
-            //characterController.Move(targetPosition * Time.deltaTime);
+       
         }
         if (canMove)
         {
@@ -336,10 +330,6 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     #region ---Animation Functions---
     public void Attacking()
     {     
-        if (comboNumber > 2)
-        {
-            comboNumber = 0;
-        }
         if (lockedOn)
         {
             float distance = Vector3.Distance(transform.position, targetLockOn.position);
@@ -357,7 +347,11 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         {
             playerAnim.SetTrigger("AttackOneHand");
         }
-        comboNumber++;      
+        comboNumber++;
+        if (comboNumber > 2)
+        {
+            comboNumber = 0;
+        }
         attacking = true;
     }
     IEnumerator MagnetMoveAndAttack()
@@ -365,11 +359,12 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         float elapsedTime = 0f;
         Vector3 startPos = transform.position;
         Vector3 endPos = targetLockOn.position + (transform.position - targetLockOn.position).normalized * attackRange;
-
+        endPos.y = startPos.y;
         while (elapsedTime < 1f)
         {
             transform.position = Vector3.Lerp(startPos, endPos, elapsedTime / 1f);
-            elapsedTime += Time.deltaTime;
+            playerAnim.SetFloat("Speed", magnetSpeed);
+            elapsedTime += Time.deltaTime * magnetSpeed;
             yield return null;
         }
 
