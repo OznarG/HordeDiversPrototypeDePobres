@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Cinemachine;
@@ -6,6 +7,7 @@ using Unity.VisualScripting;
 //using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.UI;
+using static EnemiesEnums;
 
 
 public class ThirdPersonPlayerController : MonoBehaviour, IDamage
@@ -91,6 +93,10 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
     [SerializeField] Image EnergyBar;
     [SerializeField] Image ExpBar;
 
+    [Header("TESTING VARIABLES AND THINGS")]
+    public float attackRange = 1f;
+    public float magnetRange = 2f;
+
     private void Start()
     {
         health = maxHealth;
@@ -145,7 +151,7 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
             if (Input.GetButton("Fire1") && rolling == false && !gameManager.instance.isPaused && currentWeapon.activeSelf)
             {
                 //Need to change the Slot to an actual slot because GetComponent is expensive
-
+                
                 equipSlotOne.UseItem();
             }
             if(Input.GetButton("Jump") && !rolling && !restrictedByAnimation)
@@ -329,23 +335,49 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
 
     #region ---Animation Functions---
     public void Attacking()
-    {
-        if(lockedOn)
+    {     
+        if (comboNumber > 2)
         {
-            Debug.Log(Vector3.Distance(transform.position, targetLockOn.position));
-            float desiredDistance = 2.2f; // Distance from enemy
-            Vector3 directionToEnemy = (targetLockOn.position - transform.position).normalized;
-            Debug.Log("direction: " + directionToEnemy);
-            // Calculate target position 2.2 units away from the enemy
-            Vector3 targetPosition = targetLockOn.position - directionToEnemy;
-            Debug.Log("target position: " + targetPosition);
-            // Move the player toward that target position
-            characterController.Move(directionToEnemy * 5 * ( Time.deltaTime * 1));
-
+            comboNumber = 0;
+        }
+        if (lockedOn)
+        {
+            float distance = Vector3.Distance(transform.position, targetLockOn.position);
+            if (distance >= attackRange && distance <= magnetRange)
+            {
+                StartCoroutine(MagnetMoveAndAttack());
+            }
+            else
+            {
+                playerAnim.SetTrigger("AttackOneHand");
+            }
+            Debug.Log("Attacking!");
+        }
+        else
+        {
+            playerAnim.SetTrigger("AttackOneHand");
         }
         comboNumber++;      
         attacking = true;
     }
+    IEnumerator MagnetMoveAndAttack()
+    {
+        float elapsedTime = 0f;
+        Vector3 startPos = transform.position;
+        Vector3 endPos = targetLockOn.position + (transform.position - targetLockOn.position).normalized * attackRange;
+
+        while (elapsedTime < 1f)
+        {
+            transform.position = Vector3.Lerp(startPos, endPos, elapsedTime / 1f);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = endPos;
+        playerAnim.SetTrigger("AttackOneHand");
+    }
+
+
     public void NotAttacking()
     {
         
