@@ -108,7 +108,9 @@ public class ThirdPersonPlayerController : MonoBehaviour, IDamage
         playerAnim.SetFloat("attackSpeed", meleAttackSpeed);
         rollingSpeed = walkSpeed + 3;
         enemiesInRange = new List<Transform>();
-        SetPlayerBelt();       
+        SetPlayerBelt();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
     private void Update()
     {

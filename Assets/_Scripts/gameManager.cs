@@ -134,6 +134,7 @@ public class gameManager : MonoBehaviour
 
         activeMenu = buttonsMenus.falseMenu;
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void ToggleInventory()
